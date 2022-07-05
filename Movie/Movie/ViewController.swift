@@ -1,30 +1,30 @@
-//
-//  ViewController.swift
-//  Movie
-//
-//  Created by Joobang Lee on 2022/07/04.
-//
-
 import UIKit
 
 class ViewController: UIViewController{
    
-    @IBOutlet weak var firstImage: UIView!
-    
-    @IBOutlet weak var secondImage: UIView!
-    
-    @IBOutlet weak var thirdIImage: UIView!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var thirdImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        firstImage.layer.cornerRadius = 60
-        secondImage.layer.cornerRadius = 60
-        thirdIImage.layer.cornerRadius = 60
-        
-        self.firstImage.backgroundColor = UIColor(patternImage: UIImage(named: "겨울왕국2.png")!)
-        self.secondImage.backgroundColor = UIColor(patternImage: UIImage(named: "아바타.png")!)
-        self.thirdIImage.backgroundColor = UIColor(patternImage: UIImage(named: "암살.png")!)
+                
+        posterImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        firstImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        secondImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        thirdImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+  
+        firstImage.layer.cornerRadius = 0.5 * firstImage.bounds.size.width
+        secondImage.layer.cornerRadius = 0.5 * firstImage.bounds.size.width
+        thirdImage.layer.cornerRadius = 0.5 * firstImage.bounds.size.width
+
     }
     
+    @IBAction func changeButton(_ sender: Any) {
+        posterImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        firstImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        secondImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+        thirdImage.image = UIImage(named: "movie\(Int.random(in: 1...20))")
+    }
 }
