@@ -3,71 +3,59 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var emailLabel: UITextField!
-    @IBOutlet weak var passwordLabel: UITextField!
-    @IBOutlet weak var nickNameLabel: UITextField!
-    @IBOutlet weak var locationLabel: UITextField!
-    @IBOutlet weak var codeLabel: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nickNameTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var codeTextField: UITextField!
     
+    @IBOutlet weak var membershipButton: UIButton!
     
-    @IBOutlet weak var membershipLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textInfo()
-        fontInfo()
-        boxColor()
+        titleLabelInfo()
+        textFieldInfo()
+        passwordSecure()
+        textFieldStyle()
     }
     
-    func textInfo(){
+    func titleLabelInfo(){
         titleLabel.text = "JooFlix"
-        emailLabel.text = "이메일 주소 또는 전화번호"
-        passwordLabel.text = "비밀번호"
-        nickNameLabel.text = "닉네임"
-        locationLabel.text = "위치"
-        codeLabel.text = "추천 코드 입력"
-        membershipLabel.text = "회원가입"
-    }
-    
-    func fontInfo(){
         titleLabel.textColor = .red
         titleLabel.font = UIFont.boldSystemFont(ofSize: 50)
-        
-        emailLabel.textColor = .white
-        emailLabel.font = UIFont.systemFont(ofSize: 20)
-        emailLabel.textAlignment = .center
-        
-        passwordLabel.textColor = .white
-        passwordLabel.font = UIFont.systemFont(ofSize: 20)
-        passwordLabel.textAlignment = .center
-        
-        nickNameLabel.textColor = .white
-        nickNameLabel.font = UIFont.systemFont(ofSize: 20)
-        nickNameLabel.textAlignment = .center
-        
-        locationLabel.textColor = .white
-        locationLabel.font = UIFont.systemFont(ofSize: 20)
-        locationLabel.textAlignment = .center
-        
-        codeLabel.textColor = .white
-        codeLabel.font = UIFont.systemFont(ofSize: 20)
-        codeLabel.textAlignment = .center
-        
-        membershipLabel.textColor = .black
-        membershipLabel.font = UIFont.systemFont(ofSize: 20)
-        membershipLabel.textAlignment = .center
     }
     
-    func boxColor(){
-        emailLabel.backgroundColor = .gray
-        passwordLabel.backgroundColor = .gray
-        nickNameLabel.backgroundColor = .gray
-        locationLabel.backgroundColor = .gray
-        codeLabel.backgroundColor = .gray
-        
+    func passwordSecure(){
+        if passwordTextField.text?.count != nil {
+            passwordTextField.isSecureTextEntry = true
+        }
     }
     
     
+    func textFieldInfo(){
+        let textFieldDic = [emailTextField:"이메일 주소 또는 전화번호", passwordTextField:"비밀번호", nickNameTextField:"닉네임", locationTextField:"위치", codeTextField:"추천 코드 입력"]
+        
+        for textItem in textFieldDic {
+            textItem.key?.textColor = .white
+            textItem.key?.font = UIFont.systemFont(ofSize: 20)
+            textItem.key?.textAlignment = .center
+            textItem.key?.attributedPlaceholder = NSAttributedString(string: textItem.value, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        }
+    }
     
+    
+    func textFieldStyle(){
+        let textFieldArr = [emailTextField, passwordTextField, nickNameTextField, locationTextField, codeTextField]
+        
+        for textStyleItem in textFieldArr {
+            textStyleItem?.layer.cornerRadius = 5.0
+            textStyleItem?.layer.borderWidth = 1.5
+            textStyleItem?.layer.borderColor = UIColor.lightGray.cgColor
+            textStyleItem?.borderStyle = .line
+            textStyleItem?.backgroundColor = .gray
+            textStyleItem?.keyboardType = .default
+        }
+    }
     
     
 }
