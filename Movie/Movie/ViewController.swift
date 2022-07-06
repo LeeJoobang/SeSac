@@ -11,7 +11,6 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         randomImage()
         imageRound()
-        
     }
     
     @IBAction func changeButton(_ sender: Any) {
