@@ -231,11 +231,24 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yC2-kf-Ql9">
+                                <rect key="frame" x="56" y="631" width="144" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlC-gI-Lvj">
+                                <rect key="frame" x="309" y="637" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dVZ-8G-Wy9"/>
                         <color key="backgroundColor" red="0.086066968509999994" green="0.086066968509999994" blue="0.086066968509999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="addInfoLabel" destination="yC2-kf-Ql9" id="WPg-jh-LE0"/>
+                        <outlet property="addInfoSwitch" destination="qlC-gI-Lvj" id="fwL-Nj-8mU"/>
                         <outlet property="codeTextField" destination="tsB-gr-ejV" id="my3-5j-EIz"/>
                         <outlet property="emailTextField" destination="32z-DD-WUf" id="GZl-7r-3eE"/>
                         <outlet property="locationTextField" destination="jlV-Qk-Nwp" id="YD9-8Q-wtL"/>

@@ -9,10 +9,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var membershipButton: UIButton!
+    @IBOutlet weak var addInfoLabel: UILabel!
+    @IBOutlet weak var addInfoSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabelInfo()
+        labelInfo()
         
         passwordSecure()
         textFieldInfo()
@@ -22,10 +24,15 @@ class SignUpViewController: UIViewController {
         buttonStyle()
     }
     
-    func titleLabelInfo(){
+    func labelInfo(){
         titleLabel.text = "JooFlix"
+        addInfoLabel.text = "추가 정보 입력"
+
         titleLabel.textColor = .red
+        addInfoLabel.textColor = .white
+
         titleLabel.font = UIFont.boldSystemFont(ofSize: 50)
+        addInfoLabel.font = UIFont.systemFont(ofSize: 20)
     }
         
     func passwordSecure(){
