@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sjr-vU-rXG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -103,6 +103,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="정보"/>
+                                <connections>
+                                    <segue destination="sjr-vU-rXG" kind="presentation" id="cVH-Lu-mx5"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-9t-M98">
                                 <rect key="frame" x="0.0" y="736" width="414" height="171"/>
@@ -185,7 +188,7 @@
             <objects>
                 <viewController id="sjr-vU-rXG" customClass="SignUpViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vkn-BL-PcL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21F-dm-7c2">
@@ -253,6 +256,7 @@
                             <outletCollection property="gestureRecognizers" destination="lo7-dB-BFi" appends="YES" id="2ul-mP-qQg"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Z3p-VV-WJy"/>
                     <connections>
                         <outlet property="addInfoLabel" destination="yC2-kf-Ql9" id="WPg-jh-LE0"/>
                         <outlet property="addInfoSwitch" destination="qlC-gI-Lvj" id="fwL-Nj-8mU"/>
@@ -272,7 +276,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="827.536231884058" y="837.72321428571422"/>
+            <point key="canvasLocation" x="-23" y="895"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
