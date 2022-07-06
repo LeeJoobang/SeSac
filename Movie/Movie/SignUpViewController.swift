@@ -8,15 +8,18 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var codeTextField: UITextField!
-    
     @IBOutlet weak var membershipButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabelInfo()
-        textFieldInfo()
+        
         passwordSecure()
+        textFieldInfo()
         textFieldStyle()
+        
+        buttonInfo()
+        buttonStyle()
     }
     
     func titleLabelInfo(){
@@ -24,13 +27,12 @@ class SignUpViewController: UIViewController {
         titleLabel.textColor = .red
         titleLabel.font = UIFont.boldSystemFont(ofSize: 50)
     }
-    
+        
     func passwordSecure(){
         if passwordTextField.text?.count != nil {
             passwordTextField.isSecureTextEntry = true
         }
     }
-    
     
     func textFieldInfo(){
         let textFieldDic = [emailTextField:"이메일 주소 또는 전화번호", passwordTextField:"비밀번호", nickNameTextField:"닉네임", locationTextField:"위치", codeTextField:"추천 코드 입력"]
@@ -43,7 +45,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    
     func textFieldStyle(){
         let textFieldArr = [emailTextField, passwordTextField, nickNameTextField, locationTextField, codeTextField]
         
@@ -55,6 +56,18 @@ class SignUpViewController: UIViewController {
             textStyleItem?.backgroundColor = .gray
             textStyleItem?.keyboardType = .default
         }
+    }
+    
+    func buttonInfo(){
+        membershipButton.setTitle("회원가입", for: .normal)
+        membershipButton.setTitleColor(UIColor.black, for: .normal)
+        membershipButton.backgroundColor = .white
+    }
+    
+    func buttonStyle(){
+        membershipButton.layer.cornerRadius = 5.0
+        membershipButton.layer.borderWidth = 1.5
+        membershipButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     
