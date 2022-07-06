@@ -22,6 +22,8 @@ class SignUpViewController: UIViewController {
         
         buttonInfo()
         buttonStyle()
+        
+        switchInfo()
     }
     
     func labelInfo(){
@@ -75,6 +77,12 @@ class SignUpViewController: UIViewController {
         membershipButton.layer.cornerRadius = 5.0
         membershipButton.layer.borderWidth = 1.5
         membershipButton.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func switchInfo(){
+        addInfoSwitch.onTintColor = .red
+        addInfoSwitch.setOn(true, animated: false)
+        addInfoSwitch.thumbTintColor = .white
     }
     
     
