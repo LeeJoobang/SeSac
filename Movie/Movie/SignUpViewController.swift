@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
@@ -14,15 +14,15 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelInfo()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
+        labelInfo()
         passwordSecure()
         textFieldInfo()
         textFieldStyle()
-        
         buttonInfo()
         buttonStyle()
-        
         switchInfo()
     }
     
@@ -94,5 +94,11 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
     
+    func textFieldShouldEndEditing(_ emailTextField: UITextField, _ passwordTextField: UITextField) -> Bool {
+        return true
+    }
 }
