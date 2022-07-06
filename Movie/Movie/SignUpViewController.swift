@@ -86,4 +86,13 @@ class SignUpViewController: UIViewController {
     }
     
     
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func tapGestureClicked(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
 }
