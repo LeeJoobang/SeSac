@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="827.536231884058" y="111.83035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="NH0-Ql-GOG">
             <objects>
-                <viewController id="sjr-vU-rXG" sceneMemberID="viewController">
+                <viewController id="sjr-vU-rXG" customClass="SignUpViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vkn-BL-PcL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
