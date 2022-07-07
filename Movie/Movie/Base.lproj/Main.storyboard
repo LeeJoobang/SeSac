@@ -267,6 +267,11 @@
                         <outlet property="nickNameTextField" destination="c0C-5U-Pd8" id="3aa-qQ-F8s"/>
                         <outlet property="passwordTextField" destination="WHc-kV-t6P" id="23g-5K-xiu"/>
                         <outlet property="titleLabel" destination="21F-dm-7c2" id="S0y-oU-M95"/>
+                        <outletCollection property="textFieldOutletCollection" destination="32z-DD-WUf" collectionClass="NSMutableArray" id="pte-yi-Glc"/>
+                        <outletCollection property="textFieldOutletCollection" destination="WHc-kV-t6P" collectionClass="NSMutableArray" id="wg4-6h-I8a"/>
+                        <outletCollection property="textFieldOutletCollection" destination="c0C-5U-Pd8" collectionClass="NSMutableArray" id="EyU-i9-rEy"/>
+                        <outletCollection property="textFieldOutletCollection" destination="jlV-Qk-Nwp" collectionClass="NSMutableArray" id="p9h-m2-RHp"/>
+                        <outletCollection property="textFieldOutletCollection" destination="tsB-gr-ejV" collectionClass="NSMutableArray" id="agE-Y4-lbF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1G-M1-oez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

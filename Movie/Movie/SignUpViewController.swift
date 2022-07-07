@@ -3,11 +3,14 @@ import UIKit
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet var textFieldOutletCollection: [UITextField]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var codeTextField: UITextField!
+    
     @IBOutlet weak var membershipButton: UIButton!
     @IBOutlet weak var addInfoLabel: UILabel!
     @IBOutlet weak var addInfoSwitch: UISwitch!
@@ -55,15 +58,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldStyle(){
-        let textFieldArr = [emailTextField, passwordTextField, nickNameTextField, locationTextField, codeTextField]
-        
-        for textStyleItem in textFieldArr {
-            textStyleItem?.layer.cornerRadius = 5.0
-            textStyleItem?.layer.borderWidth = 1.5
-            textStyleItem?.layer.borderColor = UIColor.lightGray.cgColor
-            textStyleItem?.borderStyle = .line
-            textStyleItem?.backgroundColor = .gray
-            textStyleItem?.keyboardType = .default
+        for textStyleItem in textFieldOutletCollection {
+            textStyleItem.layer.cornerRadius = 5.0
+            textStyleItem.layer.borderWidth = 1.5
+            textStyleItem.layer.borderColor = UIColor.lightGray.cgColor
+            textStyleItem.borderStyle = .line
+            textStyleItem.backgroundColor = .gray
+            textStyleItem.keyboardType = .default
         }
     }
     
