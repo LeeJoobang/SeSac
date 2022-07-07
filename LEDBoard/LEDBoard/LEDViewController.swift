@@ -40,7 +40,6 @@ class LEDViewController: UIViewController, UITextFieldDelegate {
         buttonName.setTitle(highlighted, for: .highlighted) // 버튼을 꾸욱 누르면 반영이 된다. .highlighted는 버튼의 상태값을 뜻한다
         buttonName.setTitleColor(color, for: .normal) // 글자색
         buttonName.setTitleColor(color, for: .highlighted) // 글자색
-        
     }
     
     func studyOutletCollection(){
