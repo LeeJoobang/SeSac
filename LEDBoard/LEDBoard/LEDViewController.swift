@@ -20,17 +20,8 @@ class LEDViewController: UIViewController, UITextFieldDelegate {
         
         designTextField()
         studyOutletCollection()
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
-        self.textFieldView.isUserInteractionEnabled = true
-        textFieldView.addGestureRecognizer(tapGestureRecognizer)
-   
     }
-    
-    @IBAction func didTapView(_ sender: UITapGestureRecognizer) {
-        print("did tap view", sender)
-    }
-    
+
     func designTextField(){
         userTextField.placeholder = "표시할 내용을 작성해주세요."
         userTextField.text = "안녕하세요"
