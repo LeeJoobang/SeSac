@@ -78,12 +78,18 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6sy-wT-cpe">
+                                <rect key="frame" x="25" y="379" width="364" height="183"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6sy-wT-cpe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="02x-tG-s5w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6sy-wT-cpe" secondAttribute="bottom" constant="300" id="S4e-a4-gYJ"/>
                             <constraint firstItem="qH8-ip-g8v" firstAttribute="top" secondItem="rl8-KI-4J7" secondAttribute="bottom" constant="13" id="UeF-go-zbq"/>
                             <constraint firstItem="BSE-Q5-Uvv" firstAttribute="top" secondItem="rl8-KI-4J7" secondAttribute="bottom" constant="13" id="bO9-Ux-aj7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6sy-wT-cpe" secondAttribute="trailing" constant="25" id="dov-17-zzh"/>
                             <constraint firstItem="rl8-KI-4J7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eFm-HQ-naD"/>
                             <constraint firstItem="g4j-S9-Su7" firstAttribute="top" secondItem="rl8-KI-4J7" secondAttribute="bottom" constant="13" id="eqx-wt-e7p"/>
                             <constraint firstItem="dOG-Jp-xiD" firstAttribute="leading" secondItem="BSE-Q5-Uvv" secondAttribute="trailing" constant="8" id="f7X-rt-rq5"/>
@@ -92,6 +98,7 @@
                             <constraint firstItem="BSE-Q5-Uvv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hdh-sV-pFc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rl8-KI-4J7" secondAttribute="trailing" constant="20" id="k55-Eu-3u4"/>
                             <constraint firstItem="rl8-KI-4J7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="mvc-q0-Ujb"/>
+                            <constraint firstItem="6sy-wT-cpe" firstAttribute="top" secondItem="BSE-Q5-Uvv" secondAttribute="bottom" constant="200" id="uKf-vb-Yft"/>
                             <constraint firstItem="g4j-S9-Su7" firstAttribute="leading" secondItem="qH8-ip-g8v" secondAttribute="trailing" constant="8" id="z30-86-tMD"/>
                         </constraints>
                     </view>
@@ -102,6 +109,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="300" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
