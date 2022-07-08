@@ -38,5 +38,8 @@ class ViewController: UIViewController {
         fifteenImage.image = UIImage(named: "mono_baedal15")
         sixteenImage.image = UIImage(named: "mono_baedal16")
     }
+    
+    //viewdidload 수정
+    
 }
 

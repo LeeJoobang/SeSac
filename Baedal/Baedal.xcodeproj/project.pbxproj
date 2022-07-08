@@ -13,6 +13,7 @@
 		37A90DCA28731C8100B59AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A90DC828731C8100B59AA7 /* Main.storyboard */; };
 		37A90DCC28731C8200B59AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A90DCB28731C8200B59AA7 /* Assets.xcassets */; };
 		37A90DCF28731C8200B59AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A90DCD28731C8200B59AA7 /* LaunchScreen.storyboard */; };
+		37B557BC2877C5D600E76AEA /* AutolayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B557BB2877C5D600E76AEA /* AutolayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		37A90DCB28731C8200B59AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A90DCE28731C8200B59AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A90DD028731C8200B59AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B557BB2877C5D600E76AEA /* AutolayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				37A90DC428731C8100B59AA7 /* SceneDelegate.swift */,
 				37A90DC628731C8100B59AA7 /* ViewController.swift */,
 				37A90DC828731C8100B59AA7 /* Main.storyboard */,
+				37B557BB2877C5D600E76AEA /* AutolayoutViewController.swift */,
 				37A90DCB28731C8200B59AA7 /* Assets.xcassets */,
 				37A90DCD28731C8200B59AA7 /* LaunchScreen.storyboard */,
 				37A90DD028731C8200B59AA7 /* Info.plist */,
@@ -141,6 +144,7 @@
 				37A90DC728731C8100B59AA7 /* ViewController.swift in Sources */,
 				37A90DC328731C8100B59AA7 /* AppDelegate.swift in Sources */,
 				37A90DC528731C8100B59AA7 /* SceneDelegate.swift in Sources */,
+				37B557BC2877C5D600E76AEA /* AutolayoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
