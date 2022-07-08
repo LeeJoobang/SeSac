@@ -37,13 +37,6 @@ class ViewController: UIViewController {
         fourteenImage.image = UIImage(named: "mono_baedal14")
         fifteenImage.image = UIImage(named: "mono_baedal15")
         sixteenImage.image = UIImage(named: "mono_baedal16")
-        
-        print("1")
-        print("2")
-        print("2")
-        
-        print("반영?")
-
     }
 }
 
