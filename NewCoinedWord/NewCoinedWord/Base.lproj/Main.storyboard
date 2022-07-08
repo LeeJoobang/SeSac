@@ -25,11 +25,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="MeC-Gb-oaQ"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyu-Me-R3Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -43,7 +42,7 @@
                                     <constraint firstAttribute="trailing" secondItem="dvG-QG-F0B" secondAttribute="trailing" constant="8" id="bOx-NO-Sdh"/>
                                     <constraint firstAttribute="bottom" secondItem="dvG-QG-F0B" secondAttribute="bottom" id="lWb-kd-Ln3"/>
                                     <constraint firstItem="dvG-QG-F0B" firstAttribute="top" secondItem="rl8-KI-4J7" secondAttribute="top" id="mTV-Yt-tcQ"/>
-                                    <constraint firstItem="dvG-QG-F0B" firstAttribute="leading" secondItem="Oyu-Me-R3Q" secondAttribute="trailing" constant="8" id="yqh-rG-wxj"/>
+                                    <constraint firstItem="dvG-QG-F0B" firstAttribute="leading" secondItem="Oyu-Me-R3Q" secondAttribute="trailing" id="yqh-rG-wxj"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSE-Q5-Uvv">
@@ -132,6 +131,7 @@
                         <outlet property="threeTagButton" destination="qH8-ip-g8v" id="4nx-B6-G9h"/>
                         <outlet property="twoTagButton" destination="dOG-Jp-xiD" id="sFQ-WO-iLG"/>
                         <outlet property="userTextField" destination="Oyu-Me-R3Q" id="iK2-75-lJo"/>
+                        <outlet property="userView" destination="rl8-KI-4J7" id="C2S-wh-X1O"/>
                         <outletCollection property="tagCollection" destination="BSE-Q5-Uvv" collectionClass="NSMutableArray" id="kbn-bI-u8r"/>
                         <outletCollection property="tagCollection" destination="dOG-Jp-xiD" collectionClass="NSMutableArray" id="9yX-KD-5W8"/>
                         <outletCollection property="tagCollection" destination="qH8-ip-g8v" collectionClass="NSMutableArray" id="QbF-N9-r9u"/>
