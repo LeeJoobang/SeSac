@@ -61,7 +61,7 @@ class LEDViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true) // 탭 동작을 하게 될 경우에 뷰에서 더이상 수정을 하지 않겠다. 그 상태가 true 이기 때문에 키보드도 사라진다.
     }
     
-    // 1. keyboard - return 터치시 키보드 사라지는 기능
+    // 1. keyboard - return 터치시 키보드 사라지는 기능
     //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //        if (userTextField.text?.isEmpty ?? true){
     //            textField.resignFirstResponder()
