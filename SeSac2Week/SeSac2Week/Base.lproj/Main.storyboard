@@ -317,8 +317,129 @@
             </objects>
             <point key="canvasLocation" x="-1997.1014492753625" y="88.392857142857139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1Iu-OJ-qHd">
+            <objects>
+                <viewController id="7i8-wE-jlT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AzE-3c-gYL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TGL-2e-ALg">
+                                <rect key="frame" x="145" y="206" width="124" height="484"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUr-ww-tac">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LUr-ww-tac" secondAttribute="height" id="bfR-Ls-xof"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwf-2v-hN9">
+                                        <rect key="frame" x="0.0" y="134" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq0-NA-e9U">
+                                        <rect key="frame" x="0.0" y="164.5" width="124" height="124.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pq0-NA-e9U" secondAttribute="height" id="091-dm-NfT"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-eT-xcd">
+                                        <rect key="frame" x="0.0" y="299" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYZ-w5-mK7">
+                                        <rect key="frame" x="0.0" y="329.5" width="124" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zYZ-w5-mK7" secondAttribute="height" id="rCu-9o-xlC"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ0-y4-ZTi">
+                                        <rect key="frame" x="0.0" y="463.5" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mt5-vU-VC6" userLabel="I">
+                                <rect key="frame" x="285" y="206" width="124.5" height="484"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-Km-q1f">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cSY-Km-q1f" secondAttribute="height" id="jya-DS-lZx"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-JL-NVu">
+                                        <rect key="frame" x="0.0" y="134" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-fr-2YQ">
+                                        <rect key="frame" x="0.0" y="164.5" width="124.5" height="124.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="uOs-fr-2YQ" secondAttribute="height" id="i2l-HV-nnk"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-3J-eZy">
+                                        <rect key="frame" x="0.0" y="299" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zk-GX-bzZ">
+                                        <rect key="frame" x="0.0" y="329.5" width="124.5" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9Zk-GX-bzZ" secondAttribute="height" id="FWx-Dw-B39"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="sesac_slime1"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5n-gP-SCS">
+                                        <rect key="frame" x="0.0" y="463.5" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mzi-4R-ESi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TGL-2e-ALg" firstAttribute="width" secondItem="AzE-3c-gYL" secondAttribute="width" multiplier="0.3" id="7Jl-e5-zYt"/>
+                            <constraint firstItem="mt5-vU-VC6" firstAttribute="centerY" secondItem="TGL-2e-ALg" secondAttribute="centerY" id="8xn-1z-f77"/>
+                            <constraint firstItem="mt5-vU-VC6" firstAttribute="leading" secondItem="TGL-2e-ALg" secondAttribute="trailing" constant="16" id="HLs-sX-gRx"/>
+                            <constraint firstItem="TGL-2e-ALg" firstAttribute="centerY" secondItem="AzE-3c-gYL" secondAttribute="centerY" id="HkF-2V-qyw"/>
+                            <constraint firstItem="mt5-vU-VC6" firstAttribute="width" secondItem="TGL-2e-ALg" secondAttribute="width" id="IKR-y9-ymz"/>
+                            <constraint firstItem="mt5-vU-VC6" firstAttribute="height" secondItem="TGL-2e-ALg" secondAttribute="height" id="UDw-DH-Srz"/>
+                            <constraint firstItem="TGL-2e-ALg" firstAttribute="centerX" secondItem="AzE-3c-gYL" secondAttribute="centerX" id="yPa-Rd-ndk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GV6-48-nnr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-994.20289855072474" y="92.410714285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="sesac_slime1" width="278" height="258"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
