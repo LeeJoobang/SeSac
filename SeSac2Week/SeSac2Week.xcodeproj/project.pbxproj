@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370DBDD7287D21110098D8F0 /* enumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DBDD6287D21110098D8F0 /* enumViewController.swift */; };
 		378D15DE287CFD1500677924 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D15DD287CFD1500677924 /* TestViewController.swift */; };
 		37962207287BA6E9001DAEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37962206287BA6E9001DAEE8 /* AppDelegate.swift */; };
 		37962209287BA6E9001DAEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37962208287BA6E9001DAEE8 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370DBDD6287D21110098D8F0 /* enumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enumViewController.swift; sourceTree = "<group>"; };
 		378D15DD287CFD1500677924 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		37962203287BA6E9001DAEE8 /* SeSac2Week.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSac2Week.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37962206287BA6E9001DAEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				37962208287BA6E9001DAEE8 /* SceneDelegate.swift */,
 				3796220A287BA6E9001DAEE8 /* ViewController.swift */,
 				378D15DD287CFD1500677924 /* TestViewController.swift */,
+				370DBDD6287D21110098D8F0 /* enumViewController.swift */,
 				3796220C287BA6E9001DAEE8 /* Main.storyboard */,
 				3796220F287BA6EA001DAEE8 /* Assets.xcassets */,
 				37962211287BA6EA001DAEE8 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				37962207287BA6E9001DAEE8 /* AppDelegate.swift in Sources */,
 				378D15DE287CFD1500677924 /* TestViewController.swift in Sources */,
 				37962209287BA6E9001DAEE8 /* SceneDelegate.swift in Sources */,
+				370DBDD7287D21110098D8F0 /* enumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
