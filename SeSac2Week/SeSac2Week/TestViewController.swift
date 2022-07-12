@@ -13,17 +13,27 @@ class TestViewController: UIViewController {
     @IBOutlet weak var emotionFirstButton: UIButton!
     @IBOutlet weak var emotionFirstLabel: UILabel!
     
-    var emotionFirst = 0
+    
+    
+    
+    
+    var emotionArr = [0, 0, 0, 0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emotionFirstButton.tag = 0 // 이거 유용
+        
+        
 
     }
     
     @IBAction func emotionFirstClicked(_ sender: UIButton) {
         print(sender.tag, sender.currentTitle, sender.currentImage)
-        emotionFirst += 1
+        
+        
+        emotionArr[sender.tag] += 1 // 배열 순서에 맞춰 카운트 1일을 더한다.
+        
         emotionFirstLabel.textAlignment = .center
-        emotionFirstLabel.text = "행복감\(emotionFirst)"
+        emotionFirstLabel.text = "행복감\(emotionArr[0])"
     }
 }
