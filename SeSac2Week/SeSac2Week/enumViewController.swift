@@ -1,10 +1,3 @@
-//
-//  enumViewController.swift
-//  SeSac2Week
-//
-//  Created by Joobang Lee on 2022/07/12.
-//
-
 import UIKit
 
 enum AppleDevice: Int {
@@ -12,7 +5,6 @@ enum AppleDevice: Int {
     case iPad = 1
     case watch = 2
 }
-
 
 class enumViewController: UIViewController {
 
@@ -23,8 +15,6 @@ class enumViewController: UIViewController {
         super.viewDidLoad()
         //만약 기본값으로 보고 싶다. 그럼 ibaction 함수를 여기서 먼저 호출하면 된다.
         segmentCotrolValuedChanged(segmentControl)
-        
-
     }
     
     @IBAction func segmentCotrolValuedChanged(_ sender: UISegmentedControl) {
@@ -42,9 +32,6 @@ class enumViewController: UIViewController {
             resultLabel.text = "오류"
 
         }
-        
-        
-        
 //        if segmentControl.selectedSegmentIndex == 0{
 //            resultLabel.text = "첫번째 선택"
 //        } else if segmentControl.selectedSegmentIndex == 1{

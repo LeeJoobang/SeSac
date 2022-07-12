@@ -1,10 +1,3 @@
-//
-//  TestViewController.swift
-//  SeSac2Week
-//
-//  Created by Joobang Lee on 2022/07/12.
-//
-
 import UIKit
 
 class TestViewController: UIViewController {
@@ -12,11 +5,7 @@ class TestViewController: UIViewController {
     
     @IBOutlet weak var emotionFirstButton: UIButton!
     @IBOutlet weak var emotionFirstLabel: UILabel!
-    
-    
-    
-    
-    
+  
     var emotionArr = [0, 0, 0, 0, 0, 0]
     
     override func viewDidLoad() {
@@ -25,7 +14,6 @@ class TestViewController: UIViewController {
         emotionFirstLabel.text = setUserNickName()
         view.backgroundColor = example().0
         emotionFirstButton.setImage(UIImage(named: example().2), for: .normal)
-        
     
     }
     
@@ -51,7 +39,7 @@ class TestViewController: UIViewController {
 
         return "저는 \(select)입니다."
     }
-    //
+
     func showAlertController(){
         // 1. 흰색바탕: uialertController
         let alert = UIAlertController(title: "title", message: "여기에 메세지 ", preferredStyle: .alert)

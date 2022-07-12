@@ -36,8 +36,6 @@ class ViewController: UIViewController {
 
     }
     
-    
-
     @IBAction func countButton(_ sender: UIButton) {
         buttonName()
         print(sender.titleLabel?.text)
