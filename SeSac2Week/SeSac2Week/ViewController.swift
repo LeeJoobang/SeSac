@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let nameArr = ["행복해", "사랑해", "좋아해", "당황해", "속상해", "우울해", "심심해", "어이해", "호호해"]
 //        var count = Int()
         for index in 0...nameCollection.count - 1{
-            nameCollection[index].text = "\(nameArr[index])\(count)"
+//            nameCollection[index].text = "\(nameArr[index])\(count)"
         }
     }
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         var tmpKey = sender.titleLabel?.text ?? "nothing"
         for item in nameArr{
             if item == tmpKey {
-                count += 1
+//                count += 1
             }
         }
         
