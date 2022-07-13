@@ -16,13 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Ow-nRS">
+                                <rect key="frame" x="22" y="84" width="370" height="313.5"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iQG-Ow-nRS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="AnY-o2-ulV"/>
+                            <constraint firstItem="iQG-Ow-nRS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="IZF-Nj-mrc"/>
+                            <constraint firstItem="iQG-Ow-nRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Q6b-hQ-9cn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iQG-Ow-nRS" secondAttribute="trailing" constant="22" id="Q7g-UT-lBL"/>
+                            <constraint firstItem="iQG-Ow-nRS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nBd-Mo-MDu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
