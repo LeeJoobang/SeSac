@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ilia-bronskiy-1iUKh12z8U0-unsplash.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
