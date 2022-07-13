@@ -19,6 +19,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Ow-nRS">
                                 <rect key="frame" x="22" y="84" width="370" height="313.5"/>
+                                <connections>
+                                    <action selector="userWheelDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="BbD-GP-xWK"/>
+                                </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="UVZ-xg-Rfy">
                                 <rect key="frame" x="22" y="428" width="183" height="346"/>
@@ -82,13 +85,6 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Y5-29-vTy">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="164"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-DZ-PK4">
-                                                <rect key="frame" x="17" y="10" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmB-R1-eIh">
                                                 <rect key="frame" x="70" y="72" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,6 +96,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-DZ-PK4">
+                                                <rect key="frame" x="17" y="10" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -151,6 +154,21 @@
                             <constraint firstItem="hIY-VJ-hMl" firstAttribute="width" secondItem="UVZ-xg-Rfy" secondAttribute="width" id="oy4-BY-FWD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userPickDate" destination="iQG-Ow-nRS" id="DWd-Q4-BFf"/>
+                        <outletCollection property="imageCollection" destination="Nui-1z-eao" collectionClass="NSMutableArray" id="rlm-LE-jmy"/>
+                        <outletCollection property="dDayLabelCollection" destination="dbC-ZW-Zuf" collectionClass="NSMutableArray" id="q3e-zx-lC8"/>
+                        <outletCollection property="imageCollection" destination="cZf-mM-rPP" collectionClass="NSMutableArray" id="11d-TU-z4Y"/>
+                        <outletCollection property="imageCollection" destination="Ij7-KV-zeQ" collectionClass="NSMutableArray" id="YLs-CF-jb3"/>
+                        <outletCollection property="imageCollection" destination="S6M-1X-3eM" collectionClass="NSMutableArray" id="HD9-oS-ETZ"/>
+                        <outletCollection property="dDayLabelCollection" destination="K42-DZ-PK4" collectionClass="NSMutableArray" id="NdK-6l-odF"/>
+                        <outletCollection property="dDayLabelCollection" destination="S7V-i6-62b" collectionClass="NSMutableArray" id="YCv-rt-F1H"/>
+                        <outletCollection property="dDayLabelCollection" destination="FhK-B6-Lgb" collectionClass="NSMutableArray" id="Lha-4K-vEo"/>
+                        <outletCollection property="thatDayCollection" destination="cUt-3J-gmJ" collectionClass="NSMutableArray" id="lSd-86-fGz"/>
+                        <outletCollection property="thatDayCollection" destination="pmB-R1-eIh" collectionClass="NSMutableArray" id="TOw-SU-dMx"/>
+                        <outletCollection property="thatDayCollection" destination="laQ-vJ-Lv7" collectionClass="NSMutableArray" id="tbE-wi-ZPg"/>
+                        <outletCollection property="thatDayCollection" destination="d1n-jc-6sa" collectionClass="NSMutableArray" id="94X-tL-MS3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
