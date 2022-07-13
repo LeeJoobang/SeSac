@@ -9,6 +9,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage()
+    }
+    
+    func backgroundImage(){
+        for number in 0...imageCollection.count - 1{
+            imageCollection[number].image = UIImage(named: "img\(number+1)")
+            imageCollection[number].contentMode = .scaleToFill
+            imageCollection[number].layer.cornerRadius = 20
+            imageCollection[number].alpha = 0.8
+        }
     }
     
     @IBAction func userWheelDate(_ sender: UIDatePicker) {
