@@ -1,11 +1,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var userPickDate: UIDatePicker!
     @IBOutlet var imageCollection: [UIImageView]!
     @IBOutlet var dDayLabelCollection: [UILabel]!
     @IBOutlet var thatDayCollection: [UILabel]!
+    
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,37 +31,29 @@ class ViewController: UIViewController {
         }
     }
     
-//    func showCalculatedDate(_ sender: UIDatePicker){
-//        for number in 0...thatDayCollection.count - 1{
-//            thatDayCollection[number].text = finalDate
-//            thatDayCollection[number].textAlignment = .center
-//            thatDayCollection[number].textColor = .black
-//        }
-//    }
-    
-    
-    @IBAction func userWheelDate(_ sender: UIDatePicker) {
-        userPickDate(sender)
+    @IBAction func userWheelDate(_ sender: UIDatePicker) { // 상위함수로서 하위함수의 호출순서 관계들을 관리하고 있다.(코드레벨)
+        let userSelectedDate = formatUserPickDate(sender)
+        changeLabelDate(userSelectedDate)
     }
- 
-    func userPickDate(_ sender: UIDatePicker){
+    
+    func formatUserPickDate(_ sender: UIDatePicker) -> Date? {
         sender.datePickerMode = UIDatePicker.Mode.date
-        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         let selectedDate = dateFormatter.string(from: sender.date) // selectedDate의 값을 string화 했다.
-        let tmp: Date?
-        tmp = dateFormatter.date(from: selectedDate)
+        let formattedDate = dateFormatter.date(from: selectedDate)
+        return formattedDate
+    }
+    
+    func changeLabelDate(_ formattedDate: Date?){
+        let formattedDate = formattedDate
         
-        if let startDate = tmp {
+        if let startDate = formattedDate {
             let count = [100, 200, 300, 400]
             for i in 0...3{
                 let calculateDate = Calendar.current.date(byAdding: .day, value: count[i], to: startDate)
                 let finalDate = dateFormatter.string(from: calculateDate ?? startDate)
                 thatDayCollection[i].text = finalDate
-                thatDayCollection[i].numberOfLines = 2
-                thatDayCollection[i].sizeThatFits(thatDayCollection[i].frame.size)
             }
         }
     }
-    
 }
