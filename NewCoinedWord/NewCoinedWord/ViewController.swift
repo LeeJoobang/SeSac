@@ -52,7 +52,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func buttonName(){
         let newWord = NewWord.allCases
-        print(newWord)
         var count = Int()
         for hashItem in tagCollection{
             hashItem.setTitle(newWord[count].rawValue, for: .normal)
