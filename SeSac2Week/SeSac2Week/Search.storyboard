@@ -114,6 +114,11 @@
             <point key="canvasLocation" x="1040.5797101449275" y="75"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="naG-h0-CT1">
+            <size key="intrinsicContentSize" width="132.5" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
