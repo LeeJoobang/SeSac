@@ -1,12 +1,22 @@
 import UIKit
 class SettingTableViewController: UITableViewController {
+    
     let header = ["전체 설정", "개인 설정", "기타"]
     let data = [["공지사항", "실험실", "버전 정보"], ["개인/보안", "알림", "채팅", "멀티프로필"], ["고객센터"] ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(addNavigationBar())
     }
-
+    
+    func addNavigationBar() -> UIView{
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: Int(view.frame.size.width), height: 44))
+        navigationBar.backgroundColor = .red
+        let navigationTitle = UINavigationItem()
+        navigationTitle.title = "설정"
+        return navigationBar
+    }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return header[0]
@@ -23,7 +33,7 @@ class SettingTableViewController: UITableViewController {
         let header = view as! UITableViewHeaderFooterView
         header.contentView.backgroundColor = UIColor.black
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return header.count
     }
@@ -54,8 +64,7 @@ class SettingTableViewController: UITableViewController {
         cell.textLabel?.text = data[indexPath.section][indexPath.row]
         cell.textLabel?.textColor = .gray
         cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+        cell.translatesAutoresizingMaskIntoConstraints = false
         return cell
-        
     }
-    
 }

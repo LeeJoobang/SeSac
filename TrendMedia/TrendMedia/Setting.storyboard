@@ -85,19 +85,19 @@
                                         <color key="tintColor" red="1" green="0.54797401320000005" blue="0.34608037489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eUV-qX-bmx" detailTextLabel="MTd-mK-9BA" imageView="JIi-ui-0Bo" style="IBUITableViewCellStyleSubtitle" id="xz0-Rf-djh">
-                                        <rect key="frame" x="20" y="136.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="136.5" width="374" height="46.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xz0-Rf-djh" id="1Tb-sk-iKa">
-                                            <rect key="frame" x="0.0" y="0.0" width="345.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345.5" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eUV-qX-bmx">
-                                                    <rect key="frame" x="56" y="5.5" width="22.5" height="14.5"/>
+                                                    <rect key="frame" x="56" y="6.5" width="22.5" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="업무">
                                                             <attributes>
-                                                                <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                                                <font key="NSFont" metaFont="system"/>
                                                                 <font key="NSOriginalFont" metaFont="system"/>
                                                             </attributes>
                                                         </fragment>
@@ -105,7 +105,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MTd-mK-9BA">
-                                                    <rect key="frame" x="56" y="22.5" width="74" height="14"/>
+                                                    <rect key="frame" x="56" y="25" width="74" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="09:00 ~ 18:00">
@@ -118,7 +118,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JIi-ui-0Bo">
-                                                    <rect key="frame" x="19.5" y="8" width="21.5" height="27"/>
+                                                    <rect key="frame" x="19.5" y="9.5" width="21.5" height="27"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <imageReference key="image" image="lanyardcard.fill" catalog="system" symbolScale="large"/>
                                                 </imageView>
@@ -127,7 +127,7 @@
                                         <color key="tintColor" red="0.70323743760000001" green="1" blue="0.43719830310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="UEa-gr-B5Y" detailTextLabel="JyI-7I-SCx" imageView="LyD-7b-Tzd" style="IBUITableViewCellStyleValue1" id="RNI-5O-kwT">
-                                        <rect key="frame" x="20" y="180" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="183" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RNI-5O-kwT" id="FIx-v0-KEs">
                                             <rect key="frame" x="0.0" y="0.0" width="345.5" height="43.5"/>
@@ -177,7 +177,7 @@
                             <tableViewSection footerTitle="이 기기에서 집중 모드를 켜면 사용자의 다른 기기에서도 집중 모드가 켜집니다." id="UIz-rK-cjp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="YC8-YT-liQ">
-                                        <rect key="frame" x="20" y="268" width="374" height="39.5"/>
+                                        <rect key="frame" x="20" y="271" width="374" height="39.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YC8-YT-liQ" id="6SE-oO-IYq">
                                             <rect key="frame" x="0.0" y="0.0" width="345.5" height="39.5"/>
