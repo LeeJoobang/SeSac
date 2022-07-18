@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378F530428855508009734BF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F530328855508009734BF /* HomeTableViewController.swift */; };
 		37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B923992884DDBA00EB8A34 /* AppDelegate.swift */; };
 		37B9239C2884DDBA00EB8A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */; };
 		37B9239E2884DDBA00EB8A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9239D2884DDBA00EB8A34 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		378F530328855508009734BF /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		37B923962884DDBA00EB8A34 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B923992884DDBA00EB8A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				37CB6E8C2884F111007805C5 /* Home.storyboard */,
 				37CB6E90288534C5007805C5 /* Setting.storyboard */,
 				37CB6E8E2884FE35007805C5 /* SettingTableViewController.swift */,
+				378F530328855508009734BF /* HomeTableViewController.swift */,
 				37B923A22884DDBC00EB8A34 /* Assets.xcassets */,
 				37B923A42884DDBC00EB8A34 /* LaunchScreen.storyboard */,
 				37B923A72884DDBC00EB8A34 /* Info.plist */,
@@ -153,6 +156,7 @@
 				37B9239E2884DDBA00EB8A34 /* ViewController.swift in Sources */,
 				37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */,
 				37B9239C2884DDBA00EB8A34 /* SceneDelegate.swift in Sources */,
+				378F530428855508009734BF /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
