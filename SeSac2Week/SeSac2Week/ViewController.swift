@@ -35,10 +35,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
+        buttonClick(sender)
+        
+    
+    }
+    
+    func buttonClick(_ sender: UIButton){
         emotionArr[sender.tag] += 1
         labelCollection[sender.tag].text = "\(labelEmotion[sender.tag]) \(String(emotionArr[sender.tag]))"
         labelCollection[sender.tag].textAlignment = .center
-        
+
     }
+    
 }
 

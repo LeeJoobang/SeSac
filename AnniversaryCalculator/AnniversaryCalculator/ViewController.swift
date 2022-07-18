@@ -52,6 +52,8 @@ class ViewController: UIViewController {
             for i in 0...3{
                 let calculateDate = Calendar.current.date(byAdding: .day, value: count[i], to: startDate)
                 let finalDate = dateFormatter.string(from: calculateDate ?? startDate)
+                // dateformatter 프로퍼티의 string 메서드의 리턴값을 finaldate상수에 할당했다.
+                // 메소드는 {} 값을 호출할 수 있으며, 프로퍼티는 값을 할당 또는 변경이 가능하다.
                 thatDayCollection[i].text = finalDate
             }
         }
