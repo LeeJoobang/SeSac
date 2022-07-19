@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3710071E28864788002629A7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710071D28864788002629A7 /* UITextField+Extension.swift */; };
-		3710072028864B92002629A7 /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710071F28864B92002629A7 /* BucketlistTableViewController.swift */; };
-		3710072228864D9A002629A7 /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710072128864D9A002629A7 /* BucketlistTableViewCell.swift */; };
+		3710072E2886797E002629A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007252886797D002629A7 /* SearchViewController.swift */; };
+		3710072F2886797E002629A7 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007262886797D002629A7 /* TrendViewController.swift */; };
+		371007302886797E002629A7 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371007272886797D002629A7 /* Intro.storyboard */; };
+		371007312886797E002629A7 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371007282886797D002629A7 /* Trend.storyboard */; };
+		371007322886797E002629A7 /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007292886797D002629A7 /* BucketlistTableViewCell.swift */; };
+		371007332886797E002629A7 /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710072A2886797D002629A7 /* BucketlistTableViewController.swift */; };
+		371007342886797E002629A7 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710072B2886797D002629A7 /* Search.storyboard */; };
+		371007352886797E002629A7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710072C2886797D002629A7 /* UITextField+Extension.swift */; };
+		371007362886797E002629A7 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710072D2886797E002629A7 /* UIViewController+Extension.swift */; };
+		3710073928867A46002629A7 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710073828867A46002629A7 /* Shopping.storyboard */; };
 		378F530428855508009734BF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F530328855508009734BF /* HomeTableViewController.swift */; };
 		37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B923992884DDBA00EB8A34 /* AppDelegate.swift */; };
 		37B9239C2884DDBA00EB8A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */; };
@@ -20,18 +27,19 @@
 		37CB6E8D2884F111007805C5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CB6E8C2884F111007805C5 /* Home.storyboard */; };
 		37CB6E8F2884FE35007805C5 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB6E8E2884FE35007805C5 /* SettingTableViewController.swift */; };
 		37CB6E91288534C5007805C5 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CB6E90288534C5007805C5 /* Setting.storyboard */; };
-		37D0C63B2886400E008AB018 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D0C63A2886400E008AB018 /* Search.storyboard */; };
-		37D0C63D28864041008AB018 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D0C63C28864041008AB018 /* Trend.storyboard */; };
-		37D0C64028864075008AB018 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D0C63F28864075008AB018 /* Intro.storyboard */; };
-		37D0C6422886440A008AB018 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D0C6412886440A008AB018 /* TrendViewController.swift */; };
-		37D0C64428864418008AB018 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D0C64328864418008AB018 /* SearchViewController.swift */; };
-		37D0C6462886451A008AB018 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D0C6452886451A008AB018 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3710071D28864788002629A7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		3710071F28864B92002629A7 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
-		3710072128864D9A002629A7 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
+		371007252886797D002629A7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		371007262886797D002629A7 /* TrendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		371007272886797D002629A7 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		371007282886797D002629A7 /* Trend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
+		371007292886797D002629A7 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
+		3710072A2886797D002629A7 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
+		3710072B2886797D002629A7 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		3710072C2886797D002629A7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		3710072D2886797E002629A7 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3710073828867A46002629A7 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
 		378F530328855508009734BF /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		37B923962884DDBA00EB8A34 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B923992884DDBA00EB8A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,12 +52,6 @@
 		37CB6E8C2884F111007805C5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		37CB6E8E2884FE35007805C5 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		37CB6E90288534C5007805C5 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
-		37D0C63A2886400E008AB018 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		37D0C63C28864041008AB018 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
-		37D0C63F28864075008AB018 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
-		37D0C6412886440A008AB018 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
-		37D0C64328864418008AB018 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		37D0C6452886451A008AB018 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		371007242886790F002629A7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3710072D2886797E002629A7 /* UIViewController+Extension.swift */,
+				3710072C2886797D002629A7 /* UITextField+Extension.swift */,
+				371007262886797D002629A7 /* TrendViewController.swift */,
+				371007282886797D002629A7 /* Trend.storyboard */,
+				371007252886797D002629A7 /* SearchViewController.swift */,
+				3710072B2886797D002629A7 /* Search.storyboard */,
+				371007272886797D002629A7 /* Intro.storyboard */,
+				3710072A2886797D002629A7 /* BucketlistTableViewController.swift */,
+				371007292886797D002629A7 /* BucketlistTableViewCell.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		37100737288679DA002629A7 /* Work  */ = {
+			isa = PBXGroup;
+			children = (
+				3710073828867A46002629A7 /* Shopping.storyboard */,
+			);
+			path = "Work ";
+			sourceTree = "<group>";
+		};
 		37B9238D2884DDBA00EB8A34 = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +108,9 @@
 		37B923982884DDBA00EB8A34 /* TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
+				37100737288679DA002629A7 /* Work  */,
+				371007242886790F002629A7 /* New Group */,
 				37B923992884DDBA00EB8A34 /* AppDelegate.swift */,
-				37D0C63E2886405B008AB018 /* New Group */,
 				37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */,
 				37B9239D2884DDBA00EB8A34 /* ViewController.swift */,
 				37B9239F2884DDBA00EB8A34 /* Main.storyboard */,
@@ -96,22 +123,6 @@
 				37B923A72884DDBC00EB8A34 /* Info.plist */,
 			);
 			path = TrendMedia;
-			sourceTree = "<group>";
-		};
-		37D0C63E2886405B008AB018 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				37D0C63A2886400E008AB018 /* Search.storyboard */,
-				37D0C63C28864041008AB018 /* Trend.storyboard */,
-				3710072128864D9A002629A7 /* BucketlistTableViewCell.swift */,
-				3710071F28864B92002629A7 /* BucketlistTableViewController.swift */,
-				37D0C63F28864075008AB018 /* Intro.storyboard */,
-				37D0C6412886440A008AB018 /* TrendViewController.swift */,
-				37D0C64328864418008AB018 /* SearchViewController.swift */,
-				37D0C6452886451A008AB018 /* UIViewController+Extension.swift */,
-				3710071D28864788002629A7 /* UITextField+Extension.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,14 +183,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D0C63D28864041008AB018 /* Trend.storyboard in Resources */,
+				371007312886797E002629A7 /* Trend.storyboard in Resources */,
 				37B923A62884DDBC00EB8A34 /* LaunchScreen.storyboard in Resources */,
 				37B923A32884DDBC00EB8A34 /* Assets.xcassets in Resources */,
-				37D0C64028864075008AB018 /* Intro.storyboard in Resources */,
 				37CB6E91288534C5007805C5 /* Setting.storyboard in Resources */,
 				37B923A12884DDBA00EB8A34 /* Main.storyboard in Resources */,
-				37D0C63B2886400E008AB018 /* Search.storyboard in Resources */,
 				37CB6E8D2884F111007805C5 /* Home.storyboard in Resources */,
+				3710073928867A46002629A7 /* Shopping.storyboard in Resources */,
+				371007342886797E002629A7 /* Search.storyboard in Resources */,
+				371007302886797E002629A7 /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,16 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3710071E28864788002629A7 /* UITextField+Extension.swift in Sources */,
-				37D0C6462886451A008AB018 /* UIViewController+Extension.swift in Sources */,
+				3710072E2886797E002629A7 /* SearchViewController.swift in Sources */,
+				371007362886797E002629A7 /* UIViewController+Extension.swift in Sources */,
 				37CB6E8F2884FE35007805C5 /* SettingTableViewController.swift in Sources */,
-				37D0C64428864418008AB018 /* SearchViewController.swift in Sources */,
 				37B9239E2884DDBA00EB8A34 /* ViewController.swift in Sources */,
 				37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */,
+				3710072F2886797E002629A7 /* TrendViewController.swift in Sources */,
+				371007352886797E002629A7 /* UITextField+Extension.swift in Sources */,
+				371007322886797E002629A7 /* BucketlistTableViewCell.swift in Sources */,
 				37B9239C2884DDBA00EB8A34 /* SceneDelegate.swift in Sources */,
-				3710072028864B92002629A7 /* BucketlistTableViewController.swift in Sources */,
-				37D0C6422886440A008AB018 /* TrendViewController.swift in Sources */,
-				3710072228864D9A002629A7 /* BucketlistTableViewCell.swift in Sources */,
+				371007332886797E002629A7 /* BucketlistTableViewController.swift in Sources */,
 				378F530428855508009734BF /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
