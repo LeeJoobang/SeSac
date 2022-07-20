@@ -1,6 +1,8 @@
 import UIKit
 class BookSearchCollectionViewController: UICollectionViewController {
     
+    var bookList = BookInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
@@ -10,6 +12,7 @@ class BookSearchCollectionViewController: UICollectionViewController {
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
         let width = UIScreen.main.bounds.width - (spacing * 3)
+        
         layout.itemSize = CGSize(width: width / 2, height: width / 2)
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
@@ -18,7 +21,6 @@ class BookSearchCollectionViewController: UICollectionViewController {
         layout.collectionView?.layer.cornerRadius = 10
     
         collectionView.collectionViewLayout = layout
-        collectionView.layer.cornerRadius = 6.0
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -28,13 +30,8 @@ class BookSearchCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookSearchCollectionViewCell", for: indexPath) as! BookSearchCollectionViewCell
-        cell.bookBackgroundView.backgroundColor = .orange
-        cell.layer.cornerRadius = 10
-        
-        cell.bookTitleLabel.text = "hi"
-        cell.classificationLabel.text = "7.7"
-        cell.bookCoverImageView.image = UIImage(named: "book1")
-
+        let data = bookList.book[indexPath.row]
+        cell.configureInfo(data: data)
         return cell
     }
     
