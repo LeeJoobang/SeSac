@@ -28,8 +28,12 @@ class BookSearchCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookSearchCollectionViewCell", for: indexPath) as! BookSearchCollectionViewCell
-        cell.bookImageView.backgroundColor = .orange
+        cell.bookBackgroundView.backgroundColor = .orange
         cell.layer.cornerRadius = 10
+        
+        cell.bookTitleLabel.text = "hi"
+        cell.classificationLabel.text = "7.7"
+        cell.bookCoverImageView.image = UIImage(named: "book1")
 
         return cell
     }
