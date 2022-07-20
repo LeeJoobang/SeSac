@@ -23,6 +23,8 @@
 		371007482886A7C5002629A7 /* TrendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007472886A7C5002629A7 /* TrendSearchTableViewCell.swift */; };
 		3710074A2886A9DE002629A7 /* TrendSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371007492886A9DE002629A7 /* TrendSearch.storyboard */; };
 		378F530428855508009734BF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F530328855508009734BF /* HomeTableViewController.swift */; };
+		37A4976828878C9F00B2FEF7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4976728878C9F00B2FEF7 /* Movie.swift */; };
+		37A4976A2887943B00B2FEF7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A497692887943B00B2FEF7 /* MovieInfo.swift */; };
 		37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B923992884DDBA00EB8A34 /* AppDelegate.swift */; };
 		37B9239C2884DDBA00EB8A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */; };
 		37B9239E2884DDBA00EB8A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9239D2884DDBA00EB8A34 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		371007472886A7C5002629A7 /* TrendSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendSearchTableViewCell.swift; sourceTree = "<group>"; };
 		371007492886A9DE002629A7 /* TrendSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendSearch.storyboard; sourceTree = "<group>"; };
 		378F530328855508009734BF /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		37A4976728878C9F00B2FEF7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		37A497692887943B00B2FEF7 /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		37B923962884DDBA00EB8A34 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B923992884DDBA00EB8A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B9239B2884DDBA00EB8A34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			children = (
 				371007472886A7C5002629A7 /* TrendSearchTableViewCell.swift */,
 				371007452886A7B1002629A7 /* TrendSearchTableViewController.swift */,
+				37A4976728878C9F00B2FEF7 /* Movie.swift */,
+				37A497692887943B00B2FEF7 /* MovieInfo.swift */,
 				371007492886A9DE002629A7 /* TrendSearch.storyboard */,
 			);
 			path = Work2;
@@ -226,12 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A4976A2887943B00B2FEF7 /* MovieInfo.swift in Sources */,
 				3710072E2886797E002629A7 /* SearchViewController.swift in Sources */,
 				371007362886797E002629A7 /* UIViewController+Extension.swift in Sources */,
 				37CB6E8F2884FE35007805C5 /* SettingTableViewController.swift in Sources */,
 				3710073B28868E17002629A7 /* ShoppinglistTableViewController.swift in Sources */,
 				37B9239E2884DDBA00EB8A34 /* ViewController.swift in Sources */,
 				37B9239A2884DDBA00EB8A34 /* AppDelegate.swift in Sources */,
+				37A4976828878C9F00B2FEF7 /* Movie.swift in Sources */,
 				3710072F2886797E002629A7 /* TrendViewController.swift in Sources */,
 				371007462886A7B1002629A7 /* TrendSearchTableViewController.swift in Sources */,
 				3710073D28868E5B002629A7 /* ShoppinglistTableViewCell.swift in Sources */,
