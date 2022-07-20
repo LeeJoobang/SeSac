@@ -42,11 +42,8 @@ class RecommandCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as! RecommandCollectionViewCell
         cell.backgroundColor = .orange
    //posterImageView
-        let url = URL(string: imageViewLink)
-        cell.kf.setImage(with: url)
-        
-        
-        
+//        let url = URL(string: imageViewLink)
+//        cell.kf.setImage(with: url)
         return cell
     }
     
