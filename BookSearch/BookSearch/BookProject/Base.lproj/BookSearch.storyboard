@@ -31,7 +31,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" red="0.97541617670000003" green="0.84476027210000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="bookImageView" destination="q1e-gd-Bco" id="iAB-g1-upA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
