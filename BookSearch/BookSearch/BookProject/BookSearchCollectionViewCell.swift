@@ -18,7 +18,6 @@ class BookSearchCollectionViewCell: UICollectionViewCell {
         
         bookBackgroundView.backgroundColor = data.backgroundColor
         bookBackgroundView.layer.cornerRadius = 10
-
     }
     
 }

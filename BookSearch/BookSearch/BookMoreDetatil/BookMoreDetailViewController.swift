@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchBookInformationViewController: UIViewController {
+class BookMoreDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
