@@ -6,6 +6,27 @@ class BookSearchCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
+        navigationItem.title = "Book Infomation"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicked))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBookInfomation))
+
+    }
+    
+    @objc
+    func backButtonClicked(){
+        self.dismiss(animated: true)
+        
+    }
+    
+    @objc
+    func searchBookInfomation(_ sender: UIButton){
+        print(sender)
+        let storyboard = UIStoryboard(name: "SearchBookInformation", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchBookInformationViewController") as! SearchBookInformationViewController
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
     }
     
     func layout(){
