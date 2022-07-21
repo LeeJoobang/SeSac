@@ -20,11 +20,10 @@ class BookSearchCollectionViewController: UICollectionViewController {
     
     @objc
     func searchBookInfomation(_ sender: UIButton){
-        print(sender)
         let storyboard = UIStoryboard(name: "SearchBookInformation", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchBookInformationViewController") as! SearchBookInformationViewController
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
+        nav.modalPresentationStyle = .formSheet
         self.present(nav, animated: true)
     }
     
