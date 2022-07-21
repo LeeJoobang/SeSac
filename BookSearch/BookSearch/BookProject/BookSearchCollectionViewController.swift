@@ -10,7 +10,6 @@ class BookSearchCollectionViewController: UICollectionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicked))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBookInfomation))
-
     }
     
     @objc
@@ -56,4 +55,9 @@ class BookSearchCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "BookDetail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "BookDetailViewController") as! BookDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
