@@ -204,9 +204,23 @@
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Iqo-Oq-jdf"/>
-                                    <barButtonItem title="새로고침" id="ag2-AD-7LA"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="E6w-Ck-pAu"/>
-                                    <barButtonItem title="Item" id="GEW-ap-rqy"/>
+                                    <barButtonItem title="뒤로가기" id="ag2-AD-7LA">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="hrf-5l-t7e" id="Kt1-5S-Neu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GZP-7u-MX4"/>
+                                    <barButtonItem title="새로고침" id="Xah-Oi-tVs">
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" destination="hrf-5l-t7e" id="qWh-oe-u3L"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="B4z-ew-64p"/>
+                                    <barButtonItem title="앞으로 이동" id="k3a-Fb-Pyo">
+                                        <connections>
+                                            <action selector="goForwardButtonClicked:" destination="hrf-5l-t7e" id="J7i-1p-dWI"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tg7-wi-kMo">
@@ -234,6 +248,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goBackButton" destination="ag2-AD-7LA" id="sJG-OY-WP3"/>
                         <outlet property="searchBar" destination="B8U-sW-YRV" id="qdc-87-cV2"/>
                         <outlet property="webView" destination="Tg7-wi-kMo" id="z7a-Bw-G0K"/>
                     </connections>

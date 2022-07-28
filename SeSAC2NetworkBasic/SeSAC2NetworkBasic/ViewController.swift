@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  SeSAC2NetworkBasic
-//
-//  Created by Joobang Lee on 2022/07/27.
-//
-
 import UIKit
 
 class ViewController: UIViewController{

@@ -1,10 +1,3 @@
-//
-//  WebViewViewController.swift
-//  SeSAC2NetworkBasic
-//
-//  Created by Joobang Lee on 2022/07/28.
-//
-
 import UIKit
 import WebKit
 
@@ -12,6 +5,13 @@ class WebViewViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
+    
+    @IBOutlet weak var goBackButton: UIBarButtonItem!
+    
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    
+    @IBOutlet weak var goForwardButton: UIBarButtonItem!
+    
     
     var destinationURL: String = "https://www.apple.com"
     //http 대부분 차단한다.
@@ -31,6 +31,20 @@ class WebViewViewController: UIViewController {
         
         let request = URLRequest(url: url)
         webView.load(request)
+    }
+    
+    @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
+        self.webView.goBack()
+    }
+   
+    @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
+        self.webView.reload()
+    }
+    
+    @IBAction func goForwardButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoForward {
+            self.webView.goForward()
+        }
     }
 }
 
