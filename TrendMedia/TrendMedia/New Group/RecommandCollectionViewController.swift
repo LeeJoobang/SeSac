@@ -40,10 +40,9 @@ class RecommandCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as! RecommandCollectionViewCell
-        cell.backgroundColor = .orange
-   //posterImageView
-//        let url = URL(string: imageViewLink)
-//        cell.kf.setImage(with: url)
+        cell.recommandImageView.backgroundColor = .orange
+        let url = URL(string: imageViewLink)
+        cell.recommandImageView.kf.setImage(with: url)
         return cell
     }
     
