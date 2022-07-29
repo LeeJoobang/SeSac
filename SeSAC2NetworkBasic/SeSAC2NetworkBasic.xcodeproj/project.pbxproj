@@ -16,6 +16,10 @@
 		3743DE8E2890E1F600672C97 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743DE8D2890E1F600672C97 /* SearchViewController.swift */; };
 		3743DE932890E4CE00672C97 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743DE912890E4CE00672C97 /* ListTableViewCell.swift */; };
 		3743DE942890E4CE00672C97 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3743DE922890E4CE00672C97 /* ListTableViewCell.xib */; };
+		37689CFC28935D440019048B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37689CFB28935D440019048B /* LocationViewController.swift */; };
+		37689D012893840B0019048B /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37689CFE2893840B0019048B /* DalseoHealingMedium.otf */; };
+		37689D022893840B0019048B /* DalseoHealingBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37689CFF2893840B0019048B /* DalseoHealingBold.otf */; };
+		37689D032893840B0019048B /* DalseoDarling.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37689D002893840B0019048B /* DalseoDarling.otf */; };
 		37C1908628920CDD0059EB4F /* ViewPresntableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1908528920CDD0059EB4F /* ViewPresntableProtocol.swift */; };
 		37C19088289223710059EB4F /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C19087289223710059EB4F /* LottoViewController.swift */; };
 		37C1908A289230520059EB4F /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C19089289230520059EB4F /* TranslateViewController.swift */; };
@@ -34,6 +38,10 @@
 		3743DE8D2890E1F600672C97 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3743DE912890E4CE00672C97 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		3743DE922890E4CE00672C97 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		37689CFB28935D440019048B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		37689CFE2893840B0019048B /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
+		37689CFF2893840B0019048B /* DalseoHealingBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingBold.otf; sourceTree = "<group>"; };
+		37689D002893840B0019048B /* DalseoDarling.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoDarling.otf; sourceTree = "<group>"; };
 		37C1908528920CDD0059EB4F /* ViewPresntableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresntableProtocol.swift; sourceTree = "<group>"; };
 		37C19087289223710059EB4F /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		37C19089289230520059EB4F /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +78,12 @@
 		3743DE782890DD7A00672C97 /* SeSAC2NetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				37689CFD2893840B0019048B /* font_otf */,
 				3743DE792890DD7A00672C97 /* AppDelegate.swift */,
 				3743DE7B2890DD7A00672C97 /* SceneDelegate.swift */,
 				3743DE7D2890DD7A00672C97 /* ViewController.swift */,
 				3743DE7F2890DD7A00672C97 /* Main.storyboard */,
+				37689CFB28935D440019048B /* LocationViewController.swift */,
 				37C1908B28923AA80059EB4F /* WebViewViewController.swift */,
 				37C19089289230520059EB4F /* TranslateViewController.swift */,
 				37C19087289223710059EB4F /* LottoViewController.swift */,
@@ -86,6 +96,16 @@
 				3743DE872890DD7C00672C97 /* Info.plist */,
 			);
 			path = SeSAC2NetworkBasic;
+			sourceTree = "<group>";
+		};
+		37689CFD2893840B0019048B /* font_otf */ = {
+			isa = PBXGroup;
+			children = (
+				37689CFE2893840B0019048B /* DalseoHealingMedium.otf */,
+				37689CFF2893840B0019048B /* DalseoHealingBold.otf */,
+				37689D002893840B0019048B /* DalseoDarling.otf */,
+			);
+			path = font_otf;
 			sourceTree = "<group>";
 		};
 		37C1908428920CAD0059EB4F /* Protocol */ = {
@@ -155,6 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3743DE862890DD7C00672C97 /* LaunchScreen.storyboard in Resources */,
+				37689D022893840B0019048B /* DalseoHealingBold.otf in Resources */,
+				37689D032893840B0019048B /* DalseoDarling.otf in Resources */,
+				37689D012893840B0019048B /* DalseoHealingMedium.otf in Resources */,
 				3743DE942890E4CE00672C97 /* ListTableViewCell.xib in Resources */,
 				3743DE832890DD7C00672C97 /* Assets.xcassets in Resources */,
 				3743DE812890DD7A00672C97 /* Main.storyboard in Resources */,
@@ -173,6 +196,7 @@
 				37C1908628920CDD0059EB4F /* ViewPresntableProtocol.swift in Sources */,
 				37C19088289223710059EB4F /* LottoViewController.swift in Sources */,
 				3743DE8E2890E1F600672C97 /* SearchViewController.swift in Sources */,
+				37689CFC28935D440019048B /* LocationViewController.swift in Sources */,
 				37C1908A289230520059EB4F /* TranslateViewController.swift in Sources */,
 				3743DE7C2890DD7A00672C97 /* SceneDelegate.swift in Sources */,
 				37C1908C28923AA80059EB4F /* WebViewViewController.swift in Sources */,
