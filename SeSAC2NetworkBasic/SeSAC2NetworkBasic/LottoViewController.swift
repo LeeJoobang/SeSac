@@ -15,7 +15,6 @@ class LottoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         numberTextField.textContentType = .oneTimeCode // 그 시점의 값을 가져올 수 있다. + 인증번호 자동 채우기(automatic strong passwords and security code autofill - 2018 떱떱)
         numberTextField.tintColor = .clear
         numberTextField.inputView = lottoPickerView // 오 뷰를 lottopicker로 바꾼다.
@@ -27,9 +26,7 @@ class LottoViewController: UIViewController {
     }
     
     func requestLotto(number: Int){
-        
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
-        
         // AF: 200~299, Status Code: 301
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
             switch response.result {
@@ -56,8 +53,6 @@ class LottoViewController: UIViewController {
 }
 
 extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -65,7 +60,6 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 //        return component == 0 ? 10 : 20 // 컨포넌트 갯수 조건문 주는 방법
         return numberList.count
-
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -12,6 +12,7 @@
 		370B16D928975FB00000CD58 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B16D828975FB00000CD58 /* UserDefaultsHelper.swift */; };
 		370B16DC28977C8A0000CD58 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 370B16DB28977C8A0000CD58 /* Alamofire */; };
 		370B16DF28977CB90000CD58 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 370B16DE28977CB90000CD58 /* SwiftyJSON */; };
+		370B16E12897B2EC0000CD58 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B16E02897B2EC0000CD58 /* BeerViewController.swift */; };
 		3743DE7A2890DD7A00672C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743DE792890DD7A00672C97 /* AppDelegate.swift */; };
 		3743DE7C2890DD7A00672C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743DE7B2890DD7A00672C97 /* SceneDelegate.swift */; };
 		3743DE7E2890DD7A00672C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743DE7D2890DD7A00672C97 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		370B16D3289752870000CD58 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		370B16D6289757960000CD58 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		370B16D828975FB00000CD58 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		370B16E02897B2EC0000CD58 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		3743DE762890DD7A00672C97 /* SeSAC2NetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2NetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3743DE792890DD7A00672C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3743DE7B2890DD7A00672C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				37C1908B28923AA80059EB4F /* WebViewViewController.swift */,
 				37C19089289230520059EB4F /* TranslateViewController.swift */,
 				37C19087289223710059EB4F /* LottoViewController.swift */,
+				370B16E02897B2EC0000CD58 /* BeerViewController.swift */,
 				3743DE912890E4CE00672C97 /* ListTableViewCell.swift */,
 				3743DE922890E4CE00672C97 /* ListTableViewCell.xib */,
 				3743DE8D2890E1F600672C97 /* SearchViewController.swift */,
@@ -222,6 +225,7 @@
 			files = (
 				3743DE7E2890DD7A00672C97 /* ViewController.swift in Sources */,
 				370B16D928975FB00000CD58 /* UserDefaultsHelper.swift in Sources */,
+				370B16E12897B2EC0000CD58 /* BeerViewController.swift in Sources */,
 				3743DE7A2890DD7A00672C97 /* AppDelegate.swift in Sources */,
 				37C1908628920CDD0059EB4F /* ViewPresntableProtocol.swift in Sources */,
 				37C19088289223710059EB4F /* LottoViewController.swift in Sources */,
