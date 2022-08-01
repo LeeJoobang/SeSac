@@ -1,4 +1,7 @@
-import UIKit
+import UIKit // 애플 내부 우선함.
+
+import Alamofire
+import SwiftyJSON
 
 class LottoViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
@@ -20,7 +23,33 @@ class LottoViewController: UIViewController {
         
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
+        
+        requestLotto(number: 1025)
+    }
+    
+    func requestLotto(number: Int){
+        
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        
+        // AF: 200~299, Status Code: 301
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                let bonus = json["bnusNo"].intValue
+                let date = json["drwNoDate"].stringValue
+                
+                print(bonus)
+                print(date)
+                
+                self.numberTextField.text = date
 
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
 }
@@ -39,8 +68,8 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        numberTextField.text = "\(numberList[row])회차"
+        requestLotto(number: numberList[row])
+//        numberTextField.text = "\(numberList[row])회차"
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
