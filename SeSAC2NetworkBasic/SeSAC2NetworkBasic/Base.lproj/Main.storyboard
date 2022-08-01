@@ -123,7 +123,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lottoBonusNumberLabel" destination="eyT-us-RdI" id="G48-Xn-Zwa"/>
                         <outlet property="numberTextField" destination="ELg-AS-nl4" id="veA-Fo-Sax"/>
+                        <outletCollection property="lottoNumberCollection" destination="pP2-49-Cri" collectionClass="NSMutableArray" id="2vt-U0-qoB"/>
+                        <outletCollection property="lottoNumberCollection" destination="y8f-fz-Oe7" collectionClass="NSMutableArray" id="kaS-Wj-xXf"/>
+                        <outletCollection property="lottoNumberCollection" destination="Nuu-PX-TaP" collectionClass="NSMutableArray" id="0eX-JF-wDV"/>
+                        <outletCollection property="lottoNumberCollection" destination="ayA-7J-kbk" collectionClass="NSMutableArray" id="Jwe-SI-ssA"/>
+                        <outletCollection property="lottoNumberCollection" destination="oac-0I-V7p" collectionClass="NSMutableArray" id="0HE-P9-hcL"/>
+                        <outletCollection property="lottoNumberCollection" destination="a4y-PP-IRB" collectionClass="NSMutableArray" id="G4l-IT-EIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdM-NQ-jI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

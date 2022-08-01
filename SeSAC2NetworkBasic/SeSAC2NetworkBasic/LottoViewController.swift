@@ -6,10 +6,10 @@ import SwiftyJSON
 class LottoViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
 //    @IBOutlet weak var lottoPickerView: UIPickerView!
-    
+    @IBOutlet var lottoNumberCollection: [UILabel]!
+    @IBOutlet weak var lottoBonusNumberLabel: UILabel!
     var lottoPickerView = UIPickerView()
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아 있음.
-    
     let numberList: [Int] = Array(1...1025).reversed()
     
     
@@ -17,7 +17,6 @@ class LottoViewController: UIViewController {
         super.viewDidLoad()
         
         numberTextField.textContentType = .oneTimeCode // 그 시점의 값을 가져올 수 있다. + 인증번호 자동 채우기(automatic strong passwords and security code autofill - 2018 떱떱)
-    
         numberTextField.tintColor = .clear
         numberTextField.inputView = lottoPickerView // 오 뷰를 lottopicker로 바꾼다.
         
@@ -37,13 +36,15 @@ class LottoViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
-                let bonus = json["bnusNo"].intValue
                 let date = json["drwNoDate"].stringValue
-                
-                print(bonus)
-                print(date)
-                
+                let bonus = json["bnusNo"].intValue
+
+                // 반복문으로 lottoNum을 json 값을 입력함.
+                for index in 0..<self.lottoNumberCollection.count {
+                    self.lottoNumberCollection[index].text = String(describing: json["drwtNo\(index+1)"].intValue)
+                }
                 self.numberTextField.text = date
+                self.lottoBonusNumberLabel.text = String(describing: bonus)
 
             case .failure(let error):
                 print(error)
