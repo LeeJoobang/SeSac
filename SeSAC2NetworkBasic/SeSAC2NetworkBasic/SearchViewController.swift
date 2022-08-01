@@ -32,7 +32,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 테이블 뷰가 사용할 테이블 뷰 셀(xib) 등록
         // 왜 xib? ib는 interface builder의 약자이다. 그렇다면 xib: xml interface builder(과거에는 nib)
         // 스토리보드 내 셀이 없고 별도 셀을 만들어 버리니까 다시 한 번 등록을 해야 한다.
-        searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier) // nibName: listTableViewCell의 이름이가져온다.
+        searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier) // nibName: listTableViewCell의 이름이가져온다.
         
     }
     
@@ -55,7 +55,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         
         cell.backgroundColor = .clear
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)

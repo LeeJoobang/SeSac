@@ -1,11 +1,12 @@
 import UIKit // 7.29. 코드 - 뱃지, 노티
 
 class LocationViewController: UIViewController {
-
+    
+    
+    //static var reuseIdentifier: String = String(describing: LocationViewController.self) // "LocationViewController" 메타 타입으로 쓰인다.
+    
     //1. Notification
     let notificationCenter = UNUserNotificationCenter.current()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,15 +18,7 @@ class LocationViewController: UIViewController {
                 print(name)
             }
         }
-        
-        
-        
-        
-        
-        
         requestAuthorization()
-
-
     }
 
     @IBAction func notificationButtonClicked(_ sender: UIButton) {
@@ -49,7 +42,6 @@ class LocationViewController: UIViewController {
       현재 앱 아이콘이 비어있다. 에셋에 앱 아이콘을 자동으로 등록하면 된다.
       앱 아이콘 함부러 못바꾼다.
      */
-    
     
     /*
      - 권한 허용해야만 알림이 온다.

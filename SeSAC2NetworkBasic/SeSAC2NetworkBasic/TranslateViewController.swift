@@ -20,8 +20,6 @@ class TranslateViewController: UIViewController {
         userInputTextView.font = UIFont(name: "DalseoHealingMedium", size: 20)
         
     }
-    
-    
 }
 
 extension TranslateViewController: UITextViewDelegate {

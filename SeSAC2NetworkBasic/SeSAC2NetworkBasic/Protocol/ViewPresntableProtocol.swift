@@ -13,15 +13,12 @@ import UIKit
 // 프로토콜 프로퍼티: 연산 프로퍼티, 저장 프로퍼티 상관하지 않는다. didset getset 을 쓰던 상관없다.
 // 무조건 var로 선언해야 한다.
 // 만약에 get을 명시했다면, get기능만 최소한 구현이 되어 있으면 된다. +a 로 set이 되는 것은 상관없다. 그래서 필요하다면 set도 구현해도 괜찮다.
-
-
 @objc
 protocol ViewPresentableProtocol{
     
     var navigationTitleString: String { get set }
     var backgroundColor: UIColor { get }
     static var identifier: String { get }
-
 
     func configureView()
     @objc optional func configureLabel()
