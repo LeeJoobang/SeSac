@@ -316,15 +316,21 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="randomButtonClicked:" destination="fBl-aG-21o" eventType="touchUpInside" id="rnD-rL-9Yr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaG-Ty-R1y">
-                                <rect key="frame" x="40" y="503" width="42" height="21"/>
+                                <rect key="frame" x="40" y="503" width="274" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yXf-dG-LNR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkO-qx-y2J">
-                                <rect key="frame" x="40" y="564" width="334" height="20.5"/>
+                                <rect key="frame" x="40" y="563" width="334" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -341,9 +347,11 @@
                             <constraint firstItem="UqZ-Qm-eay" firstAttribute="trailing" secondItem="dkO-qx-y2J" secondAttribute="trailing" constant="40" id="Tli-Oq-L1Z"/>
                             <constraint firstItem="SPq-De-uQZ" firstAttribute="leading" secondItem="UqZ-Qm-eay" secondAttribute="leading" constant="40" id="U41-ab-PXj"/>
                             <constraint firstItem="vaG-Ty-R1y" firstAttribute="top" secondItem="SPq-De-uQZ" secondAttribute="bottom" constant="40" id="b1v-zw-ddS"/>
+                            <constraint firstItem="UqZ-Qm-eay" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dkO-qx-y2J" secondAttribute="bottom" id="cO2-KR-zrE"/>
+                            <constraint firstItem="tsT-pg-Eab" firstAttribute="leading" secondItem="vaG-Ty-R1y" secondAttribute="trailing" constant="20" id="jcO-AC-2d6"/>
                             <constraint firstItem="tsT-pg-Eab" firstAttribute="top" secondItem="SPq-De-uQZ" secondAttribute="bottom" constant="40" id="qmZ-5o-mMJ"/>
                             <constraint firstItem="SPq-De-uQZ" firstAttribute="height" secondItem="V8j-a8-lQz" secondAttribute="height" multiplier="0.45" id="reW-RQ-2es"/>
-                            <constraint firstItem="dkO-qx-y2J" firstAttribute="top" secondItem="vaG-Ty-R1y" secondAttribute="bottom" constant="40" id="z8n-wA-jhD"/>
+                            <constraint firstItem="dkO-qx-y2J" firstAttribute="top" secondItem="vaG-Ty-R1y" secondAttribute="bottom" constant="20" id="z8n-wA-jhD"/>
                             <constraint firstItem="dkO-qx-y2J" firstAttribute="height" relation="lessThanOrEqual" secondItem="V8j-a8-lQz" secondAttribute="height" multiplier="0.3" id="zMJ-wE-yiZ"/>
                         </constraints>
                     </view>

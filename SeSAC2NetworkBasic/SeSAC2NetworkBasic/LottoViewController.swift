@@ -18,7 +18,6 @@ class LottoViewController: UIViewController {
         numberTextField.textContentType = .oneTimeCode // 그 시점의 값을 가져올 수 있다. + 인증번호 자동 채우기(automatic strong passwords and security code autofill - 2018 떱떱)
         numberTextField.tintColor = .clear
         numberTextField.inputView = lottoPickerView // 오 뷰를 lottopicker로 바꾼다.
-        
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
@@ -47,7 +46,6 @@ class LottoViewController: UIViewController {
                 print(error)
             }
         }
-        
     }
     
 }
