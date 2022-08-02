@@ -12,11 +12,10 @@ class BeerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestLotto()
-
+        requestBeer()
     }
     
-    func requestLotto(){
+    func requestBeer(){
         let url = "https://api.punkapi.com/v2/beers/random"
         // AF: 200~299, Status Code: 301
         AF.request(url, method: .get).validate().responseJSON { response in
@@ -44,11 +43,9 @@ class BeerViewController: UIViewController {
                 self.beerInformationLabel.numberOfLines = 0
                 self.beerInformationLabel.sizeToFit()
                 
-                
                 self.randomButton.setImage(UIImage(systemName: "takeoutbag.and.cup.and.straw.fill"), for: .normal)
                 self.randomButton.setTitle("", for: .normal)
                 self.randomButton.tintColor = .lightGray
-                
                 
             case .failure(let error):
                 print(error)
@@ -57,13 +54,6 @@ class BeerViewController: UIViewController {
     }
     
     @IBAction func randomButtonClicked(_ sender: UIButton) {
-        requestLotto()
+        requestBeer()
     }
 }
-
-//final class TopAlignedLabel: UILabel {
-//    override func draw(_ rect: CGRect) {
-//        super.drawText(in: .init(origin: .zero, size: textRect(forBounds: rect, limitedToNumberOfLines: numberOfLines).size))
-//    }
-//}
-//
