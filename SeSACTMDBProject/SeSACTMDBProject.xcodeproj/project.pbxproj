@@ -15,9 +15,6 @@
 		370B17072899F6C40000CD58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370B17052899F6C40000CD58 /* LaunchScreen.storyboard */; };
 		370B170F2899F7D30000CD58 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 370B170E2899F7D30000CD58 /* .gitignore */; };
 		370B17112899F82D0000CD58 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B17102899F82D0000CD58 /* SearchViewController.swift */; };
-		370B17152899F8A60000CD58 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B17142899F8A60000CD58 /* APIKey.swift */; };
-		370B17192899FA000000CD58 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B17182899FA000000CD58 /* Constant.swift */; };
-		370B171C2899FAA50000CD58 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B171B2899FAA50000CD58 /* Example.swift */; };
 		370B171F2899FABD0000CD58 /* Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B171E2899FABD0000CD58 /* Example2.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,9 +29,6 @@
 		370B17082899F6C40000CD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370B170E2899F7D30000CD58 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		370B17102899F82D0000CD58 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		370B17142899F8A60000CD58 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		370B17182899FA000000CD58 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		370B171B2899FAA50000CD58 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		370B171E2899FABD0000CD58 /* Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				370B171D2899FAAD0000CD58 /* Resource */,
-				370B171A2899FA6A0000CD58 /* Key */,
 				370B16FA2899F6C20000CD58 /* AppDelegate.swift */,
 				370B16FC2899F6C20000CD58 /* SceneDelegate.swift */,
 				370B16FE2899F6C20000CD58 /* ViewController.swift */,
@@ -79,18 +72,8 @@
 				370B17052899F6C40000CD58 /* LaunchScreen.storyboard */,
 				370B17082899F6C40000CD58 /* Info.plist */,
 				370B17102899F82D0000CD58 /* SearchViewController.swift */,
-				370B17142899F8A60000CD58 /* APIKey.swift */,
-				370B17182899FA000000CD58 /* Constant.swift */,
 			);
 			path = SeSACTMDBProject;
-			sourceTree = "<group>";
-		};
-		370B171A2899FA6A0000CD58 /* Key */ = {
-			isa = PBXGroup;
-			children = (
-				370B171B2899FAA50000CD58 /* Example.swift */,
-			);
-			path = Key;
 			sourceTree = "<group>";
 		};
 		370B171D2899FAAD0000CD58 /* Resource */ = {
@@ -174,12 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				370B16FF2899F6C20000CD58 /* ViewController.swift in Sources */,
-				370B171C2899FAA50000CD58 /* Example.swift in Sources */,
 				370B16FB2899F6C20000CD58 /* AppDelegate.swift in Sources */,
 				370B17112899F82D0000CD58 /* SearchViewController.swift in Sources */,
 				370B16FD2899F6C20000CD58 /* SceneDelegate.swift in Sources */,
-				370B17152899F8A60000CD58 /* APIKey.swift in Sources */,
-				370B17192899FA000000CD58 /* Constant.swift in Sources */,
 				370B171F2899FABD0000CD58 /* Example2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
