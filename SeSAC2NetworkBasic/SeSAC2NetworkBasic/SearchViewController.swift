@@ -2,6 +2,7 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 /*
  swift protocol
  - delegate
@@ -93,6 +94,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 
     func requestBoxOffice(text: String) {
+        
+        let hud = JGProgressHUD()
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 3.0)
         
         list.removeAll() // 조건 1. 서버 통신 하기 전에 미리 지워주고 시작한다.
         

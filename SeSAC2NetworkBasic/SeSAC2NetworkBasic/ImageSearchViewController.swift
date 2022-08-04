@@ -60,7 +60,7 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
                     print(imageUrl)
                     let url = URL(string: imageUrl)
                     guard let url = url else { return }
-                    let data = Data(imageUrl.utf8)
+//                    let data = Data(imageUrl.utf8)
                     print(imageUrl)
                     self.list.append(url)
 //                    self.list.append(data)
