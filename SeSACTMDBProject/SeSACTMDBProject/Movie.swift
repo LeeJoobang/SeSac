@@ -6,4 +6,5 @@ struct Movie {
     let title: String
     let average: String
     let releaseDate: String
+    let backDrop: String
 }

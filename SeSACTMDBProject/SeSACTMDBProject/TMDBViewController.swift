@@ -33,7 +33,7 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+//                print("JSON: \(json)")
                 for movie in json["results"].arrayValue{
                     let poster = movie["poster_path"].stringValue
                     let posterPath = "\(APIKey.imageURL)\(poster)"
@@ -42,10 +42,11 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let average = movie["vote_average"].stringValue
                     let voteAverage = average.prefix(3)
                     let releaseDate = movie["release_date"].stringValue
-                    
+                    let backDrop = movie["backdrop_path"].stringValue
+                    let backDropPath = "\(APIKey.imageURL)\(backDrop)"
                     guard let url = URL(string: posterPath) else { return }
-                    print(url)
-                    let data = Movie(poster: url, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate)
+                    
+                    let data = Movie(poster: url, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate, backDrop: backDropPath)
                     self.list.append(data)
                 }
                 self.tmdbTableView.reloadData()
@@ -64,13 +65,31 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tmdbTableView.dequeueReusableCell(withIdentifier: "TMDBTableViewCell", for: indexPath) as! TMDBTableViewCell
         cell.tmdbImageView.contentMode = .scaleToFill
-        cell.configureCell(data: list, indexPath: indexPath.row)
-       // cell.tmdbImageView.kf.setImage(with: list[indexPath.row].poster)
+        cell.configureCell(data: list, indexPath: indexPath.item)
+        print("***********TableView Cell -> \(indexPath.item)")
+        InformationViewController.informationNum = indexPath
+        
+        
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
+    @IBAction func buttonCliecked(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Information", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
+//    @IBAction func informationButtonClicked(_ sender: UIButton) {
+//        let sb = UIStoryboard(name: "Information", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+//
 }
