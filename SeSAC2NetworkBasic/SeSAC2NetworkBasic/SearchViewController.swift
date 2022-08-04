@@ -48,6 +48,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // boxOffice 배열
     var list: [BoxOfficeModel] = []
     
+    //progressview
+    let hud = JGProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,11 +97,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func requestBoxOffice(text: String) {
         
-        let hud = JGProgressHUD()
         hud.textLabel.text = "Loading"
         hud.show(in: self.view)
         hud.dismiss(afterDelay: 3.0)
-        
+
         list.removeAll() // 조건 1. 서버 통신 하기 전에 미리 지워주고 시작한다.
         
         // AF: 200~299, Status Code: 301
