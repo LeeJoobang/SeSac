@@ -99,14 +99,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         hud.textLabel.text = "Loading"
         hud.show(in: self.view)
-        hud.dismiss(afterDelay: 3.0)
 
         list.removeAll() // 조건 1. 서버 통신 하기 전에 미리 지워주고 시작한다.
         
         // AF: 200~299, Status Code: 301
         // 인증키 제한
         let url = "\(EndPoint.boxOfficeURL)key=d340182e69b5b3c5de430a97df93ab86&targetDt=\(text)"
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -124,10 +123,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
                 
                 self.searchTableView.reloadData()
-                print(self.list)
+                self.hud.dismiss()
 
             case .failure(let error):
+                
+                self.hud.dismiss()
+
                 print(error)
+                //시뮬레이터 실패 테스트 할 때, 맥북의 인터넷 환경을 따라가게 된다. 맥이 네트워크 붙어 있으면 시뮬레이터도 네트워크 붙어 있게 된다.
+                // 네트워크 안되는 테스트를 시뮬레이터로 한다.
+                
             }
         }
         
