@@ -44,9 +44,10 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let releaseDate = movie["release_date"].stringValue
                     let backDrop = movie["backdrop_path"].stringValue
                     let backDropPath = "\(APIKey.imageURL)\(backDrop)"
-                    guard let url = URL(string: posterPath) else { return }
+                    guard let posterUrl = URL(string: posterPath) else { return }
+                    guard let backDropUrl = URL(string: backDropPath) else { return }
                     
-                    let data = Movie(poster: url, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate, backDrop: backDropPath)
+                    let data = Movie(poster: posterUrl, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate, backDrop: backDropUrl)
                     self.list.append(data)
                 }
                 self.tmdbTableView.reloadData()
@@ -68,22 +69,15 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tmdbTableView.dequeueReusableCell(withIdentifier: "TMDBTableViewCell", for: indexPath) as! TMDBTableViewCell
         cell.tmdbImageView.contentMode = .scaleToFill
         cell.configureCell(data: list, indexPath: indexPath.item)
-        print("***********TableView Cell -> \(indexPath.item)")
-        InformationViewController.informationNum = indexPath
-        
-        
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-    
-    @IBAction func buttonCliecked(_ sender: UIButton) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Information", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
+        vc.informationData = list
+        vc.informationNum = indexPath.row
         self.navigationController?.pushViewController(vc, animated: true)
-
     }
     
 //    @IBAction func informationButtonClicked(_ sender: UIButton) {

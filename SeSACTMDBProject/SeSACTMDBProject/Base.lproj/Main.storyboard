@@ -76,9 +76,6 @@
                                                             <rect key="frame" x="309" y="326.5" width="33" height="21.5"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain"/>
-                                                            <connections>
-                                                                <action selector="buttonCliecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJR-id-Fax"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

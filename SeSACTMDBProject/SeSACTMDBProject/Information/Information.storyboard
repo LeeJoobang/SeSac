@@ -16,40 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MI7-Vt-8me">
-                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f09-F7-Yyu">
-                                <rect key="frame" x="0.0" y="313" width="414" height="549"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WJ7-SA-AcN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="119" id="ib2-zB-ec0">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="119"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ib2-zB-ec0" id="MMq-ri-S9U">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="VsC-2o-SbW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZT-rq-Stw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="tZT-rq-Stw" firstAttribute="leading" secondItem="VsC-2o-SbW" secondAttribute="leading" id="0Pc-kT-OMN"/>
+                                        <constraint firstItem="tZT-rq-Stw" firstAttribute="top" secondItem="VsC-2o-SbW" secondAttribute="top" id="7Kh-Qc-3Fp"/>
+                                        <constraint firstAttribute="bottom" secondItem="tZT-rq-Stw" secondAttribute="bottom" id="9Gw-mJ-3ax"/>
+                                        <constraint firstAttribute="trailing" secondItem="tZT-rq-Stw" secondAttribute="trailing" id="kuq-U4-xrG"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="f09-F7-Yyu" firstAttribute="top" secondItem="MI7-Vt-8me" secondAttribute="bottom" id="1DE-hN-xD1"/>
-                            <constraint firstItem="MI7-Vt-8me" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FAu-De-yRJ"/>
-                            <constraint firstItem="MI7-Vt-8me" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NB3-4y-gmD"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f09-F7-Yyu" secondAttribute="bottom" id="a0g-0n-s6F"/>
-                            <constraint firstItem="f09-F7-Yyu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fDZ-ja-WYE"/>
-                            <constraint firstItem="MI7-Vt-8me" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="kql-FZ-WD4"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f09-F7-Yyu" secondAttribute="trailing" id="s4R-6a-TNQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MI7-Vt-8me" secondAttribute="trailing" id="zBV-8W-aqc"/>
+                            <constraint firstItem="WJ7-SA-AcN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FwZ-Me-rVY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WJ7-SA-AcN" secondAttribute="bottom" id="GlD-5W-n48"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WJ7-SA-AcN" secondAttribute="trailing" id="Qa3-c0-jry"/>
+                            <constraint firstItem="WJ7-SA-AcN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aRT-ga-KIj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="informationPosterImageView" destination="MI7-Vt-8me" id="K5l-Xo-jRi"/>
-                        <outlet property="informationTableView" destination="f09-F7-Yyu" id="9C1-Ae-rCL"/>
+                        <outlet property="backDropImageView" destination="tZT-rq-Stw" id="qJd-wk-g6Y"/>
+                        <outlet property="informationTableView" destination="WJ7-SA-AcN" id="AKl-Cp-Zbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
