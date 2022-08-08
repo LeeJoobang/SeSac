@@ -39,6 +39,9 @@ class TMDBTableViewCell: UITableViewCell {
         tmdbDetailLabel.text = "자세히 보기"
         tmdbButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         tmdbButton.tintColor = .gray
+        tmdbVideoButton.setImage(UIImage(systemName: "paperclip.circle.fill"), for: .normal)
+        tmdbVideoButton.setTitle("", for: .normal)
+        tmdbVideoButton.tintColor = .white
         
         tmdbDateLabel.textColor = UIColor.gray
         tmdbOverviewLabel.textColor = UIColor.gray

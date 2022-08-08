@@ -8,8 +8,6 @@ class TMDBViewController: UIViewController {
    
     @IBOutlet weak var tmdbTableView: UITableView!
     
-
-    
     var list = [Movie]()
     var movieChangePage = 1 // 데이터가 10개만 나오기 때문에 우선적으로 페이지 네이션 패스
     var totalPage = 0
@@ -61,8 +59,6 @@ class TMDBViewController: UIViewController {
             }
         }
     }
-    
-    
 }
 
 extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
@@ -75,7 +71,7 @@ extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tmdbTableView.dequeueReusableCell(withIdentifier: "TMDBTableViewCell", for: indexPath) as! TMDBTableViewCell
+        let cell = tmdbTableView.dequeueReusableCell(withIdentifier: TMDBTableViewCell.reusableIdentifier, for: indexPath) as! TMDBTableViewCell
         cell.tmdbImageView.contentMode = .scaleToFill
         cell.configureCell(data: list, indexPath: indexPath.item)
         cell.tmdbVideoButton.tag = indexPath.row
@@ -86,17 +82,14 @@ extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
     @objc
     func videoButtonClicked(_ sender: UIButton) {
         let sb = UIStoryboard(name: "WebView", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else { return }
+        guard let vc = sb.instantiateViewController(withIdentifier: WebViewController.reusableIdentifier) as? WebViewController else { return }
         WebViewController.movieId = list[sender.tag].movieId
-//        vc.tmdbVideoNumber = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Information", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
+        let vc = sb.instantiateViewController(withIdentifier: InformationViewController.reusableIdentifier) as! InformationViewController
         vc.informationData = list
         vc.informationNum = indexPath.row
         self.navigationController?.pushViewController(vc, animated: true)

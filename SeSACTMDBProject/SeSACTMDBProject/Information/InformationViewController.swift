@@ -6,7 +6,6 @@ import Kingfisher
 
 class InformationViewController: UIViewController{
     
-    
     @IBOutlet weak var informationTableView: UITableView!
     @IBOutlet weak var backDropImageView: UIImageView!
     
@@ -21,12 +20,12 @@ class InformationViewController: UIViewController{
         informationTableView.delegate = self
         informationTableView.dataSource = self
         
-        self.navigationItem.title = "hi"
+        self.navigationItem.title = "출연/정보"
         
         backDropImageView.contentMode = .scaleToFill
         backDropImageView.kf.setImage(with: informationData[informationNum].backDrop)
         
-        informationTableView.register(UINib(nibName: "InformationTableViewCell", bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reuseidentifier)
+        informationTableView.register(UINib(nibName: InformationTableViewCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reusableIdentifier)
         
         castRequest(movieID: informationData[informationNum].movieId)
     }
@@ -40,7 +39,6 @@ class InformationViewController: UIViewController{
 //                print("JSON: \(json)")
                 //name, profile_path, character
                 for cast in json["cast"].arrayValue{
-                    print(cast)
                     let name = cast["name"].stringValue
                     let charcter = cast["character"].stringValue
                     let image = cast["profile_path"].stringValue

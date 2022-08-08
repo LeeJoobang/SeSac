@@ -19,6 +19,7 @@
 		372E048B28A0DBA300F4FDAD /* CastInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048A28A0DBA300F4FDAD /* CastInfo.swift */; };
 		372E048E28A105E600F4FDAD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048D28A105E600F4FDAD /* WebViewController.swift */; };
 		372E049228A1061500F4FDAD /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372E049128A1061500F4FDAD /* WebView.storyboard */; };
+		372E049528A1525F00F4FDAD /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E049428A1525F00F4FDAD /* ReusableProtocol.swift */; };
 		37458A43289AB0DC00138072 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A42289AB0DC00138072 /* APIKey.swift */; };
 		37458A45289AB0EF00138072 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A44289AB0EF00138072 /* Constant.swift */; };
 		37458A49289AB45E00138072 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37458A48289AB45E00138072 /* Alamofire */; };
@@ -47,6 +48,7 @@
 		372E048A28A0DBA300F4FDAD /* CastInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastInfo.swift; sourceTree = "<group>"; };
 		372E048D28A105E600F4FDAD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		372E049128A1061500F4FDAD /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		372E049428A1525F00F4FDAD /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		37458A42289AB0DC00138072 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		37458A44289AB0EF00138072 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		37458A50289AB7B900138072 /* TMDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,20 +93,19 @@
 		370B16F92899F6C20000CD58 /* SeSACTMDBProject */ = {
 			isa = PBXGroup;
 			children = (
-				372E048C28A105B200F4FDAD /* WebView */,
-				370B16FA2899F6C20000CD58 /* AppDelegate.swift */,
-				370B17032899F6C40000CD58 /* Assets.xcassets */,
-				370B17082899F6C40000CD58 /* Info.plist */,
 				37B422C0289BBD940043FB05 /* Information */,
-				37458A46289AB0FE00138072 /* Key */,
-				370B17052899F6C40000CD58 /* LaunchScreen.storyboard */,
-				370B17002899F6C20000CD58 /* Main.storyboard */,
-				370B171D2899FAAD0000CD58 /* Resource */,
-				370B16FC2899F6C20000CD58 /* SceneDelegate.swift */,
+				372E049628A1545300F4FDAD /* TMDB */,
+				372E048C28A105B200F4FDAD /* WebView */,
 				372E048928A0DB5B00F4FDAD /* Struct */,
-				37458A50289AB7B900138072 /* TMDBTableViewCell.swift */,
-				370B17102899F82D0000CD58 /* TMDBViewController.swift */,
+				37458A46289AB0FE00138072 /* Key */,
+				372E049328A1523F00F4FDAD /* Protocol */,
+				370B17082899F6C40000CD58 /* Info.plist */,
+				370B16FA2899F6C20000CD58 /* AppDelegate.swift */,
+				370B16FC2899F6C20000CD58 /* SceneDelegate.swift */,
 				370B16FE2899F6C20000CD58 /* ViewController.swift */,
+				370B17032899F6C40000CD58 /* Assets.xcassets */,
+				370B17052899F6C40000CD58 /* LaunchScreen.storyboard */,
+				370B171D2899FAAD0000CD58 /* Resource */,
 			);
 			path = SeSACTMDBProject;
 			sourceTree = "<group>";
@@ -120,8 +121,8 @@
 		372E048928A0DB5B00F4FDAD /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				37458A52289ACAED00138072 /* Movie.swift */,
 				372E048A28A0DBA300F4FDAD /* CastInfo.swift */,
+				37458A52289ACAED00138072 /* Movie.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -129,10 +130,28 @@
 		372E048C28A105B200F4FDAD /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				372E048D28A105E600F4FDAD /* WebViewController.swift */,
 				372E049128A1061500F4FDAD /* WebView.storyboard */,
+				372E048D28A105E600F4FDAD /* WebViewController.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		372E049328A1523F00F4FDAD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				372E049428A1525F00F4FDAD /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		372E049628A1545300F4FDAD /* TMDB */ = {
+			isa = PBXGroup;
+			children = (
+				370B17002899F6C20000CD58 /* Main.storyboard */,
+				37458A50289AB7B900138072 /* TMDBTableViewCell.swift */,
+				370B17102899F82D0000CD58 /* TMDBViewController.swift */,
+			);
+			path = TMDB;
 			sourceTree = "<group>";
 		};
 		37458A46289AB0FE00138072 /* Key */ = {
@@ -248,6 +267,7 @@
 				370B16FB2899F6C20000CD58 /* AppDelegate.swift in Sources */,
 				370B17112899F82D0000CD58 /* TMDBViewController.swift in Sources */,
 				370B16FD2899F6C20000CD58 /* SceneDelegate.swift in Sources */,
+				372E049528A1525F00F4FDAD /* ReusableProtocol.swift in Sources */,
 				37458A43289AB0DC00138072 /* APIKey.swift in Sources */,
 				370B171F2899FABD0000CD58 /* Example2.swift in Sources */,
 				37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */,

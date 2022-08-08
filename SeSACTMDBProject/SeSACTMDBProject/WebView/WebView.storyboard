@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rI-Hx-qFP">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gat-YB-chf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -24,44 +24,32 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="865-Ul-ZyR">
-                                <rect key="frame" x="-2" y="830" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCa-bP-x0k">
+                                <rect key="frame" x="2" y="818" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem style="plain" id="iTh-9y-i5Q">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wGN-Gy-i1Z">
-                                            <rect key="frame" x="20" y="5" width="75" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        </button>
+                                    <barButtonItem title="Item" id="p0Q-t9-ih2">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="Y6W-OH-hqX" id="4Uf-BR-XRK"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fDx-rA-lEb"/>
-                                    <barButtonItem style="plain" id="ALd-We-eIN">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Vd4-wT-cbm">
-                                            <rect key="frame" x="119.5" y="5" width="75" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        </button>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yE7-iq-a8t"/>
+                                    <barButtonItem title="Item" id="6py-s7-4Yx">
+                                        <connections>
+                                            <action selector="stopButtonClicked:" destination="Y6W-OH-hqX" id="6zj-He-kMK"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5ya-AZ-Osw"/>
-                                    <barButtonItem style="plain" id="2Ld-4g-7yg">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cmI-eJ-nhp">
-                                            <rect key="frame" x="219.5" y="5" width="75" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        </button>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Gpb-qQ-UNv"/>
+                                    <barButtonItem title="Item" id="JC8-y4-2Ve">
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" destination="Y6W-OH-hqX" id="wDc-86-uNb"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IhW-R0-VuH"/>
-                                    <barButtonItem style="plain" id="vQd-4W-88w">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xdC-ZC-TDK">
-                                            <rect key="frame" x="319" y="5" width="75" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        </button>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="D1a-gF-ULV"/>
+                                    <barButtonItem title="Item" id="PDQ-EA-VSN">
+                                        <connections>
+                                            <action selector="goForwarButtonClicked:" destination="Y6W-OH-hqX" id="yNS-ws-U8B"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -69,14 +57,18 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1rI-Hx-qFP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1Ul-U4-WER"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1rI-Hx-qFP" secondAttribute="bottom" id="Mko-Jn-3k8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1rI-Hx-qFP" secondAttribute="trailing" id="fsf-ve-wxB"/>
-                            <constraint firstItem="1rI-Hx-qFP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="imZ-WS-abi"/>
+                            <constraint firstItem="gat-YB-chf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="B4T-t7-ca4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gat-YB-chf" secondAttribute="bottom" id="NSb-Dc-s1S"/>
+                            <constraint firstItem="gat-YB-chf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TFf-Zv-RGN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gat-YB-chf" secondAttribute="trailing" id="voe-rq-48G"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tmdbVideoWeb" destination="1rI-Hx-qFP" id="tX4-nv-7jE"/>
+                        <outlet property="goBackButton" destination="p0Q-t9-ih2" id="ZUo-iY-vvt"/>
+                        <outlet property="goForwardButton" destination="PDQ-EA-VSN" id="7Qv-Gj-RKE"/>
+                        <outlet property="reloadButton" destination="JC8-y4-2Ve" id="Dti-KZ-MHU"/>
+                        <outlet property="stopButton" destination="6py-s7-4Yx" id="q9R-F3-EsI"/>
+                        <outlet property="tmdbWebView" destination="gat-YB-chf" id="64E-sZ-bVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
