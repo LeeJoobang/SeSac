@@ -22,8 +22,6 @@ class InformationViewController: UIViewController{
         informationTableView.dataSource = self
         
         self.navigationItem.title = "hi"
-        self.view.backgroundColor = .green
-        informationTableView.backgroundColor = .green
         
         backDropImageView.contentMode = .scaleToFill
         backDropImageView.kf.setImage(with: informationData[informationNum].backDrop)
@@ -50,10 +48,7 @@ class InformationViewController: UIViewController{
                     guard let imageUrl = URL(string: imagePath) else { return }
                     let data = CastInfo(name: name, image: imageUrl, character: charcter)
                     self.castList.append(data)
-
                 }
-                print(self.castList)
-                
                 self.informationTableView.reloadData()
             case .failure(let error):
                 print(error)
@@ -61,31 +56,31 @@ class InformationViewController: UIViewController{
         }
     }
 }
+
+
+
+
+extension InformationViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return castList.count
+    }
     
-    
-    extension InformationViewController: UITableViewDelegate, UITableViewDataSource {
-        
-        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 20
-        }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return castList.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as! InformationTableViewCell
-            print(castList.count)
-            cell.infromationCellImageView.kf.setImage(with: castList[indexPath.row].image)
-            cell.infromationCellImageView.contentMode = .scaleAspectFit
-            cell.informationNameLabel.text = castList[indexPath.row].name
-            cell.informationSubnameLabel.text = castList[indexPath.row].character
-            return cell
-            
-        }
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as! InformationTableViewCell
+        print(castList.count)
+        cell.infromationCellImageView.kf.setImage(with: castList[indexPath.row].image)
+        cell.infromationCellImageView.contentMode = .scaleAspectFit
+        cell.informationNameLabel.text = castList[indexPath.row].name
+        cell.informationSubnameLabel.text = castList[indexPath.row].character
+        return cell
         
     }
     
+    
+}
+

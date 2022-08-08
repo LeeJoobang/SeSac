@@ -77,6 +77,15 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain"/>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-48-xDN">
+                                                            <rect key="frame" x="314" y="12" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="KLI-YE-Xgk"/>
+                                                                <constraint firstAttribute="width" constant="40" id="Q2L-aF-iTJ"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -95,7 +104,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="HBf-tf-I4t" secondAttribute="trailing" constant="24" id="Z7q-WK-IDe"/>
                                                         <constraint firstItem="3Pe-7p-4Tj" firstAttribute="leading" secondItem="xWk-Oo-ncL" secondAttribute="leading" constant="24" id="aGv-BN-UhK"/>
                                                         <constraint firstItem="cz0-Lm-Nu5" firstAttribute="leading" secondItem="xWk-Oo-ncL" secondAttribute="leading" id="gy6-IC-bSw"/>
+                                                        <constraint firstItem="0dS-48-xDN" firstAttribute="top" secondItem="xWk-Oo-ncL" secondAttribute="top" constant="12" id="hKL-hZ-Tvt"/>
                                                         <constraint firstAttribute="trailing" secondItem="CY1-lM-uji" secondAttribute="trailing" constant="24" id="hTN-0s-4DQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0dS-48-xDN" secondAttribute="trailing" constant="12" id="kqZ-WF-THd"/>
                                                         <constraint firstAttribute="trailing" secondItem="cz0-Lm-Nu5" secondAttribute="trailing" id="pfG-EY-bpS"/>
                                                         <constraint firstAttribute="trailing" secondItem="8Ss-99-CFp" secondAttribute="trailing" constant="24" id="tKy-RZ-ppf"/>
                                                         <constraint firstItem="oyA-z5-p60" firstAttribute="height" secondItem="xWk-Oo-ncL" secondAttribute="height" multiplier="0.06" id="v2o-kF-XFQ"/>
@@ -130,6 +141,7 @@
                                             <outlet property="tmdbLineLabel" destination="HBf-tf-I4t" id="Iox-5P-NQx"/>
                                             <outlet property="tmdbOverviewLabel" destination="8Ss-99-CFp" id="fIn-Bv-JYp"/>
                                             <outlet property="tmdbTitleLabel" destination="CY1-lM-uji" id="BTF-mX-Hex"/>
+                                            <outlet property="tmdbVideoButton" destination="0dS-48-xDN" id="rKK-1L-fMA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

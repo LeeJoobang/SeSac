@@ -14,6 +14,7 @@ class TMDBTableViewCell: UITableViewCell {
     @IBOutlet weak var tmdbLineLabel: UILabel!
     @IBOutlet weak var tmdbDetailLabel: UILabel!
     @IBOutlet weak var tmdbButton: UIButton!
+    @IBOutlet weak var tmdbVideoButton: UIButton!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -50,4 +51,6 @@ class TMDBTableViewCell: UITableViewCell {
         tmdbLineLabel.layer.borderColor = UIColor.gray.cgColor
         tmdbLineLabel.layer.borderWidth = 5
     }
+    
+    
 }
