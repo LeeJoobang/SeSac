@@ -18,6 +18,10 @@
 		372E047328A0906100F4FDAD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 372E047228A0906100F4FDAD /* Kingfisher */; };
 		372E047928A092F400F4FDAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 372E047828A092F400F4FDAD /* .gitignore */; };
 		372E047B28A0931A00F4FDAD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047A28A0931900F4FDAD /* APIKey.swift */; };
+		372E047E28A0949F00F4FDAD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047D28A0949F00F4FDAD /* Endpoint.swift */; };
+		372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047F28A0951B00F4FDAD /* URL+Extension.swift */; };
+		372E048228A0A79300F4FDAD /* KakoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048128A0A79300F4FDAD /* KakoAPIManager.swift */; };
+		372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		372E046528A08FED00F4FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372E047828A092F400F4FDAD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		372E047A28A0931900F4FDAD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		372E047D28A0949F00F4FDAD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		372E047F28A0951B00F4FDAD /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		372E048128A0A79300F4FDAD /* KakoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoAPIManager.swift; sourceTree = "<group>"; };
+		372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +75,28 @@
 		372E045628A08FEC00F4FDAD /* SeSAC2Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				372E047C28A0948400F4FDAD /* Network */,
 				372E045728A08FEC00F4FDAD /* AppDelegate.swift */,
 				372E045928A08FEC00F4FDAD /* SceneDelegate.swift */,
 				372E045B28A08FEC00F4FDAD /* ViewController.swift */,
 				372E045D28A08FEC00F4FDAD /* Main.storyboard */,
+				372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */,
 				372E046028A08FED00F4FDAD /* Assets.xcassets */,
 				372E046228A08FED00F4FDAD /* LaunchScreen.storyboard */,
 				372E046528A08FED00F4FDAD /* Info.plist */,
 				372E047A28A0931900F4FDAD /* APIKey.swift */,
 			);
 			path = SeSAC2Week6;
+			sourceTree = "<group>";
+		};
+		372E047C28A0948400F4FDAD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				372E047D28A0949F00F4FDAD /* Endpoint.swift */,
+				372E047F28A0951B00F4FDAD /* URL+Extension.swift */,
+				372E048128A0A79300F4FDAD /* KakoAPIManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +183,12 @@
 			files = (
 				372E045C28A08FEC00F4FDAD /* ViewController.swift in Sources */,
 				372E045828A08FEC00F4FDAD /* AppDelegate.swift in Sources */,
+				372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */,
 				372E047B28A0931A00F4FDAD /* APIKey.swift in Sources */,
+				372E048228A0A79300F4FDAD /* KakoAPIManager.swift in Sources */,
 				372E045A28A08FEC00F4FDAD /* SceneDelegate.swift in Sources */,
+				372E047E28A0949F00F4FDAD /* Endpoint.swift in Sources */,
+				372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
