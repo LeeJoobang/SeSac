@@ -9,6 +9,8 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tmdbTableView: UITableView!
     
     var list = [Movie]()
+    var movieChangePage = 1 // 데이터가 10개만 나오기 때문에 우선적으로 페이지 네이션 패스
+    var totalPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +44,14 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let average = movie["vote_average"].stringValue
                     let voteAverage = average.prefix(3)
                     let releaseDate = movie["release_date"].stringValue
+                    let id = movie["id"].stringValue
                     let backDrop = movie["backdrop_path"].stringValue
                     let backDropPath = "\(APIKey.imageURL)\(backDrop)"
                     guard let posterUrl = URL(string: posterPath) else { return }
                     guard let backDropUrl = URL(string: backDropPath) else { return }
                     
-                    let data = Movie(poster: posterUrl, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate, backDrop: backDropUrl)
+                    let data = Movie(poster: posterUrl, overview: overview, title: title, average: String(voteAverage), releaseDate: releaseDate, backDrop: backDropUrl, movieId: id)
+                    
                     self.list.append(data)
                 }
                 self.tmdbTableView.reloadData()
@@ -79,11 +83,4 @@ class TMDBViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc.informationNum = indexPath.row
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-//    @IBAction func informationButtonClicked(_ sender: UIButton) {
-//        let sb = UIStoryboard(name: "Information", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
-//
 }
