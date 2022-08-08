@@ -16,6 +16,8 @@
 		372E046D28A0903C00F4FDAD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 372E046C28A0903C00F4FDAD /* SwiftyJSON */; };
 		372E047028A0905600F4FDAD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 372E046F28A0905600F4FDAD /* Alamofire */; };
 		372E047328A0906100F4FDAD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 372E047228A0906100F4FDAD /* Kingfisher */; };
+		372E047928A092F400F4FDAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 372E047828A092F400F4FDAD /* .gitignore */; };
+		372E047B28A0931A00F4FDAD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047A28A0931900F4FDAD /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		372E046028A08FED00F4FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372E046328A08FED00F4FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372E046528A08FED00F4FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372E047828A092F400F4FDAD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		372E047A28A0931900F4FDAD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		372E044B28A08FEC00F4FDAD = {
 			isa = PBXGroup;
 			children = (
+				372E047828A092F400F4FDAD /* .gitignore */,
 				372E045628A08FEC00F4FDAD /* SeSAC2Week6 */,
 				372E045528A08FEC00F4FDAD /* Products */,
 			);
@@ -69,6 +74,7 @@
 				372E046028A08FED00F4FDAD /* Assets.xcassets */,
 				372E046228A08FED00F4FDAD /* LaunchScreen.storyboard */,
 				372E046528A08FED00F4FDAD /* Info.plist */,
+				372E047A28A0931900F4FDAD /* APIKey.swift */,
 			);
 			path = SeSAC2Week6;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372E047928A092F400F4FDAD /* .gitignore in Resources */,
 				372E046428A08FED00F4FDAD /* LaunchScreen.storyboard in Resources */,
 				372E046128A08FED00F4FDAD /* Assets.xcassets in Resources */,
 				372E045F28A08FEC00F4FDAD /* Main.storyboard in Resources */,
@@ -156,6 +163,7 @@
 			files = (
 				372E045C28A08FEC00F4FDAD /* ViewController.swift in Sources */,
 				372E045828A08FEC00F4FDAD /* AppDelegate.swift in Sources */,
+				372E047B28A0931A00F4FDAD /* APIKey.swift in Sources */,
 				372E045A28A08FEC00F4FDAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
