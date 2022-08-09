@@ -4,6 +4,19 @@ class PosterViewController: UIViewController {
 
     @IBOutlet weak var posterTableView: UITableView!
     
+    let numberList: [[Int]] = [
+        [Int](1...10),
+        [Int](11...20),
+        [Int](21...30),
+        [Int](31...40),
+        [Int](41...50),
+        [Int](51...60),
+        [Int](61...70),
+        [Int](71...80),
+        [Int](81...90),
+        [Int](91...100)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,7 +29,7 @@ class PosterViewController: UIViewController {
 extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return numberList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,14 +37,14 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PosterTableViewCell", for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.reusableIdentifier, for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
         cell.backgroundColor = .yellow
         cell.contentCollectionView.backgroundColor = .lightGray
         cell.contentCollectionView.delegate = self
         cell.contentCollectionView.dataSource = self
         cell.contentCollectionView.tag = indexPath.section
         
-        cell.contentCollectionView.register(UINib(nibName: "PosterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PosterCollectionViewCell")
+        cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reusableIdentifier)
         
         return cell
     }
@@ -41,27 +54,16 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-
 extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return numberList[collectionView.tag].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCollectionViewCell", for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell()}
+        cell.posterView.PosterLabel.text = "\(numberList[collectionView.tag][indexPath.row])"
+        
         return cell
     }
-    
-    func collectionViewLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: (UIScreen.main.bounds.width) / 4, height: (UIScreen.main.bounds.height) / 4)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        return layout
-    }
-    
-    
 }

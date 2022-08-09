@@ -10,9 +10,21 @@ extension UIViewController: ReusableProtocol{
         return String(describing: self)
     }
 }
-extension UITableViewCell: ReusableProtocol{
+
+//extension UITableViewCell: ReusableProtocol{
+//    static var reusableIdentifier: String {
+//        return String(describing: self)
+//    }
+//}
+//
+//extension UICollectionViewCell: ReusableProtocol{
+//    static var reusableIdentifier: String {
+//        return String(describing: self)
+//    }
+//}
+
+extension UIView: ReusableProtocol{
     static var reusableIdentifier: String {
         return String(describing: self)
     }
 }
-

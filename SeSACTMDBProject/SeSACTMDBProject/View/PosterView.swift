@@ -8,18 +8,15 @@
 import UIKit
 
 class PosterView: UIView {
-
  
     @IBOutlet weak var PosterLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super .init(coder: coder)
         
-        let view = UINib(nibName: "PosterView", bundle: nil).instantiate(withOwner: self).first as! UIView
+        let view = UINib(nibName: PosterView.reusableIdentifier, bundle: nil).instantiate(withOwner: self).first as! UIView
         view.frame = bounds
         view.backgroundColor = .lightGray
         self.addSubview(view)
     }
-    
-    
 }
