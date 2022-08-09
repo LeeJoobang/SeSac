@@ -31,6 +31,12 @@
 		3762D47C289CFFEF002B9EF9 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3762D47A289CFFEF002B9EF9 /* InformationTableViewCell.xib */; };
 		37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B422C1289BBDD90043FB05 /* InformationViewController.swift */; };
 		37B422C4289BBF040043FB05 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B422C3289BBF040043FB05 /* Information.storyboard */; };
+		37BE79C528A26EE500FA8E47 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79C428A26EE500FA8E47 /* PosterViewController.swift */; };
+		37BE79C728A26FC100FA8E47 /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79C628A26FC100FA8E47 /* PosterTableViewCell.swift */; };
+		37BE79C928A274FF00FA8E47 /* PosterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79C828A274FF00FA8E47 /* PosterView.xib */; };
+		37BE79CB28A275C600FA8E47 /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79CA28A275C600FA8E47 /* PosterView.swift */; };
+		37BE79CE28A2787C00FA8E47 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79CC28A2787C00FA8E47 /* PosterCollectionViewCell.swift */; };
+		37BE79CF28A2787C00FA8E47 /* PosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,12 @@
 		3762D47A289CFFEF002B9EF9 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		37B422C1289BBDD90043FB05 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		37B422C3289BBF040043FB05 /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		37BE79C428A26EE500FA8E47 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		37BE79C628A26FC100FA8E47 /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
+		37BE79C828A274FF00FA8E47 /* PosterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterView.xib; sourceTree = "<group>"; };
+		37BE79CA28A275C600FA8E47 /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
+		37BE79CC28A2787C00FA8E47 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
+		37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,7 @@
 		370B16F92899F6C20000CD58 /* SeSACTMDBProject */ = {
 			isa = PBXGroup;
 			children = (
+				37BE79C128A26CC600FA8E47 /* View */,
 				37B422C0289BBD940043FB05 /* Information */,
 				372E049628A1545300F4FDAD /* TMDB */,
 				372E048C28A105B200F4FDAD /* WebView */,
@@ -174,6 +187,19 @@
 			path = Information;
 			sourceTree = "<group>";
 		};
+		37BE79C128A26CC600FA8E47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37BE79C428A26EE500FA8E47 /* PosterViewController.swift */,
+				37BE79C628A26FC100FA8E47 /* PosterTableViewCell.swift */,
+				37BE79C828A274FF00FA8E47 /* PosterView.xib */,
+				37BE79CA28A275C600FA8E47 /* PosterView.swift */,
+				37BE79CC28A2787C00FA8E47 /* PosterCollectionViewCell.swift */,
+				37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +275,8 @@
 				37B422C4289BBF040043FB05 /* Information.storyboard in Resources */,
 				370B17042899F6C40000CD58 /* Assets.xcassets in Resources */,
 				370B17022899F6C20000CD58 /* Main.storyboard in Resources */,
+				37BE79CF28A2787C00FA8E47 /* PosterCollectionViewCell.xib in Resources */,
+				37BE79C928A274FF00FA8E47 /* PosterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +296,15 @@
 				370B17112899F82D0000CD58 /* TMDBViewController.swift in Sources */,
 				370B16FD2899F6C20000CD58 /* SceneDelegate.swift in Sources */,
 				372E049528A1525F00F4FDAD /* ReusableProtocol.swift in Sources */,
+				37BE79CE28A2787C00FA8E47 /* PosterCollectionViewCell.swift in Sources */,
+				37BE79C528A26EE500FA8E47 /* PosterViewController.swift in Sources */,
+				37BE79C728A26FC100FA8E47 /* PosterTableViewCell.swift in Sources */,
 				37458A43289AB0DC00138072 /* APIKey.swift in Sources */,
 				370B171F2899FABD0000CD58 /* Example2.swift in Sources */,
 				37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */,
 				372E048E28A105E600F4FDAD /* WebViewController.swift in Sources */,
 				37458A51289AB7B900138072 /* TMDBTableViewCell.swift in Sources */,
+				37BE79CB28A275C600FA8E47 /* PosterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
