@@ -26,6 +26,7 @@
 		37458A3A289A3D5A00138072 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A39289A3D5A00138072 /* BoxOfficeModel.swift */; };
 		37458A3C289A517F00138072 /* ImageSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A3B289A517F00138072 /* ImageSearchViewCell.swift */; };
 		37458A41289A763C00138072 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 37458A40289A763C00138072 /* Kingfisher */; };
+		3762D474289CB3F8002B9EF9 /* ImageSearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762D473289CB3F8002B9EF9 /* ImageSearchAPIManager.swift */; };
 		37689CFC28935D440019048B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37689CFB28935D440019048B /* LocationViewController.swift */; };
 		37689D012893840B0019048B /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37689CFE2893840B0019048B /* DalseoHealingMedium.otf */; };
 		37689D022893840B0019048B /* DalseoHealingBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37689CFF2893840B0019048B /* DalseoHealingBold.otf */; };
@@ -56,6 +57,7 @@
 		37458A37289A39CB00138072 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		37458A39289A3D5A00138072 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		37458A3B289A517F00138072 /* ImageSearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewCell.swift; sourceTree = "<group>"; };
+		3762D473289CB3F8002B9EF9 /* ImageSearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchAPIManager.swift; sourceTree = "<group>"; };
 		37689CFB28935D440019048B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		37689CFE2893840B0019048B /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
 		37689CFF2893840B0019048B /* DalseoHealingBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingBold.otf; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		3743DE782890DD7A00672C97 /* SeSAC2NetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				3762D472289CB3E5002B9EF9 /* APIManager */,
 				37458A30289A393900138072 /* Constant */,
 				37689CFD2893840B0019048B /* font_otf */,
 				37C1908428920CAD0059EB4F /* Protocol */,
@@ -132,6 +135,14 @@
 				37458A35289A398400138072 /* UserDefaultHelper.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		3762D472289CB3E5002B9EF9 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				3762D473289CB3F8002B9EF9 /* ImageSearchAPIManager.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		37689CFD2893840B0019048B /* font_otf */ = {
@@ -250,6 +261,7 @@
 				3743DE8E2890E1F600672C97 /* SearchViewController.swift in Sources */,
 				37689CFC28935D440019048B /* LocationViewController.swift in Sources */,
 				37C1908A289230520059EB4F /* TranslateViewController.swift in Sources */,
+				3762D474289CB3F8002B9EF9 /* ImageSearchAPIManager.swift in Sources */,
 				3743DE7C2890DD7A00672C97 /* SceneDelegate.swift in Sources */,
 				37458A3C289A517F00138072 /* ImageSearchViewCell.swift in Sources */,
 				37458A34289A395E00138072 /* Constant.swift in Sources */,

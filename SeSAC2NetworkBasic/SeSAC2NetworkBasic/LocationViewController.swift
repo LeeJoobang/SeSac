@@ -1,4 +1,5 @@
 import UIKit // 7.29. 코드 - 뱃지, 노티
+import SwiftUI
 
 class LocationViewController: UIViewController {
     
@@ -8,6 +9,7 @@ class LocationViewController: UIViewController {
     //1. Notification
     let notificationCenter = UNUserNotificationCenter.current()
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // custom font 출력
@@ -21,6 +23,28 @@ class LocationViewController: UIViewController {
         requestAuthorization()
     }
 
+    @IBAction func downloadImage(_ sender: UIButton) {
+        
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+        print("1", Thread.isMainThread)
+        DispatchQueue.global().async { // 동시에 여러작업이 가능하게 해줘
+        
+            print("2", Thread.isMainThread)
+            
+            let data = try! Data(contentsOf: URL(string: url)!)
+            let image = UIImage(data: data)
+            
+            DispatchQueue.main.async {
+                
+                print("3", Thread.isMainThread)
+                self.imageView.image = image
+            }
+        }
+        
+        
+    }
+    
+    
     @IBAction func notificationButtonClicked(_ sender: UIButton) {
         sendNotification()
     }

@@ -13,10 +13,9 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
     var list: [URL] = []
     
     // 네트워크 요청시 시작 페이지 넘버
-    
     var startPage: Int = 1
     var totalCount = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,63 +46,44 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
     // page 네이션을 해볼 것이다.
     
     func fetchImage(query: String){
-        
-//        let text = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-//        let url = EndPoint.imageSearchURL + "query=\(text)&diplay=30&start=\(startPage)"
-//        // AF: 200~299, Status Code: 301
-//
-        let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let url = "https://openapi.naver.com/v1/search/image.json?query=\(text)&display=30&start=\(startPage)"
-        
-        let header: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
-        
-        AF.request(url, method: .get, headers: header).validate(statusCode: 200...500).responseData { [self] response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                self.totalCount = json["total"].intValue
-                // Dispatch group
-                for snack in json["items"].arrayValue{
-                    let imageUrl = snack["link"].stringValue
-                    let url = URL(string: imageUrl)
-                    guard let url = url else { return }
-                    self.list.append(url)
-                }
+        ImageSearchAPIManager.shared.fetchImageData(query: query, startPage: startPage) { totalCount, list in
+            self.totalCount = totalCount
+            self.list.append(contentsOf: list)
+            
+            DispatchQueue.main.async {
                 self.imageSearchCollectionView.reloadData()
-            case .failure(let error):
-                print(error)
             }
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+}
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageSearchViewCell", for: indexPath) as! ImageSearchViewCell
-        cell.ImageSearchImageView.contentMode = .scaleToFill
-        cell.ImageSearchImageView.kf.setImage(with: list[indexPath.row])
-        return cell
-    }
+func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return list.count
+}
+
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-    // 페이지네이션 방법 1. 컬렉션 뷰가 특정 셀을 그리려는 시점에 호출되는 메서드.
-    // 마지막 셀의 사용자가 위치해 있는지 명확하게 확인하기 어려움.
-    // 굳이 필요없을 수도 있는데??? 주석처리
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageSearchViewCell", for: indexPath) as! ImageSearchViewCell
+    cell.ImageSearchImageView.contentMode = .scaleToFill
+    cell.ImageSearchImageView.kf.setImage(with: list[indexPath.row])
+    return cell
+}
+
+// 페이지네이션 방법 1. 컬렉션 뷰가 특정 셀을 그리려는 시점에 호출되는 메서드.
+// 마지막 셀의 사용자가 위치해 있는지 명확하게 확인하기 어려움.
+// 굳이 필요없을 수도 있는데??? 주석처리
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 //        <#code#>
 //    }
-    
-    //페이지네이션 방법 2: UIScrollViewDelegateProtocol.
-    // 테이블뷰, 컬렉션뷰 스크롤뷰를 상속받고 있어서, 스크롤뷰 프로토콜을 사용할 수 있음.
-    // scrollview.offset.y = 체크해볼 수 있다.
-    
+
+//페이지네이션 방법 2: UIScrollViewDelegateProtocol.
+// 테이블뷰, 컬렉션뷰 스크롤뷰를 상속받고 있어서, 스크롤뷰 프로토콜을 사용할 수 있음.
+// scrollview.offset.y = 체크해볼 수 있다.
+
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        print(scrollView.contentOffset)
 //    }
-    
+
 }
 
 extension ImageSearchViewController: UISearchBarDelegate {
@@ -114,7 +94,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
         if let text = searchBar.text {
             list.removeAll()
             startPage = 1
-//            imageSearchCollectionView.scrollToItem(at: <#T##IndexPath#>, at: <#T##UICollectionView.ScrollPosition#>, animated: <#T##Bool#>)
+            //            imageSearchCollectionView.scrollToItem(at: <#T##IndexPath#>, at: <#T##UICollectionView.ScrollPosition#>, animated: <#T##Bool#>)
             fetchImage(query: text)
         }
     }

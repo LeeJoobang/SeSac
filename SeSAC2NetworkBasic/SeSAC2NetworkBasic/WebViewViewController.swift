@@ -18,14 +18,14 @@ class WebViewViewController: UIViewController {
         super.viewDidLoad()
         openWebPage(url: destinationURL)
         searchBar.delegate = self
-    }
-    
-    func openWebPage(url: String){
-        guard let url = URL(string: url) else {
-            print("Invaild URL")
-            return
         }
         
+        func openWebPage(url: String){
+            guard let url = URL(string: url) else {
+                print("Invaild URL")
+                return
+            }
+            
         let request = URLRequest(url: url)
         webView.load(request)
     }
