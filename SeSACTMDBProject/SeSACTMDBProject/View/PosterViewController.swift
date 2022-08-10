@@ -1,9 +1,10 @@
 import UIKit
 
+import Alamofire
+import SwiftyJSON
 class PosterViewController: UIViewController {
 
     @IBOutlet weak var posterTableView: UITableView!
-    
     let numberList: [[Int]] = [
         [Int](1...10),
         [Int](11...20),
@@ -22,7 +23,26 @@ class PosterViewController: UIViewController {
         
         posterTableView.delegate = self
         posterTableView.dataSource = self
-
+        
+        researchTMDB()
+        TMDBAPIManager.shared.callRequest()
+    }
+    
+    func researchTMDB() {
+        let url = "\(EndPoint.tmdbURL)\(APIKey.APIKey)"
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                for item in json["results"].arrayValue{
+                    TMDBAPIManager.movieList.updateValue(item["title"].stringValue, forKey: item["id"].stringValue)
+                }
+                print(TMDBAPIManager.movieList)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -61,7 +81,7 @@ extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
         cell.posterView.PosterLabel.text = "\(numberList[collectionView.tag][indexPath.row])"
         
         return cell
