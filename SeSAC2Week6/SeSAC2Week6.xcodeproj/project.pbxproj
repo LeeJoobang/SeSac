@@ -22,6 +22,15 @@
 		372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047F28A0951B00F4FDAD /* URL+Extension.swift */; };
 		372E048228A0A79300F4FDAD /* KakoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048128A0A79300F4FDAD /* KakoAPIManager.swift */; };
 		372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */; };
+		3777370928A3306F004ABDB6 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777370828A3306F004ABDB6 /* ReusableViewProtocol.swift */; };
+		3777370B28A343E0004ABDB6 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777370A28A343E0004ABDB6 /* TMDBAPIManager.swift */; };
+		37BE79B428A1E03000FA8E47 /* SeSacButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79B328A1E03000FA8E47 /* SeSacButton.swift */; };
+		37BE79B628A1E60400FA8E47 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79B528A1E60400FA8E47 /* CardView.xib */; };
+		37BE79B828A1E64400FA8E47 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79B728A1E64400FA8E47 /* CardView.swift */; };
+		37BE79BB28A1F37B00FA8E47 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79B928A1F37B00FA8E47 /* CardCollectionViewCell.swift */; };
+		37BE79BC28A1F37B00FA8E47 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79BA28A1F37B00FA8E47 /* CardCollectionViewCell.xib */; };
+		37BE79BE28A1F64100FA8E47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79BD28A1F64100FA8E47 /* MainViewController.swift */; };
+		37BE79C028A1FC2500FA8E47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79BF28A1FC2500FA8E47 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +48,15 @@
 		372E047F28A0951B00F4FDAD /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		372E048128A0A79300F4FDAD /* KakoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoAPIManager.swift; sourceTree = "<group>"; };
 		372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		3777370828A3306F004ABDB6 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		3777370A28A343E0004ABDB6 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
+		37BE79B328A1E03000FA8E47 /* SeSacButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacButton.swift; sourceTree = "<group>"; };
+		37BE79B528A1E60400FA8E47 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		37BE79B728A1E64400FA8E47 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		37BE79B928A1F37B00FA8E47 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		37BE79BA28A1F37B00FA8E47 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		37BE79BD28A1F64100FA8E47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		37BE79BF28A1FC2500FA8E47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,8 @@
 		372E045628A08FEC00F4FDAD /* SeSAC2Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				3777370728A33052004ABDB6 /* Protocol */,
+				37BE79B228A1DFE000FA8E47 /* View */,
 				372E047C28A0948400F4FDAD /* Network */,
 				372E045728A08FEC00F4FDAD /* AppDelegate.swift */,
 				372E045928A08FEC00F4FDAD /* SceneDelegate.swift */,
@@ -95,8 +115,31 @@
 				372E047D28A0949F00F4FDAD /* Endpoint.swift */,
 				372E047F28A0951B00F4FDAD /* URL+Extension.swift */,
 				372E048128A0A79300F4FDAD /* KakoAPIManager.swift */,
+				3777370A28A343E0004ABDB6 /* TMDBAPIManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3777370728A33052004ABDB6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3777370828A3306F004ABDB6 /* ReusableViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		37BE79B228A1DFE000FA8E47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37BE79BD28A1F64100FA8E47 /* MainViewController.swift */,
+				37BE79BF28A1FC2500FA8E47 /* MainTableViewCell.swift */,
+				37BE79B328A1E03000FA8E47 /* SeSacButton.swift */,
+				37BE79B928A1F37B00FA8E47 /* CardCollectionViewCell.swift */,
+				37BE79BA28A1F37B00FA8E47 /* CardCollectionViewCell.xib */,
+				37BE79B528A1E60400FA8E47 /* CardView.xib */,
+				37BE79B728A1E64400FA8E47 /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +212,9 @@
 			files = (
 				372E047928A092F400F4FDAD /* .gitignore in Resources */,
 				372E046428A08FED00F4FDAD /* LaunchScreen.storyboard in Resources */,
+				37BE79B628A1E60400FA8E47 /* CardView.xib in Resources */,
 				372E046128A08FED00F4FDAD /* Assets.xcassets in Resources */,
+				37BE79BC28A1F37B00FA8E47 /* CardCollectionViewCell.xib in Resources */,
 				372E045F28A08FEC00F4FDAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,13 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BE79C028A1FC2500FA8E47 /* MainTableViewCell.swift in Sources */,
 				372E045C28A08FEC00F4FDAD /* ViewController.swift in Sources */,
 				372E045828A08FEC00F4FDAD /* AppDelegate.swift in Sources */,
 				372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */,
+				37BE79BE28A1F64100FA8E47 /* MainViewController.swift in Sources */,
+				37BE79BB28A1F37B00FA8E47 /* CardCollectionViewCell.swift in Sources */,
 				372E047B28A0931A00F4FDAD /* APIKey.swift in Sources */,
+				37BE79B828A1E64400FA8E47 /* CardView.swift in Sources */,
 				372E048228A0A79300F4FDAD /* KakoAPIManager.swift in Sources */,
 				372E045A28A08FEC00F4FDAD /* SceneDelegate.swift in Sources */,
+				37BE79B428A1E03000FA8E47 /* SeSacButton.swift in Sources */,
+				3777370928A3306F004ABDB6 /* ReusableViewProtocol.swift in Sources */,
 				372E047E28A0949F00F4FDAD /* Endpoint.swift in Sources */,
+				3777370B28A343E0004ABDB6 /* TMDBAPIManager.swift in Sources */,
 				372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
