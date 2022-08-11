@@ -9,7 +9,8 @@ import UIKit
 
 class PosterView: UIView {
  
-    @IBOutlet weak var PosterLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var posterLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super .init(coder: coder)
@@ -18,5 +19,7 @@ class PosterView: UIView {
         view.frame = bounds
         view.backgroundColor = .lightGray
         self.addSubview(view)
+        
+        print(view.translatesAutoresizingMaskIntoConstraints)
     }
 }

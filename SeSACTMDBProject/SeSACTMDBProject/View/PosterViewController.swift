@@ -18,38 +18,31 @@ class PosterViewController: UIViewController {
         [Int](91...100)
     ]
     
+    var recommendMovieList: [[String]] = [[]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         posterTableView.delegate = self
         posterTableView.dataSource = self
+                
+        TMDBAPIManager.shared.requestImage { posterList in
+            self.recommendMovieList = posterList
+            self.posterTableView.reloadData()
+            dump(posterList)
+
+        }
         
-        researchTMDB()
-        TMDBAPIManager.shared.callRequest()
     }
     
-    func researchTMDB() {
-        let url = "\(EndPoint.tmdbURL)\(APIKey.APIKey)"
-        AF.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                for item in json["results"].arrayValue{
-                    TMDBAPIManager.movieList.updateValue(item["title"].stringValue, forKey: item["id"].stringValue)
-                }
-                print(TMDBAPIManager.movieList)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+
 }
 
 extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return numberList.count
+        print(recommendMovieList.count)
+        return recommendMovieList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,30 +53,36 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.reusableIdentifier, for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
         cell.backgroundColor = .yellow
         cell.contentCollectionView.backgroundColor = .lightGray
+        cell.titleLabel.text = TMDBAPIManager.shared.movieList[indexPath.section].0
+        
         cell.contentCollectionView.delegate = self
         cell.contentCollectionView.dataSource = self
-        cell.contentCollectionView.tag = indexPath.section
         
+        cell.contentCollectionView.tag = indexPath.section
         cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reusableIdentifier)
+        cell.contentCollectionView.reloadData()
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        return 240
     }
 }
 
 extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberList[collectionView.tag].count
+        print(recommendMovieList[collectionView.tag].count)
+        return recommendMovieList[collectionView.tag].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
-        cell.posterView.PosterLabel.text = "\(numberList[collectionView.tag][indexPath.row])"
         
+        let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(recommendMovieList[collectionView.tag][indexPath.item])")
+//        print(recommendMovieList[collectionView.tag])
+        cell.posterView.posterImageView.kf.setImage(with: url)
         return cell
     }
 }
