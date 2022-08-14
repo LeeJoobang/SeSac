@@ -5,6 +5,7 @@ import SwiftyJSON
 class PosterViewController: UIViewController {
 
     @IBOutlet weak var posterTableView: UITableView!
+    
     let numberList: [[Int]] = [
         [Int](1...10),
         [Int](11...20),
@@ -18,31 +19,37 @@ class PosterViewController: UIViewController {
         [Int](91...100)
     ]
     
-    var recommendMovieList: [[String]] = [[]]
+    var recommendMovieList: [[String]] = []
+    var recommendTMDBList: [RecommendMovie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         posterTableView.delegate = self
         posterTableView.dataSource = self
-                
-        TMDBAPIManager.shared.requestImage { posterList in
-            self.recommendMovieList = posterList
-            self.posterTableView.reloadData()
-            dump(posterList)
-
-        }
         
+        Refactoring.shared.researchTMDB { value in
+            self.recommendTMDBList = value
+            for _ in 0...self.recommendTMDBList.count{
+                self.recommendMovieList.append([""])
+            }
+            self.posterTableView.reloadData()
+           print("서버통신 완료")
+            
+            TMDBAPIManager.shared.requestImage { poster in
+                self.recommendMovieList = poster
+                self.posterTableView.reloadData()
+//                dump(self.recommendMovieList)
+                print("서버통신 완료 - 2번째")
+            }
+        }
     }
-    
-
 }
 
 extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(recommendMovieList.count)
-        return recommendMovieList.count
+        return recommendTMDBList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,14 +58,16 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.reusableIdentifier, for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
-        cell.backgroundColor = .yellow
-        cell.contentCollectionView.backgroundColor = .lightGray
-        cell.titleLabel.text = TMDBAPIManager.shared.movieList[indexPath.section].0
+        
+        cell.backgroundColor = .clear
+        cell.contentCollectionView.backgroundColor = .clear
+        cell.titleLabel.text = recommendTMDBList[indexPath.section].title
         
         cell.contentCollectionView.delegate = self
         cell.contentCollectionView.dataSource = self
         
         cell.contentCollectionView.tag = indexPath.section
+        print("======\(indexPath.section)")
         cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reusableIdentifier)
         cell.contentCollectionView.reloadData()
         
@@ -73,16 +82,23 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
 extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(recommendMovieList[collectionView.tag].count)
-        return recommendMovieList[collectionView.tag].count
+        //  빈배열 상태로 놔두지 말고 뭐라도 넣어두자.
+        return recommendMovieList.count == 0 ? recommendMovieList.count : recommendMovieList[collectionView.tag].count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
         
-        let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(recommendMovieList[collectionView.tag][indexPath.item])")
-//        print(recommendMovieList[collectionView.tag])
+        let tmdbUrl = URL(string: "\(Refactoring.shared.imageURL)\(recommendTMDBList[indexPath.item].filePath)")
+        let url = URL(string: "\(Refactoring.shared.imageURL)\(recommendMovieList[collectionView.tag][indexPath.item])")
+        print("indexPath.item: \(indexPath.item)")
+        print("collectionView.tag: \(collectionView.tag)")
+        print("recommendMovieList[indexPath.item][collectionView.tag]: \(recommendMovieList[collectionView.tag][indexPath.item])")
+        cell.posterView.posterLabel.text = ""
+        cell.posterView.backgroundColor = .yellow
+        cell.posterView.posterImageView.contentMode = .scaleToFill
         cell.posterView.posterImageView.kf.setImage(with: url)
+        print("셀 생성 완료")
         return cell
     }
 }

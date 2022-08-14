@@ -13,9 +13,9 @@ class PosterTableViewCell: UITableViewCell {
     func setupUI(){
         titleLabel.font = .boldSystemFont(ofSize: 24)
         titleLabel.text = "관련된 영화 목록"
-        titleLabel.backgroundColor = .red
+        titleLabel.backgroundColor = .clear
         
-        contentCollectionView.backgroundColor = .green
+        contentCollectionView.backgroundColor = .clear
         contentCollectionView.collectionViewLayout = collectionLayout()
     }
     
