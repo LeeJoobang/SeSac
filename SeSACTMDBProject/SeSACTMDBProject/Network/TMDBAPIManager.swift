@@ -38,22 +38,22 @@ class TMDBAPIManager {
         }
     }
     
-    func requestImage(completionHandler: @escaping ([[String]]) -> ()) {
+    func requestImage(list: [RecommendMovie], completionHandler: @escaping ([[String]]) -> ()) {
         var posterList: [[String]] = []
         // MARK: - dispatchqueue = dispatchGroup - 순서 보장
         // MARK: - section 활용
-        Refactoring.shared.researchTMDB { list in
-//            for item in 0...list.count - 1{
-//                print("check number: \(item)")
-//                posterList.append([""])
-//            }
-            for item in 0...list.count - 1 {
-                TMDBAPIManager.shared.callRequest(query: list[item].id) { value in
-                    posterList.append(value)
-                    completionHandler(posterList)
-                }
+        for item in 0...list.count - 1 {
+            TMDBAPIManager.shared.callRequest(query: list[item].id) { value in
+                posterList.append(value)
             }
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+            completionHandler(posterList)
+        })
+        
+
+        
     }
 }
 

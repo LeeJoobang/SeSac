@@ -38,6 +38,7 @@
 		37BE79CE28A2787C00FA8E47 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79CC28A2787C00FA8E47 /* PosterCollectionViewCell.swift */; };
 		37BE79CF28A2787C00FA8E47 /* PosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */; };
 		37BF5BD828A3FD4C002D4C70 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */; };
+		37C1EE6F28A6337C0055196A /* RecommendMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EE6E28A6337C0055196A /* RecommendMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		37BE79CC28A2787C00FA8E47 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCollectionViewCell.xib; sourceTree = "<group>"; };
 		37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
+		37C1EE6E28A6337C0055196A /* RecommendMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */,
+				37C1EE6E28A6337C0055196A /* RecommendMovie.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				370B17112899F82D0000CD58 /* TMDBViewController.swift in Sources */,
 				370B16FD2899F6C20000CD58 /* SceneDelegate.swift in Sources */,
 				372E049528A1525F00F4FDAD /* ReusableProtocol.swift in Sources */,
+				37C1EE6F28A6337C0055196A /* RecommendMovie.swift in Sources */,
 				37BE79CE28A2787C00FA8E47 /* PosterCollectionViewCell.swift in Sources */,
 				37BE79C528A26EE500FA8E47 /* PosterViewController.swift in Sources */,
 				37BF5BD828A3FD4C002D4C70 /* TMDBAPIManager.swift in Sources */,

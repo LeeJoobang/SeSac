@@ -33,10 +33,9 @@ class PosterViewController: UIViewController {
 //            self.posterTableView.reloadData()
            print("서버통신 완료")
             
-            TMDBAPIManager.shared.requestImage { poster in
+            TMDBAPIManager.shared.requestImage(list: self.recommendTMDBList) { poster in
                 self.recommendMovieList = poster
                 self.posterTableView.reloadData()
-//                dump(self.recommendMovieList)
                 print("서버통신 완료 - 2번째")
             }
         }
@@ -79,9 +78,7 @@ extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //  빈배열 상태로 놔두지 말고 뭐라도 넣어두자.
-        print("recommendMovieList.count:\(recommendMovieList.count)")
-        print(recommendMovieList)
-        return recommendMovieList.count == 0 ? recommendMovieList.count : recommendMovieList[collectionView.tag].count
+        return recommendMovieList[collectionView.tag].count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
