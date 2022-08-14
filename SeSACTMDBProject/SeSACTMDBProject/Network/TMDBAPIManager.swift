@@ -43,10 +43,10 @@ class TMDBAPIManager {
         // MARK: - dispatchqueue = dispatchGroup - 순서 보장
         // MARK: - section 활용
         Refactoring.shared.researchTMDB { list in
-            for item in 0...list.count - 1{
-                print("check number: \(item)")
-                posterList.append([""])
-            }
+//            for item in 0...list.count - 1{
+//                print("check number: \(item)")
+//                posterList.append([""])
+//            }
             for item in 0...list.count - 1 {
                 TMDBAPIManager.shared.callRequest(query: list[item].id) { value in
                     posterList.append(value)

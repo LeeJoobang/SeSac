@@ -30,10 +30,7 @@ class PosterViewController: UIViewController {
         
         Refactoring.shared.researchTMDB { value in
             self.recommendTMDBList = value
-            for _ in 0...self.recommendTMDBList.count{
-                self.recommendMovieList.append([""])
-            }
-            self.posterTableView.reloadData()
+//            self.posterTableView.reloadData()
            print("서버통신 완료")
             
             TMDBAPIManager.shared.requestImage { poster in
@@ -67,7 +64,6 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
         cell.contentCollectionView.dataSource = self
         
         cell.contentCollectionView.tag = indexPath.section
-        print("======\(indexPath.section)")
         cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reusableIdentifier)
         cell.contentCollectionView.reloadData()
         
@@ -83,17 +79,17 @@ extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //  빈배열 상태로 놔두지 말고 뭐라도 넣어두자.
+        print("recommendMovieList.count:\(recommendMovieList.count)")
+        print(recommendMovieList)
         return recommendMovieList.count == 0 ? recommendMovieList.count : recommendMovieList[collectionView.tag].count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
         
-        let tmdbUrl = URL(string: "\(Refactoring.shared.imageURL)\(recommendTMDBList[indexPath.item].filePath)")
+//        let tmdbUrl = URL(string: "\(Refactoring.shared.imageURL)\(recommendTMDBList[indexPath.item].filePath)")
+
         let url = URL(string: "\(Refactoring.shared.imageURL)\(recommendMovieList[collectionView.tag][indexPath.item])")
-        print("indexPath.item: \(indexPath.item)")
-        print("collectionView.tag: \(collectionView.tag)")
-        print("recommendMovieList[indexPath.item][collectionView.tag]: \(recommendMovieList[collectionView.tag][indexPath.item])")
         cell.posterView.posterLabel.text = ""
         cell.posterView.backgroundColor = .yellow
         cell.posterView.posterImageView.contentMode = .scaleToFill
