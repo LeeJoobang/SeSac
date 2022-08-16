@@ -17,9 +17,9 @@ class WalkThroughViewController: UIPageViewController {
     //2. 배열에 뷰 컨트롤러 추가
     func createPageViewController() {
         let sb = UIStoryboard(name: "WalkThrough", bundle: nil)
-        let vc1 = sb.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-        let vc2 = sb.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        let vc3 = sb.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
+        let vc1 = sb.instantiateViewController(withIdentifier: FirstViewController.reuseIdentifier) as! FirstViewController
+        let vc2 = sb.instantiateViewController(withIdentifier: SecondViewController.reuseIdentifier) as! SecondViewController
+        let vc3 = sb.instantiateViewController(withIdentifier: ThirdViewController.reuseIdentifier) as! ThirdViewController
         pageViewControllerList = [vc1, vc2, vc3]
     }
     

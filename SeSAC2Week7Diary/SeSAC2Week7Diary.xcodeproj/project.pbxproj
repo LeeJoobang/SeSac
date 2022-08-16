@@ -20,7 +20,6 @@
 		37FD1D0828AB40E800CC5FCB /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D0728AB40E800CC5FCB /* WalkThroughViewController.swift */; };
 		37FD1D0A28AB40FA00CC5FCB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D0928AB40FA00CC5FCB /* SecondViewController.swift */; };
 		37FD1D0C28AB410600CC5FCB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D0B28AB410600CC5FCB /* ThirdViewController.swift */; };
-		37FD1D0F28AB442700CC5FCB /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D0E28AB442700CC5FCB /* ReusableViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		37FD1D0728AB40E800CC5FCB /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		37FD1D0928AB40FA00CC5FCB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		37FD1D0B28AB410600CC5FCB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		37FD1D0E28AB442700CC5FCB /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 		37FD1CCA28AB1FCC00CC5FCB /* SeSAC2Week7Diary */ = {
 			isa = PBXGroup;
 			children = (
-				37FD1D0D28AB441900CC5FCB /* Protocol */,
 				37FD1D0628AB3ACA00CC5FCB /* WalkThrough */,
 				37FD1CCB28AB1FCC00CC5FCB /* AppDelegate.swift */,
 				37FD1CCD28AB1FCC00CC5FCB /* SceneDelegate.swift */,
@@ -144,14 +141,6 @@
 				37FD1D0028AB3A8F00CC5FCB /* WalkThrough.storyboard */,
 			);
 			path = WalkThrough;
-			sourceTree = "<group>";
-		};
-		37FD1D0D28AB441900CC5FCB /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				37FD1D0E28AB442700CC5FCB /* ReusableViewProtocol.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +242,6 @@
 				37FD1D0A28AB40FA00CC5FCB /* SecondViewController.swift in Sources */,
 				37FD1CD028AB1FCC00CC5FCB /* ViewController.swift in Sources */,
 				37FD1D0828AB40E800CC5FCB /* WalkThroughViewController.swift in Sources */,
-				37FD1D0F28AB442700CC5FCB /* ReusableViewProtocol.swift in Sources */,
 				37FD1D0C28AB410600CC5FCB /* ThirdViewController.swift in Sources */,
 				37FD1CCC28AB1FCC00CC5FCB /* AppDelegate.swift in Sources */,
 				37FD1CCE28AB1FCC00CC5FCB /* SceneDelegate.swift in Sources */,
