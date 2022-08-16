@@ -11,6 +11,9 @@
 		37FD1D2928AB898300CC5FCB /* SeSACTMDBFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD1D1E28AB898300CC5FCB /* SeSACTMDBFramework.framework */; };
 		37FD1D2E28AB898300CC5FCB /* SeSACTMDBFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D2D28AB898300CC5FCB /* SeSACTMDBFrameworkTests.swift */; };
 		37FD1D2F28AB898300CC5FCB /* SeSACTMDBFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 37FD1D2128AB898300CC5FCB /* SeSACTMDBFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37FD1D3928AB89C600CC5FCB /* SeSACTMDBAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D3828AB89C600CC5FCB /* SeSACTMDBAlert.swift */; };
+		37FD1D3B28AB8B8200CC5FCB /* SeSACReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D3A28AB8B8200CC5FCB /* SeSACReusable.swift */; };
+		37FD1D3D28AB8C8800CC5FCB /* SeSACWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D3C28AB8C8800CC5FCB /* SeSACWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		37FD1D2228AB898300CC5FCB /* SeSACTMDBFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SeSACTMDBFramework.docc; sourceTree = "<group>"; };
 		37FD1D2828AB898300CC5FCB /* SeSACTMDBFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACTMDBFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FD1D2D28AB898300CC5FCB /* SeSACTMDBFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTMDBFrameworkTests.swift; sourceTree = "<group>"; };
+		37FD1D3828AB89C600CC5FCB /* SeSACTMDBAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTMDBAlert.swift; sourceTree = "<group>"; };
+		37FD1D3A28AB8B8200CC5FCB /* SeSACReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACReusable.swift; sourceTree = "<group>"; };
+		37FD1D3C28AB8C8800CC5FCB /* SeSACWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				37FD1D2128AB898300CC5FCB /* SeSACTMDBFramework.h */,
 				37FD1D2228AB898300CC5FCB /* SeSACTMDBFramework.docc */,
+				37FD1D3828AB89C600CC5FCB /* SeSACTMDBAlert.swift */,
+				37FD1D3A28AB8B8200CC5FCB /* SeSACReusable.swift */,
+				37FD1D3C28AB8C8800CC5FCB /* SeSACWebView.swift */,
 			);
 			path = SeSACTMDBFramework;
 			sourceTree = "<group>";
@@ -195,6 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FD1D2328AB898300CC5FCB /* SeSACTMDBFramework.docc in Sources */,
+				37FD1D3D28AB8C8800CC5FCB /* SeSACWebView.swift in Sources */,
+				37FD1D3B28AB8B8200CC5FCB /* SeSACReusable.swift in Sources */,
+				37FD1D3928AB89C600CC5FCB /* SeSACTMDBAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +408,7 @@
 		37FD1D3628AB898300CC5FCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
@@ -412,6 +425,7 @@
 		37FD1D3728AB898300CC5FCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
