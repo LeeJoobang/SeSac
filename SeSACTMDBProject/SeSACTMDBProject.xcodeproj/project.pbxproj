@@ -29,6 +29,11 @@
 		37458A53289ACAEE00138072 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A52289ACAED00138072 /* Movie.swift */; };
 		3762D47B289CFFEF002B9EF9 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3762D479289CFFEF002B9EF9 /* InformationTableViewCell.swift */; };
 		3762D47C289CFFEF002B9EF9 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3762D47A289CFFEF002B9EF9 /* InformationTableViewCell.xib */; };
+		3767C39828ABBD40003561E8 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3767C39728ABBD40003561E8 /* WalkThrough.storyboard */; };
+		3767C39A28ABC05F003561E8 /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767C39928ABC05F003561E8 /* WalkViewController.swift */; };
+		3767C39C28ABC071003561E8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767C39B28ABC071003561E8 /* FirstViewController.swift */; };
+		3767C39E28ABC07C003561E8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767C39D28ABC07C003561E8 /* SecondViewController.swift */; };
+		3767C3A028ABC0A6003561E8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767C39F28ABC0A6003561E8 /* ThirdViewController.swift */; };
 		37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B422C1289BBDD90043FB05 /* InformationViewController.swift */; };
 		37B422C4289BBF040043FB05 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B422C3289BBF040043FB05 /* Information.storyboard */; };
 		37BE79C528A26EE500FA8E47 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79C428A26EE500FA8E47 /* PosterViewController.swift */; };
@@ -40,7 +45,40 @@
 		37BF5BD828A3FD4C002D4C70 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */; };
 		37C1EE6F28A6337C0055196A /* RecommendMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EE6E28A6337C0055196A /* RecommendMovie.swift */; };
 		37FD1D1328AB85D000CC5FCB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D1228AB85D000CC5FCB /* File.swift */; };
+		37FD1D4828AB913800CC5FCB /* SeSACTMDBFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD1D4428AB912900CC5FCB /* SeSACTMDBFramework.framework */; };
+		37FD1D4928AB913800CC5FCB /* SeSACTMDBFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD1D4428AB912900CC5FCB /* SeSACTMDBFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37FD1D4328AB912900CC5FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FD1D3E28AB912900CC5FCB /* SeSACTMDBFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37FD1D1E28AB898300CC5FCB;
+			remoteInfo = SeSACTMDBFramework;
+		};
+		37FD1D4528AB912900CC5FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FD1D3E28AB912900CC5FCB /* SeSACTMDBFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37FD1D2828AB898300CC5FCB;
+			remoteInfo = SeSACTMDBFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37FD1D4A28AB913800CC5FCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37FD1D4928AB913800CC5FCB /* SeSACTMDBFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		370B16F72899F6C20000CD58 /* SeSACTMDBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACTMDBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +102,11 @@
 		37458A52289ACAED00138072 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		3762D479289CFFEF002B9EF9 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		3762D47A289CFFEF002B9EF9 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
+		3767C39728ABBD40003561E8 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		3767C39928ABC05F003561E8 /* WalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
+		3767C39B28ABC071003561E8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3767C39D28ABC07C003561E8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3767C39F28ABC0A6003561E8 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		37B422C1289BBDD90043FB05 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		37B422C3289BBF040043FB05 /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		37BE79C428A26EE500FA8E47 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +118,7 @@
 		37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		37C1EE6E28A6337C0055196A /* RecommendMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMovie.swift; sourceTree = "<group>"; };
 		37FD1D1228AB85D000CC5FCB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		37FD1D3E28AB912900CC5FCB /* SeSACTMDBFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACTMDBFramework.xcodeproj; path = ../SeSACTMDBFramework/SeSACTMDBFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FD1D4828AB913800CC5FCB /* SeSACTMDBFramework.framework in Frameworks */,
 				37458A4F289AB4A500138072 /* Kingfisher in Frameworks */,
 				37458A4C289AB47A00138072 /* SwiftyJSON in Frameworks */,
 				37458A49289AB45E00138072 /* Alamofire in Frameworks */,
@@ -94,9 +139,11 @@
 		370B16EE2899F6C20000CD58 = {
 			isa = PBXGroup;
 			children = (
+				37FD1D3E28AB912900CC5FCB /* SeSACTMDBFramework.xcodeproj */,
 				370B170E2899F7D30000CD58 /* .gitignore */,
 				370B16F92899F6C20000CD58 /* SeSACTMDBProject */,
 				370B16F82899F6C20000CD58 /* Products */,
+				37FD1D4728AB913800CC5FCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +158,7 @@
 		370B16F92899F6C20000CD58 /* SeSACTMDBProject */ = {
 			isa = PBXGroup;
 			children = (
+				3767C39428ABBCF5003561E8 /* WalkThrough */,
 				37BF5BD628A3FD30002D4C70 /* Network */,
 				37BE79C128A26CC600FA8E47 /* View */,
 				37B422C0289BBD940043FB05 /* Information */,
@@ -184,6 +232,18 @@
 			path = Key;
 			sourceTree = "<group>";
 		};
+		3767C39428ABBCF5003561E8 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				3767C39728ABBD40003561E8 /* WalkThrough.storyboard */,
+				3767C39928ABC05F003561E8 /* WalkViewController.swift */,
+				3767C39B28ABC071003561E8 /* FirstViewController.swift */,
+				3767C39D28ABC07C003561E8 /* SecondViewController.swift */,
+				3767C39F28ABC0A6003561E8 /* ThirdViewController.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
 		37B422C0289BBD940043FB05 /* Information */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +277,22 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		37FD1D3F28AB912900CC5FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FD1D4428AB912900CC5FCB /* SeSACTMDBFramework.framework */,
+				37FD1D4628AB912900CC5FCB /* SeSACTMDBFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37FD1D4728AB913800CC5FCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +303,7 @@
 				370B16F32899F6C20000CD58 /* Sources */,
 				370B16F42899F6C20000CD58 /* Frameworks */,
 				370B16F52899F6C20000CD58 /* Resources */,
+				37FD1D4A28AB913800CC5FCB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,12 +350,35 @@
 			);
 			productRefGroup = 370B16F82899F6C20000CD58 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 37FD1D3F28AB912900CC5FCB /* Products */;
+					ProjectRef = 37FD1D3E28AB912900CC5FCB /* SeSACTMDBFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				370B16F62899F6C20000CD58 /* SeSACTMDBProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		37FD1D4428AB912900CC5FCB /* SeSACTMDBFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SeSACTMDBFramework.framework;
+			remoteRef = 37FD1D4328AB912900CC5FCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		37FD1D4628AB912900CC5FCB /* SeSACTMDBFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SeSACTMDBFrameworkTests.xctest;
+			remoteRef = 37FD1D4528AB912900CC5FCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		370B16F52899F6C20000CD58 /* Resources */ = {
@@ -294,6 +394,7 @@
 				370B17022899F6C20000CD58 /* Main.storyboard in Resources */,
 				37BE79CF28A2787C00FA8E47 /* PosterCollectionViewCell.xib in Resources */,
 				37BE79C928A274FF00FA8E47 /* PosterView.xib in Resources */,
+				3767C39828ABBD40003561E8 /* WalkThrough.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3767C39E28ABC07C003561E8 /* SecondViewController.swift in Sources */,
 				37458A45289AB0EF00138072 /* Constant.swift in Sources */,
 				3762D47B289CFFEF002B9EF9 /* InformationTableViewCell.swift in Sources */,
 				370B16FF2899F6C20000CD58 /* ViewController.swift in Sources */,
@@ -323,8 +425,11 @@
 				37FD1D1328AB85D000CC5FCB /* File.swift in Sources */,
 				37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */,
 				372E048E28A105E600F4FDAD /* WebViewController.swift in Sources */,
+				3767C39A28ABC05F003561E8 /* WalkViewController.swift in Sources */,
 				37458A51289AB7B900138072 /* TMDBTableViewCell.swift in Sources */,
+				3767C3A028ABC0A6003561E8 /* ThirdViewController.swift in Sources */,
 				37BE79CB28A275C600FA8E47 /* PosterView.swift in Sources */,
+				3767C39C28ABC071003561E8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +581,7 @@
 				INFOPLIST_FILE = SeSACTMDBProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,7 +609,7 @@
 				INFOPLIST_FILE = SeSACTMDBProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

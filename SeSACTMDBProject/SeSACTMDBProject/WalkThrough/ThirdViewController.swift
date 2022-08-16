@@ -1,29 +1,30 @@
-//
-//  ThirdViewController.swift
-//  SeSACTMDBProject
-//
-//  Created by Joobang Lee on 2022/08/16.
-//
-
 import UIKit
 
 class ThirdViewController: UIViewController {
-
+    @IBOutlet weak var thirdImageView: UIImageView!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
-        // Do any additional setup after loading the view.
+        thirdImageView.image = UIImage(named: "image3.png")
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextPageButtonClicked(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(true, forKey: "First")
+        
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+                
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: TMDBViewController.reuseIdentifier) as! TMDBViewController
+        let nav = UINavigationController(rootViewController: vc)
+        
+        sceneDelegate?.window?.rootViewController = nav
+        sceneDelegate?.window?.makeKeyAndVisible()
     }
-    */
-
 }

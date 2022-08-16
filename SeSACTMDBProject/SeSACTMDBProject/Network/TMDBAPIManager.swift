@@ -19,7 +19,7 @@ class TMDBAPIManager {
     
     let tmdbList: [RecommendMovie] = []
     
-    func callRequest(query: String, completionHandler: @escaping([String]) -> ()) {
+    private func callRequest(query: String, completionHandler: @escaping([String]) -> ()) {
         let url = "https://api.themoviedb.org/3/movie/\(query)/recommendations?api_key=\(APIKey.APIKey)&language=en-US"
         
         AF.request(url, method: .get).validate().responseData { response in
@@ -51,12 +51,8 @@ class TMDBAPIManager {
         DispatchQueue.main.asyncAfter(deadline: .now() + 20, execute: {
             completionHandler(posterList)
         })
-        
-
-        
     }
 }
-
 
 class Refactoring {
     
@@ -82,5 +78,4 @@ class Refactoring {
             }
         }
     }
-    
 }

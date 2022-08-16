@@ -25,10 +25,25 @@ class InformationViewController: UIViewController{
         backDropImageView.contentMode = .scaleToFill
         backDropImageView.kf.setImage(with: informationData[informationNum].backDrop)
         
-        informationTableView.register(UINib(nibName: InformationTableViewCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reusableIdentifier)
+        
+        informationTableView.register(UINib(nibName: InformationTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reuseIdentifier)
         
         castRequest(movieID: informationData[informationNum].movieId)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "설명", style: .plain, target: self, action: #selector(resetUserDefault))
+    }
+    
+    @objc
+    func resetUserDefault(){
+        print("초기화면")
+        showSesacAlert(title: "사용방법", message: "처음 접속시 사용방법을 확인하시겠습니까?", buttonTitle: "확인") { _ in
+            UserDefaults.standard.removeObject(forKey: "First")
+        }
+    }
+    
     
     private func castRequest(movieID: String){
         let casturl = "\(EndPoint.tmdbCastURL)\(movieID)/credits?api_key=\(APIKey.APIKey)"

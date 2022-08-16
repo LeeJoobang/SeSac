@@ -1,5 +1,7 @@
 import UIKit
 
+import SeSACTMDBFramework
+
 class PosterView: UIView {
  
     @IBOutlet weak var posterImageView: UIImageView!
@@ -8,7 +10,7 @@ class PosterView: UIView {
     required init?(coder: NSCoder) {
         super .init(coder: coder)
         
-        let view = UINib(nibName: PosterView.reusableIdentifier, bundle: nil).instantiate(withOwner: self).first as! UIView
+        let view = UINib(nibName: PosterView.reuseIdentifier, bundle: nil).instantiate(withOwner: self).first as! UIView
         view.frame = bounds
         view.backgroundColor = .clear
         self.addSubview(view)

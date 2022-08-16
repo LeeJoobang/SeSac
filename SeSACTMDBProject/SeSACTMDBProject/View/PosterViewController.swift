@@ -2,6 +2,8 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import SeSACTMDBFramework
+
 class PosterViewController: UIViewController {
 
     @IBOutlet weak var posterTableView: UITableView!
@@ -53,7 +55,7 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.reusableIdentifier, for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.reuseIdentifier, for: indexPath) as? PosterTableViewCell else { return UITableViewCell()}
         
         cell.backgroundColor = .clear
         cell.contentCollectionView.backgroundColor = .clear
@@ -63,7 +65,7 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
         cell.contentCollectionView.dataSource = self
         
         cell.contentCollectionView.tag = indexPath.section
-        cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reusableIdentifier)
+        cell.contentCollectionView.register(UINib(nibName: PosterCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: PosterCollectionViewCell.reuseIdentifier)
         cell.contentCollectionView.reloadData()
         
         return cell
@@ -82,7 +84,7 @@ extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reusableIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reuseIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
         
 //        let tmdbUrl = URL(string: "\(Refactoring.shared.imageURL)\(recommendTMDBList[indexPath.item].filePath)")
 
@@ -91,6 +93,7 @@ extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.posterView.backgroundColor = .yellow
         cell.posterView.posterImageView.contentMode = .scaleToFill
         cell.posterView.posterImageView.kf.setImage(with: url)
+            
         print("셀 생성 완료")
         return cell
     }

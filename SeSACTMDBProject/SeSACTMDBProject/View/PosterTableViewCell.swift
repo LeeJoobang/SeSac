@@ -1,5 +1,7 @@
 import UIKit
 
+import SeSACTMDBFramework
+
 class PosterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -8,6 +10,8 @@ class PosterTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        
+
     }
     
     private func setupUI(){
@@ -29,4 +33,6 @@ class PosterTableViewCell: UITableViewCell {
         
         return layout
     }
+    
+    
 }
