@@ -7,7 +7,6 @@ import SwiftyJSON
 class WebViewController: UIViewController {
 
     @IBOutlet weak var tmdbWebView: WKWebView!
-    
     @IBOutlet weak var goBackButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
@@ -27,7 +26,7 @@ class WebViewController: UIViewController {
 
     }
     
-    func requestVideo(movieID: String){
+    private func requestVideo(movieID: String){
         let videourl = "\(EndPoint.tmdbCastURL)\(movieID)/videos?api_key=\(APIKey.APIKey)"
         AF.request(videourl, method: .get).validate().responseJSON { response in
             switch response.result {

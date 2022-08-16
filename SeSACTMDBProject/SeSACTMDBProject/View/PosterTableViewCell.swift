@@ -10,7 +10,7 @@ class PosterTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    func setupUI(){
+    private func setupUI(){
         titleLabel.font = .boldSystemFont(ofSize: 24)
         titleLabel.text = "관련된 영화 목록"
         titleLabel.backgroundColor = .clear
@@ -19,7 +19,7 @@ class PosterTableViewCell: UITableViewCell {
         contentCollectionView.collectionViewLayout = collectionLayout()
     }
     
-    func collectionLayout() -> UICollectionViewFlowLayout {
+    private func collectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 300, height: self.bounds.size.height)

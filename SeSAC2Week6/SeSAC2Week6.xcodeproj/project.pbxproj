@@ -22,6 +22,7 @@
 		372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E047F28A0951B00F4FDAD /* URL+Extension.swift */; };
 		372E048228A0A79300F4FDAD /* KakoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048128A0A79300F4FDAD /* KakoAPIManager.swift */; };
 		372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */; };
+		376EC41728A493AC00B71C4C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EC41628A493AC00B71C4C /* MapViewController.swift */; };
 		3777370928A3306F004ABDB6 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777370828A3306F004ABDB6 /* ReusableViewProtocol.swift */; };
 		3777370B28A343E0004ABDB6 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777370A28A343E0004ABDB6 /* TMDBAPIManager.swift */; };
 		37BE79B428A1E03000FA8E47 /* SeSacButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79B328A1E03000FA8E47 /* SeSacButton.swift */; };
@@ -31,6 +32,8 @@
 		37BE79BC28A1F37B00FA8E47 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79BA28A1F37B00FA8E47 /* CardCollectionViewCell.xib */; };
 		37BE79BE28A1F64100FA8E47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79BD28A1F64100FA8E47 /* MainViewController.swift */; };
 		37BE79C028A1FC2500FA8E47 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BE79BF28A1FC2500FA8E47 /* MainTableViewCell.swift */; };
+		37C1EE6B28A5D6FF0055196A /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 37C1EE6A28A5D6FF0055196A /* YPImagePicker */; };
+		37C1EE6D28A5DD200055196A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EE6C28A5DD200055196A /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,7 @@
 		372E047F28A0951B00F4FDAD /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		372E048128A0A79300F4FDAD /* KakoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoAPIManager.swift; sourceTree = "<group>"; };
 		372E048728A0AC2D00F4FDAD /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		376EC41628A493AC00B71C4C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3777370828A3306F004ABDB6 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		3777370A28A343E0004ABDB6 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		37BE79B328A1E03000FA8E47 /* SeSacButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacButton.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		37BE79BA28A1F37B00FA8E47 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		37BE79BD28A1F64100FA8E47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37BE79BF28A1FC2500FA8E47 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		37C1EE6C28A5DD200055196A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 				372E047328A0906100F4FDAD /* Kingfisher in Frameworks */,
 				372E046D28A0903C00F4FDAD /* SwiftyJSON in Frameworks */,
 				372E047028A0905600F4FDAD /* Alamofire in Frameworks */,
+				37C1EE6B28A5D6FF0055196A /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,8 @@
 		372E045628A08FEC00F4FDAD /* SeSAC2Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				37C1EE6828A5D6140055196A /* Camera */,
+				376EC41828A4942700B71C4C /* Map */,
 				3777370728A33052004ABDB6 /* Protocol */,
 				37BE79B228A1DFE000FA8E47 /* View */,
 				372E047C28A0948400F4FDAD /* Network */,
@@ -120,6 +128,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		376EC41828A4942700B71C4C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				376EC41628A493AC00B71C4C /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		3777370728A33052004ABDB6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +158,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37C1EE6828A5D6140055196A /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				37C1EE6C28A5DD200055196A /* CameraViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +186,7 @@
 				372E046C28A0903C00F4FDAD /* SwiftyJSON */,
 				372E046F28A0905600F4FDAD /* Alamofire */,
 				372E047228A0906100F4FDAD /* Kingfisher */,
+				37C1EE6A28A5D6FF0055196A /* YPImagePicker */,
 			);
 			productName = SeSAC2Week6;
 			productReference = 372E045428A08FEC00F4FDAD /* SeSAC2Week6.app */;
@@ -195,6 +220,7 @@
 				372E046B28A0903C00F4FDAD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				372E046E28A0905600F4FDAD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				372E047128A0906100F4FDAD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				37C1EE6928A5D6FF0055196A /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = 372E045528A08FEC00F4FDAD /* Products */;
 			projectDirPath = "";
@@ -229,6 +255,7 @@
 				37BE79C028A1FC2500FA8E47 /* MainTableViewCell.swift in Sources */,
 				372E045C28A08FEC00F4FDAD /* ViewController.swift in Sources */,
 				372E045828A08FEC00F4FDAD /* AppDelegate.swift in Sources */,
+				37C1EE6D28A5DD200055196A /* CameraViewController.swift in Sources */,
 				372E048828A0AC2D00F4FDAD /* ClosureViewController.swift in Sources */,
 				37BE79BE28A1F64100FA8E47 /* MainViewController.swift in Sources */,
 				37BE79BB28A1F37B00FA8E47 /* CardCollectionViewCell.swift in Sources */,
@@ -241,6 +268,7 @@
 				372E047E28A0949F00F4FDAD /* Endpoint.swift in Sources */,
 				3777370B28A343E0004ABDB6 /* TMDBAPIManager.swift in Sources */,
 				372E048028A0951B00F4FDAD /* URL+Extension.swift in Sources */,
+				376EC41728A493AC00B71C4C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +432,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -432,7 +460,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -484,6 +512,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		37C1EE6928A5D6FF0055196A /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -501,6 +537,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 372E047128A0906100F4FDAD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		37C1EE6A28A5D6FF0055196A /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37C1EE6928A5D6FF0055196A /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

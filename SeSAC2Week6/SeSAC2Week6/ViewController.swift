@@ -20,13 +20,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var bloglist: [String] = []
-    var cafelist: [String] = []
+    private var bloglist: [String] = []
+    private var cafelist: [String] = []
+    
     var isExpanded = false // false 2줄, true 0으로
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         searchBlog()
         
         tableView.delegate = self
@@ -35,7 +37,7 @@ class ViewController: UIViewController {
         
     }
     
-    func searchBlog(){
+    private func searchBlog(){
         KakaoAPIManager.shared.callRequest(type: .blog, query: "고래밥") { json  in
             print(json)
             

@@ -9,7 +9,7 @@ class TMDBAPIManager {
     
     let imageURL = "https://image.tmdb.org/t/p/w500"
     
-    let movieList = [
+    private let movieList = [
         ("Jurassic World Dominion", 507086),
         ("Doctor Strange in the Multiverse of Madness", 453395),
         ("Thirteen Lives", 698948),
@@ -48,7 +48,7 @@ class TMDBAPIManager {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20, execute: {
             completionHandler(posterList)
         })
         

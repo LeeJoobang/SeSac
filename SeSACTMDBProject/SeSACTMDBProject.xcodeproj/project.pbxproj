@@ -39,6 +39,7 @@
 		37BE79CF28A2787C00FA8E47 /* PosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */; };
 		37BF5BD828A3FD4C002D4C70 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */; };
 		37C1EE6F28A6337C0055196A /* RecommendMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EE6E28A6337C0055196A /* RecommendMovie.swift */; };
+		37FD1D1328AB85D000CC5FCB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1D1228AB85D000CC5FCB /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		37BE79CD28A2787C00FA8E47 /* PosterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCollectionViewCell.xib; sourceTree = "<group>"; };
 		37BF5BD728A3FD4C002D4C70 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		37C1EE6E28A6337C0055196A /* RecommendMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMovie.swift; sourceTree = "<group>"; };
+		37FD1D1228AB85D000CC5FCB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				370B17032899F6C40000CD58 /* Assets.xcassets */,
 				370B17052899F6C40000CD58 /* LaunchScreen.storyboard */,
 				370B171D2899FAAD0000CD58 /* Resource */,
+				37FD1D1228AB85D000CC5FCB /* File.swift */,
 			);
 			path = SeSACTMDBProject;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				37BE79C728A26FC100FA8E47 /* PosterTableViewCell.swift in Sources */,
 				37458A43289AB0DC00138072 /* APIKey.swift in Sources */,
 				370B171F2899FABD0000CD58 /* Example2.swift in Sources */,
+				37FD1D1328AB85D000CC5FCB /* File.swift in Sources */,
 				37B422C2289BBDD90043FB05 /* InformationViewController.swift in Sources */,
 				372E048E28A105E600F4FDAD /* WebViewController.swift in Sources */,
 				37458A51289AB7B900138072 /* TMDBTableViewCell.swift in Sources */,

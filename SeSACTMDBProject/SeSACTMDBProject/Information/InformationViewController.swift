@@ -30,7 +30,7 @@ class InformationViewController: UIViewController{
         castRequest(movieID: informationData[informationNum].movieId)
     }
     
-    func castRequest(movieID: String){
+    private func castRequest(movieID: String){
         let casturl = "\(EndPoint.tmdbCastURL)\(movieID)/credits?api_key=\(APIKey.APIKey)"
         AF.request(casturl, method: .get).validate().responseJSON { response in
             switch response.result {

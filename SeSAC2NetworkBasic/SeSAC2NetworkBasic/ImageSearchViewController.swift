@@ -84,7 +84,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 //        print(scrollView.contentOffset)
 //    }
 
-}
+//}
 
 extension ImageSearchViewController: UISearchBarDelegate {
     

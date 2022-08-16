@@ -27,7 +27,7 @@ class TMDBViewController: UIViewController {
         self.tmdbTableView.reloadData()
     }
     
-    func researchTMDB() {
+    private func researchTMDB() {
         self.list.removeAll()
         let url = "\(EndPoint.tmdbURL)\(APIKey.APIKey)"
         AF.request(url, method: .get).validate().responseJSON { response in

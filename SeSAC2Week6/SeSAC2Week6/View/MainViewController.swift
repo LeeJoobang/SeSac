@@ -87,6 +87,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     //테이블 뷰 객체 하나일 경우에는 내부 매개변수를 활용하지 않아도 문제가 생기지 않는다.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseIdentifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+                
         cell.backgroundColor = .yellow
         cell.titleLabel.text = TMDBAPIManager.shared.tvList[indexPath.section].0
         cell.contentCollectionView.backgroundColor = .lightGray

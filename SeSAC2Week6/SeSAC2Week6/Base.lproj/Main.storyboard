@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ddz-7e-Ct5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ybU-89-q8w">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -303,6 +303,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eax-TM-gfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2918.840579710145" y="75"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="syG-9Q-0lV">
+            <objects>
+                <viewController id="lkh-Yr-Yud" customClass="MapViewController" customModule="SeSAC2Week6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iv6-je-WY3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-qw-kg0">
+                                <rect key="frame" x="0.0" y="209.66666666666669" width="375" height="568.33333333333326"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Tf-kR-nM0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8kD-qw-kg0" firstAttribute="leading" secondItem="2Tf-kR-nM0" secondAttribute="leading" id="51a-rS-sxF"/>
+                            <constraint firstItem="8kD-qw-kg0" firstAttribute="height" secondItem="Iv6-je-WY3" secondAttribute="height" multiplier="0.7" id="9rT-nI-lN9"/>
+                            <constraint firstItem="2Tf-kR-nM0" firstAttribute="trailing" secondItem="8kD-qw-kg0" secondAttribute="trailing" id="9zo-I0-T38"/>
+                            <constraint firstItem="8kD-qw-kg0" firstAttribute="centerX" secondItem="Iv6-je-WY3" secondAttribute="centerX" id="ATL-vS-sFp"/>
+                            <constraint firstItem="2Tf-kR-nM0" firstAttribute="bottom" secondItem="8kD-qw-kg0" secondAttribute="bottom" id="LNa-hQ-zO8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="8kD-qw-kg0" id="zNB-ah-ApT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2R-0D-jsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852" y="82"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="KiY-cD-lzj">
+            <objects>
+                <viewController id="ybU-89-q8w" customClass="CameraViewController" customModule="SeSAC2Week6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7sd-cp-xR7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-Km-cM3">
+                                <rect key="frame" x="20" y="64" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ln3-Hj-uTf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="ypImagePickeClicked:" destination="ybU-89-q8w" eventType="touchUpInside" id="LLg-A7-WcM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3n-s4-foV">
+                                <rect key="frame" x="20" y="134" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kQa-RA-6lz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="cameraButtonClickec:" destination="ybU-89-q8w" eventType="touchUpInside" id="UnX-1h-IZB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfT-mX-IE0">
+                                <rect key="frame" x="20" y="204" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dDn-Ec-ze0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonClicked:" destination="ybU-89-q8w" eventType="touchUpInside" id="Hhq-u7-dAe"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-un-77E">
+                                <rect key="frame" x="20" y="274" width="335" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1XY-fy-ngz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7x-hm-7s0">
+                                <rect key="frame" x="20" y="444" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IH1-oO-S4X"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="savePhotoLibrary:" destination="ybU-89-q8w" eventType="touchUpInside" id="pbd-3E-raA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZk-Zn-spP">
+                                <rect key="frame" x="20" y="514" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mc9-Y7-fLy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="clovarButtonClicked:" destination="ybU-89-q8w" eventType="touchUpInside" id="CuR-wj-XkC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rnb-97-a3I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RfT-mX-IE0" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="0hq-Ou-ph0"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="RfT-mX-IE0" secondAttribute="trailing" constant="20" id="BA2-Fa-BtS"/>
+                            <constraint firstItem="Ivy-un-77E" firstAttribute="top" secondItem="RfT-mX-IE0" secondAttribute="bottom" constant="20" id="Br4-p9-kcN"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="pZk-Zn-spP" secondAttribute="trailing" constant="20" id="MJJ-HU-GaG"/>
+                            <constraint firstItem="p7x-hm-7s0" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="O84-qg-D3V"/>
+                            <constraint firstItem="pZk-Zn-spP" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="PQ1-d3-pFn"/>
+                            <constraint firstItem="Ivy-un-77E" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="SZP-68-a8Z"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="p7x-hm-7s0" secondAttribute="trailing" constant="20" id="UiT-D0-6BA"/>
+                            <constraint firstItem="p7x-hm-7s0" firstAttribute="top" secondItem="Ivy-un-77E" secondAttribute="bottom" constant="20" id="aVR-Mb-bG7"/>
+                            <constraint firstItem="pZk-Zn-spP" firstAttribute="top" secondItem="p7x-hm-7s0" secondAttribute="bottom" constant="20" id="dQF-VM-XHt"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="y3n-s4-foV" secondAttribute="trailing" constant="20" id="eJR-Kq-BMn"/>
+                            <constraint firstItem="RfT-mX-IE0" firstAttribute="top" secondItem="y3n-s4-foV" secondAttribute="bottom" constant="20" id="gDe-RI-FTQ"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="Ivy-un-77E" secondAttribute="trailing" constant="20" id="jPQ-0C-OzY"/>
+                            <constraint firstItem="5Kg-Km-cM3" firstAttribute="top" secondItem="Rnb-97-a3I" secondAttribute="top" constant="20" id="sq5-a2-OwN"/>
+                            <constraint firstItem="y3n-s4-foV" firstAttribute="top" secondItem="5Kg-Km-cM3" secondAttribute="bottom" constant="20" id="t0d-cv-GEC"/>
+                            <constraint firstItem="5Kg-Km-cM3" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="tsh-0w-M7y"/>
+                            <constraint firstItem="Rnb-97-a3I" firstAttribute="trailing" secondItem="5Kg-Km-cM3" secondAttribute="trailing" constant="20" id="wbw-t3-P3b"/>
+                            <constraint firstItem="y3n-s4-foV" firstAttribute="leading" secondItem="Rnb-97-a3I" secondAttribute="leading" constant="20" id="xSS-Kq-fZU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="Ivy-un-77E" id="Am0-4j-643"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sP6-8O-t7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4840.8000000000002" y="87.931034482758619"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tkc-91-5KR">
