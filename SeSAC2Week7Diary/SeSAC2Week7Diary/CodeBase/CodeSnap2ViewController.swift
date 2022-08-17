@@ -27,6 +27,7 @@ class CodeSnap2ViewController: UIViewController {
         [redView, blackView].forEach { view.addSubview($0) } // addsubview가 되는 순서대로 레이아웃의 중첩 순서를 나타낸다.
         
         redView.addSubview(yellowView)
+    
         // 헷갈리지 말자. containerView, stackview의 경우 다른 메서드를 써야 한다.
         
         
