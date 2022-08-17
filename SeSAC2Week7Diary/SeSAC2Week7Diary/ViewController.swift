@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        let vc = CodeSnap2ViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+        
         testOpen()
 //alert  버튼
 //        showSesacAlert(title: "테스트 얼렛", message: "테스트 메세지", buttonTitle: "변경"){ _ in

@@ -72,12 +72,21 @@
                                     <constraint firstAttribute="width" constant="100" id="fOL-8f-C3l"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cg5-la-Igw">
+                                <rect key="frame" x="334" y="74" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4pR-Wp-Lix"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZFP-Y4-Y3A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
                             <constraint firstItem="Gt6-Yt-dsM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="35D-jM-C7A"/>
                             <constraint firstItem="7iw-1t-kNp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3v3-lz-gI4"/>
+                            <constraint firstItem="cg5-la-Igw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Orc-vn-QRh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cg5-la-Igw" secondAttribute="trailing" constant="30" id="cQ4-QC-ed3"/>
                             <constraint firstItem="Gt6-Yt-dsM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="gai-oF-dPG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gt6-Yt-dsM" secondAttribute="trailing" constant="30" id="iUt-2i-Bnu"/>
                             <constraint firstItem="7iw-1t-kNp" firstAttribute="top" secondItem="Gt6-Yt-dsM" secondAttribute="bottom" constant="8" id="wih-um-QwI"/>
@@ -86,11 +95,12 @@
                     <connections>
                         <outlet property="blackView" destination="7iw-1t-kNp" id="xTv-x9-oM6"/>
                         <outlet property="tutorialLabel" destination="Gt6-Yt-dsM" id="yn5-a2-HkY"/>
+                        <outlet property="upImageView" destination="cg5-la-Igw" id="7X9-b7-ZGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="102"/>
+            <point key="canvasLocation" x="0.0" y="101.78571428571428"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="vVf-gq-dGy">
