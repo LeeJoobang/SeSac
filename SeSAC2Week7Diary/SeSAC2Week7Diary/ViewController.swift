@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let vc = ExampleOneViewController()
+        let vc = ExampleTwoViewController()
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
         
