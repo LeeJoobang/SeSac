@@ -12,6 +12,7 @@ class WebViewController: UIViewController {
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var goForwardButton: UIBarButtonItem!
     
+    
     static var movieId: String?
     
     override func viewDidLoad() {
@@ -21,12 +22,11 @@ class WebViewController: UIViewController {
         reloadButton.title = "다시"
         goForwardButton.title = "앞으로"
         
-        
         requestVideo(movieID: WebViewController.movieId ?? "")
-
     }
     
     private func requestVideo(movieID: String){
+        
         let videourl = "\(EndPoint.tmdbCastURL)\(movieID)/videos?api_key=\(APIKey.APIKey)"
         AF.request(videourl, method: .get).validate().responseJSON { response in
             switch response.result {

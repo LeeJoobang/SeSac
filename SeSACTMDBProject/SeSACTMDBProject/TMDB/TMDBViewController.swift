@@ -8,6 +8,7 @@ class TMDBViewController: UIViewController {
    
     @IBOutlet weak var tmdbTableView: UITableView!
     
+
     var list = [Movie]()
     var movieChangePage = 1 // 데이터가 10개만 나오기 때문에 우선적으로 페이지 네이션 패스
     var totalPage = 0
@@ -66,6 +67,9 @@ class TMDBViewController: UIViewController {
 }
 
 extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height / 2
     }
@@ -79,26 +83,35 @@ extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
         cell.tmdbImageView.contentMode = .scaleToFill
         cell.configureCell(data: list, indexPath: indexPath.item)
         cell.tmdbVideoButton.tag = indexPath.row
+//        cell.tmdbVideoButton.addTarget(self, action: #selector(videoButtonClicked), for: .touchUpInside)
+        
         cell.tmdbVideoButton.addTarget(self, action: #selector(videoButtonClicked), for: .touchUpInside)
         return cell
     }
     
+
+    
+    
     @objc
     func videoButtonClicked(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "WebView", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: WebViewController.reuseIdentifier) as? WebViewController else { return }
         WebViewController.movieId = list[sender.tag].movieId
-        self.navigationController?.pushViewController(vc, animated: true)
+        transitionViewController(storyboard: "WebView", identifier: WebViewController.reuseIdentifier, viewController: WebViewController())
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Information", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: InformationViewController.reuseIdentifier) as! InformationViewController
-        vc.informationData = list
-        vc.informationNum = indexPath.row
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // alert삭제
+
+        InformationViewController.informationData = self.list
+        InformationViewController.informationNum = indexPath.row
         
-        showSesacAlert(title: list[indexPath.row].title, message: "\(list[indexPath.row].title)의 등장인물 정보를 보시겠습니까?", buttonTitle: "확인") { _ in
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        transitionViewController(storyboard: "Information", identifier: InformationViewController.reuseIdentifier, viewController: InformationViewController())
+        
+//        let infoVC = InformationViewController()
+//        infoVC.informationButtonActionHandler = {
+//            infoVC.informationData = self.list
+//            infoVC.informationNum = indexPath.row
+//        }
+//        showSesacAlert(title: list[indexPath.row].title, message: "\(list[indexPath.row].title)의 등장인물 정보를 보시겠습니까?", buttonTitle: "확인")
     }
 }

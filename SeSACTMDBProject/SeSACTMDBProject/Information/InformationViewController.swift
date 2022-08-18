@@ -9,11 +9,13 @@ class InformationViewController: UIViewController{
     @IBOutlet weak var informationTableView: UITableView!
     @IBOutlet weak var backDropImageView: UIImageView!
     
-    var informationData = [Movie]()
-    var informationNum = Int()
+    static var informationData = [Movie]()
+    static var informationNum = Int()
     
     var castList: [CastInfo] = []
     
+    var informationButtonActionHandler: (() -> ())?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,19 +24,39 @@ class InformationViewController: UIViewController{
         
         self.navigationItem.title = "출연/정보"
         
-        backDropImageView.contentMode = .scaleToFill
-        backDropImageView.kf.setImage(with: informationData[informationNum].backDrop)
-        
-        
-        informationTableView.register(UINib(nibName: InformationTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reuseIdentifier)
-        
-        castRequest(movieID: informationData[informationNum].movieId)
+//        backDropImageView.contentMode = .scaleToFill
+//        backDropImageView.kf.setImage(with: informationData[informationNum].backDrop)
+//
+//
+//        informationTableView.register(UINib(nibName: InformationTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reuseIdentifier)
+//
+//        castRequest(movieID: informationData[informationNum].movieId)
+        displayCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "설명", style: .plain, target: self, action: #selector(resetUserDefault))
     }
+    
+    func displayCell(){
+//        informationButtonActionHandler?()
+        
+        backDropImageView.contentMode = .scaleToFill
+        backDropImageView.kf.setImage(with: InformationViewController.informationData[InformationViewController.informationNum].backDrop)
+        
+        
+        informationTableView.register(UINib(nibName: InformationTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: InformationTableViewCell.reuseIdentifier)
+        
+        castRequest(movieID: InformationViewController.informationData[InformationViewController.informationNum].movieId)
+    }
+    
+    //        webVC.informationButtonActionHandler = {
+    //            webVC.informationData = self.list
+    //            webVC.informationNum = indexPath.row
+    //        }
+    
     
     @objc
     func resetUserDefault(){
@@ -84,7 +106,7 @@ extension InformationViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as! InformationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: InformationTableViewCell.reuseIdentifier, for: indexPath) as! InformationTableViewCell
         print(castList.count)
         cell.infromationCellImageView.kf.setImage(with: castList[indexPath.row].image)
         cell.infromationCellImageView.contentMode = .scaleAspectFit

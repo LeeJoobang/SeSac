@@ -20,6 +20,7 @@
 		372E048E28A105E600F4FDAD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E048D28A105E600F4FDAD /* WebViewController.swift */; };
 		372E049228A1061500F4FDAD /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372E049128A1061500F4FDAD /* WebView.storyboard */; };
 		372E049528A1525F00F4FDAD /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E049428A1525F00F4FDAD /* ReusableProtocol.swift */; };
+		37426ADB28AE3B9C00E6F3D6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37426ADA28AE3B9C00E6F3D6 /* UIViewController+Extension.swift */; };
 		37458A43289AB0DC00138072 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A42289AB0DC00138072 /* APIKey.swift */; };
 		37458A45289AB0EF00138072 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37458A44289AB0EF00138072 /* Constant.swift */; };
 		37458A49289AB45E00138072 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37458A48289AB45E00138072 /* Alamofire */; };
@@ -96,6 +97,7 @@
 		372E048D28A105E600F4FDAD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		372E049128A1061500F4FDAD /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		372E049428A1525F00F4FDAD /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		37426ADA28AE3B9C00E6F3D6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		37458A42289AB0DC00138072 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		37458A44289AB0EF00138072 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		37458A50289AB7B900138072 /* TMDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		370B16F92899F6C20000CD58 /* SeSACTMDBProject */ = {
 			isa = PBXGroup;
 			children = (
+				37426AD728AE3B7100E6F3D6 /* Extension */,
 				3767C39428ABBCF5003561E8 /* WalkThrough */,
 				37BF5BD628A3FD30002D4C70 /* Network */,
 				37BE79C128A26CC600FA8E47 /* View */,
@@ -221,6 +224,14 @@
 				370B17102899F82D0000CD58 /* TMDBViewController.swift */,
 			);
 			path = TMDB;
+			sourceTree = "<group>";
+		};
+		37426AD728AE3B7100E6F3D6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				37426ADA28AE3B9C00E6F3D6 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		37458A46289AB0FE00138072 /* Key */ = {
@@ -419,6 +430,7 @@
 				37BE79CE28A2787C00FA8E47 /* PosterCollectionViewCell.swift in Sources */,
 				37BE79C528A26EE500FA8E47 /* PosterViewController.swift in Sources */,
 				37BF5BD828A3FD4C002D4C70 /* TMDBAPIManager.swift in Sources */,
+				37426ADB28AE3B9C00E6F3D6 /* UIViewController+Extension.swift in Sources */,
 				37BE79C728A26FC100FA8E47 /* PosterTableViewCell.swift in Sources */,
 				37458A43289AB0DC00138072 /* APIKey.swift in Sources */,
 				370B171F2899FABD0000CD58 /* Example2.swift in Sources */,

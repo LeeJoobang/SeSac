@@ -32,7 +32,6 @@ class PosterViewController: UIViewController {
         
         Refactoring.shared.researchTMDB { value in
             self.recommendTMDBList = value
-//            self.posterTableView.reloadData()
            print("서버통신 완료")
             
             TMDBAPIManager.shared.requestImage(list: self.recommendTMDBList) { poster in
@@ -79,22 +78,17 @@ extension PosterViewController: UITableViewDelegate, UITableViewDataSource{
 extension PosterViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //  빈배열 상태로 놔두지 말고 뭐라도 넣어두자.
         return recommendMovieList[collectionView.tag].count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.reuseIdentifier, for: indexPath) as? PosterCollectionViewCell else { return UICollectionViewCell() }
         
-//        let tmdbUrl = URL(string: "\(Refactoring.shared.imageURL)\(recommendTMDBList[indexPath.item].filePath)")
-
         let url = URL(string: "\(Refactoring.shared.imageURL)\(recommendMovieList[collectionView.tag][indexPath.item])")
         cell.posterView.posterLabel.text = ""
         cell.posterView.backgroundColor = .yellow
         cell.posterView.posterImageView.contentMode = .scaleToFill
         cell.posterView.posterImageView.kf.setImage(with: url)
-            
-        print("셀 생성 완료")
         return cell
     }
 }
