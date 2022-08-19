@@ -94,7 +94,9 @@ extension TMDBViewController: UITableViewDelegate, UITableViewDataSource {
     
     @objc
     func videoButtonClicked(_ sender: UIButton) {
-        WebViewController.movieId = list[sender.tag].movieId
+        NotificationCenter.default.post(name: NSNotification.Name("Test"), object: "\(list[sender.tag].movieId)")
+                                                                                                   
+//        WebViewController.movieId = list[sender.tag].movieId
         transitionViewController(storyboard: "WebView", identifier: WebViewController.reuseIdentifier, viewController: WebViewController())
     }
     

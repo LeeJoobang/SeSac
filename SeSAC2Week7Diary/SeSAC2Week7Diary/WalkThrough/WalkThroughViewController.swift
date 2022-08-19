@@ -60,6 +60,8 @@ extension WalkThroughViewController: UIPageViewControllerDelegate, UIPageViewCon
         return pageViewControllerList.count
     }
     
+    // intro 화면은 첫번째로 떠야 한다. 유동적으로 무조건 0번부터 보여줘라 / return 0으로 처리해도 무방하다.
+    // 그렇다면 왜?? 사진을 슬라이딩을 할 때, 중간까지 왔다. 클릭을 하면 페이지 뷰 컨트롤러가 확대가 된다. 사용자가 클릭한 인덱스를 바로 보여줘야 할 것이다. 이럴 때마다 어떤 인덱스를 클릭할 때마다 디스플레이되는 뷰컨트롤러가 달라지고, 그 때 인덱스도 달라지게 될 것이다. 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let first = viewControllers?.first, let index = pageViewControllerList.firstIndex(of: first) else { return 0 }
         print(index)

@@ -13,7 +13,8 @@ class WebViewController: UIViewController {
     @IBOutlet weak var goForwardButton: UIBarButtonItem!
     
     
-    static var movieId: String?
+//    static var movieId: String?
+    var movieId = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,18 @@ class WebViewController: UIViewController {
         reloadButton.title = "다시"
         goForwardButton.title = "앞으로"
         
-        requestVideo(movieID: WebViewController.movieId ?? "")
+        addNotificationObserver()
+        requestVideo(movieID: movieId)
+    }
+    
+    func addNotificationObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(test(_:)), name: NSNotification.Name("Test"), object: nil)
+    }
+    
+    @objc func test(_ notification: NSNotification){
+        if let text = notification.object as? String {
+            movieId = text
+        }
     }
     
     private func requestVideo(movieID: String){
