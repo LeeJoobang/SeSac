@@ -5,9 +5,29 @@ class MainView: BaseView{
     
     let logoButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(.red, for: .normal)
         button.setTitle("N", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 50)
+        return button
+    }()
+    
+    let tvProgramButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("TV 프로그램", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        return button
+    }()
+    
+    let movieButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("영화", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        return button
+    }()
+    
+    let contentsButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("내가 찜한 콘텐츠", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         return button
     }()
  
@@ -20,7 +40,7 @@ class MainView: BaseView{
     }
     
     override func configureUI() {
-        [logoButton].forEach {
+        [logoButton, tvProgramButton, movieButton, contentsButton].forEach {
             self.addSubview($0)
         }
     }
@@ -30,6 +50,22 @@ class MainView: BaseView{
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.leadingMargin.equalTo(20)
             make.height.equalTo(50)
+        }
+        
+        tvProgramButton.snp.makeConstraints { make in
+            make.bottom.equalTo(self.logoButton.snp.bottom)
+            make.leadingMargin.equalTo(self.logoButton.snp.trailing).offset(30)
+        }
+        
+        movieButton.snp.makeConstraints { make in
+            make.bottom.equalTo(self.logoButton.snp.bottom)
+            make.leadingMargin.equalTo(self.tvProgramButton.snp.trailing).offset(30)
+
+        }
+
+        contentsButton.snp.makeConstraints { make in
+            make.bottom.equalTo(self.logoButton.snp.bottom)
+            make.leadingMargin.equalTo(self.movieButton.snp.trailing).offset(30)
         }
     }
 }
