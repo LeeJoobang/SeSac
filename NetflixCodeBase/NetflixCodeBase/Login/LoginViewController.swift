@@ -6,6 +6,9 @@ class LoginViewController: BaseViewController{
     
     override func loadView() {
         self.view = loginView
+        loginView.backgroundColor = .black
+        //loginView.backgroundColor = .white // default black이네?
+
     }
     
     override func configureUI() {

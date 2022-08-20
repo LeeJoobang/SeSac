@@ -3,7 +3,6 @@ import SnapKit
 
 class LoginView: BaseView{
     
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "JACKFLIX"
@@ -59,7 +58,37 @@ class LoginView: BaseView{
         )
         return view
     }()
-
+    
+    let checkButton: LoginButton = {
+        let view = LoginButton()
+        view.setTitle("회원가입", for: .normal)
+        view.setTitleColor(UIColor.black, for: .normal)
+        return view
+    }()
+    
+    let addInformationLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .black
+        label.text = " 추가 정보 입력"
+        label.textColor = UIColor.white
+        label.textAlignment = .left
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        return label
+    }()
+    
+    let segmentedControl: UISegmentedControl = {
+        let control = UISegmentedControl(items: ["firstView", "secondView"])
+        control.translatesAutoresizingMaskIntoConstraints = false
+        return control
+    }()
+    
+    let switchControl: UISwitch = {
+        let control = UISwitch()
+        control.tintColor = UIColor.orange
+        control.isOn = true
+        return control
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -69,14 +98,12 @@ class LoginView: BaseView{
     }
     
     override func configureUI() {
-        [titleLabel, emailTextField, passwordTextField, nicknameTextField, locationTextField, codeTextField].forEach {
+        [titleLabel, emailTextField, passwordTextField, nicknameTextField, locationTextField, codeTextField, checkButton, addInformationLabel, switchControl].forEach {
             self.addSubview($0)
         }
-        
     }
     
     override func setConstraints() {
-
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalTo(self.safeAreaLayoutGuide)
             make.centerY.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.3)
@@ -90,40 +117,54 @@ class LoginView: BaseView{
             make.centerY.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.7)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
         
         passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(self.emailTextField.snp.bottom).offset(10)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
         
         nicknameTextField.snp.makeConstraints { make in
             make.top.equalTo(self.passwordTextField.snp.bottom).offset(10)
-
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
         
         locationTextField.snp.makeConstraints { make in
             make.top.equalTo(self.nicknameTextField.snp.bottom).offset(10)
-
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
         
         codeTextField.snp.makeConstraints { make in
             make.top.equalTo(self.locationTextField.snp.bottom).offset(10)
-
+            make.leadingMargin.equalTo(20)
+            make.trailingMargin.equalTo(-20)
+            make.height.equalTo(40)
+        }
+        
+        checkButton.snp.makeConstraints { make in
+            make.top.equalTo(self.codeTextField.snp.bottom).offset(10)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.height.equalTo(50)
         }
         
+        addInformationLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.checkButton.snp.bottom).offset(5)
+            make.leadingMargin.equalTo(20)
+            make.height.equalTo(50)
+            make.width.equalTo(150)
+        }
         
+        switchControl.snp.makeConstraints { make in
+            make.centerY.equalTo(self.addInformationLabel).multipliedBy(1)
+            make.trailingMargin.equalTo(-20)
+        }
     }
 }

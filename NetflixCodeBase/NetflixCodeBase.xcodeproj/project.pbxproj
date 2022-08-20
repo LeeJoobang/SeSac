@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37379B3728B0F84800A4A801 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37379B3628B0F84800A4A801 /* LoginButton.swift */; };
+		37379B3C28B0FEBF00A4A801 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37379B3B28B0FEBF00A4A801 /* MainViewController.swift */; };
+		37379B3E28B0FECB00A4A801 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37379B3D28B0FECB00A4A801 /* MainView.swift */; };
 		37B2375128AF628100790DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2375028AF628100790DFC /* AppDelegate.swift */; };
 		37B2375328AF628100790DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2375228AF628100790DFC /* SceneDelegate.swift */; };
 		37B2375528AF628100790DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2375428AF628100790DFC /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37379B3628B0F84800A4A801 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		37379B3B28B0FEBF00A4A801 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		37379B3D28B0FECB00A4A801 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		37B2374D28AF628100790DFC /* NetflixCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B2375028AF628100790DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B2375228AF628100790DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37379B3A28B0FEB200A4A801 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				37379B3B28B0FEBF00A4A801 /* MainViewController.swift */,
+				37379B3D28B0FECB00A4A801 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		37B2374428AF628100790DFC = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +83,8 @@
 		37B2374F28AF628100790DFC /* NetflixCodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				37B2376A28AF6DEC00790DFC /* Netflix */,
+				37379B3A28B0FEB200A4A801 /* Main */,
+				37B2376A28AF6DEC00790DFC /* Login */,
 				37B2376928AF6DE700790DFC /* Utility */,
 				37B2375028AF628100790DFC /* AppDelegate.swift */,
 				37B2375228AF628100790DFC /* SceneDelegate.swift */,
@@ -91,19 +107,20 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		37B2376A28AF6DEC00790DFC /* Netflix */ = {
+		37B2376A28AF6DEC00790DFC /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				37B2377528AF77B500790DFC /* LoginViewController.swift */,
 				37B2377728AF77D600790DFC /* LoginView.swift */,
 			);
-			path = Netflix;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		37B2377128AF6EDB00790DFC /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 				37B2376F28AF6E6100790DFC /* LoginTextField.swift */,
+				37379B3628B0F84800A4A801 /* LoginButton.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -186,13 +203,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B2375528AF628100790DFC /* ViewController.swift in Sources */,
+				37379B3728B0F84800A4A801 /* LoginButton.swift in Sources */,
 				37B2377828AF77D600790DFC /* LoginView.swift in Sources */,
 				37B2376C28AF6E3100790DFC /* BaseViewController.swift in Sources */,
 				37B2376E28AF6E4800790DFC /* BaseView.swift in Sources */,
 				37B2377028AF6E6100790DFC /* LoginTextField.swift in Sources */,
 				37B2375128AF628100790DFC /* AppDelegate.swift in Sources */,
+				37379B3E28B0FECB00A4A801 /* MainView.swift in Sources */,
 				37B2375328AF628100790DFC /* SceneDelegate.swift in Sources */,
 				37B2377628AF77B500790DFC /* LoginViewController.swift in Sources */,
+				37379B3C28B0FEBF00A4A801 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

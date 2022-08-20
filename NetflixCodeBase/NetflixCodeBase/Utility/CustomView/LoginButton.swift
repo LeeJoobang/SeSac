@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginTextField: UITextField {
+class LoginButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -12,13 +12,9 @@ class LoginTextField: UITextField {
     }
     
     func setupView() {
-        backgroundColor = .lightGray
-        textAlignment = .center
-        textColor = .black
-        borderStyle = .none
+        backgroundColor = .white
         layer.cornerRadius = 8
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
     }
 }
-
