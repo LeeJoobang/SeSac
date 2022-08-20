@@ -13,6 +13,12 @@
 		37B2375828AF628100790DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B2375628AF628100790DFC /* Main.storyboard */; };
 		37B2375A28AF628400790DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B2375928AF628400790DFC /* Assets.xcassets */; };
 		37B2375D28AF628400790DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B2375B28AF628400790DFC /* LaunchScreen.storyboard */; };
+		37B2376C28AF6E3100790DFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2376B28AF6E3100790DFC /* BaseViewController.swift */; };
+		37B2376E28AF6E4800790DFC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2376D28AF6E4800790DFC /* BaseView.swift */; };
+		37B2377028AF6E6100790DFC /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2376F28AF6E6100790DFC /* LoginTextField.swift */; };
+		37B2377428AF700E00790DFC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 37B2377328AF700E00790DFC /* SnapKit */; };
+		37B2377628AF77B500790DFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2377528AF77B500790DFC /* LoginViewController.swift */; };
+		37B2377828AF77D600790DFC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2377728AF77D600790DFC /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		37B2375928AF628400790DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B2375C28AF628400790DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37B2375E28AF628400790DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B2376B28AF6E3100790DFC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		37B2376D28AF6E4800790DFC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		37B2376F28AF6E6100790DFC /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		37B2377528AF77B500790DFC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37B2377728AF77D600790DFC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B2377428AF700E00790DFC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,8 @@
 		37B2374F28AF628100790DFC /* NetflixCodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				37B2376A28AF6DEC00790DFC /* Netflix */,
+				37B2376928AF6DE700790DFC /* Utility */,
 				37B2375028AF628100790DFC /* AppDelegate.swift */,
 				37B2375228AF628100790DFC /* SceneDelegate.swift */,
 				37B2375428AF628100790DFC /* ViewController.swift */,
@@ -65,6 +79,33 @@
 				37B2375E28AF628400790DFC /* Info.plist */,
 			);
 			path = NetflixCodeBase;
+			sourceTree = "<group>";
+		};
+		37B2376928AF6DE700790DFC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				37B2377128AF6EDB00790DFC /* CustomView */,
+				37B2376B28AF6E3100790DFC /* BaseViewController.swift */,
+				37B2376D28AF6E4800790DFC /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		37B2376A28AF6DEC00790DFC /* Netflix */ = {
+			isa = PBXGroup;
+			children = (
+				37B2377528AF77B500790DFC /* LoginViewController.swift */,
+				37B2377728AF77D600790DFC /* LoginView.swift */,
+			);
+			path = Netflix;
+			sourceTree = "<group>";
+		};
+		37B2377128AF6EDB00790DFC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				37B2376F28AF6E6100790DFC /* LoginTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = NetflixCodeBase;
+			packageProductDependencies = (
+				37B2377328AF700E00790DFC /* SnapKit */,
+			);
 			productName = NetflixCodeBase;
 			productReference = 37B2374D28AF628100790DFC /* NetflixCodeBase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 37B2374428AF628100790DFC;
+			packageReferences = (
+				37B2377228AF700E00790DFC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 37B2374E28AF628100790DFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B2375528AF628100790DFC /* ViewController.swift in Sources */,
+				37B2377828AF77D600790DFC /* LoginView.swift in Sources */,
+				37B2376C28AF6E3100790DFC /* BaseViewController.swift in Sources */,
+				37B2376E28AF6E4800790DFC /* BaseView.swift in Sources */,
+				37B2377028AF6E6100790DFC /* LoginTextField.swift in Sources */,
 				37B2375128AF628100790DFC /* AppDelegate.swift in Sources */,
 				37B2375328AF628100790DFC /* SceneDelegate.swift in Sources */,
+				37B2377628AF77B500790DFC /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		37B2377228AF700E00790DFC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37B2377328AF700E00790DFC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37B2377228AF700E00790DFC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37B2374528AF628100790DFC /* Project object */;
 }
