@@ -75,18 +75,21 @@ class MainView: BaseView{
     let oneImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "movie1")
+        image.layer.cornerRadius = 25
         return image
     }()
     
     let twoImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "movie2")
+        image.layer.cornerRadius = 25
         return image
     }()
     
     let threeImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "movie3")
+        image.layer.cornerRadius = 25
         return image
     }()
     
