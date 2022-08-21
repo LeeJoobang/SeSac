@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372E847128B2827300C7A7EF /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E847028B2827300C7A7EF /* SearchViewCell.swift */; };
+		372E847328B2834400C7A7EF /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E847228B2834400C7A7EF /* BaseViewCell.swift */; };
+		372E847628B288DE00C7A7EF /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E847528B288DE00C7A7EF /* ReusableProtocol.swift */; };
 		37903A1228B2359400EFF886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37903A1128B2359400EFF886 /* AppDelegate.swift */; };
 		37903A1428B2359400EFF886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37903A1328B2359400EFF886 /* SceneDelegate.swift */; };
 		37903A1628B2359400EFF886 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37903A1528B2359400EFF886 /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372E847028B2827300C7A7EF /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		372E847228B2834400C7A7EF /* BaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		372E847528B288DE00C7A7EF /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		37903A0E28B2359400EFF886 /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37903A1128B2359400EFF886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37903A1328B2359400EFF886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372E847428B2889900C7A7EF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				372E847528B288DE00C7A7EF /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		37903A0528B2359400EFF886 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +84,7 @@
 		37903A1028B2359400EFF886 /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				372E847428B2889900C7A7EF /* Protocol */,
 				37903A2728B235FF00EFF886 /* Search */,
 				37903A2628B235F900EFF886 /* Main */,
 				37903A2528B235F500EFF886 /* Utility */,
@@ -90,6 +105,7 @@
 				37903A3228B2367A00EFF886 /* CustomView */,
 				37903A3328B2368A00EFF886 /* BaseViewController.swift */,
 				37903A3528B2369600EFF886 /* BaseView.swift */,
+				372E847228B2834400C7A7EF /* BaseViewCell.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -108,6 +124,7 @@
 			children = (
 				37903A2C28B2364700EFF886 /* SearchViewController.swift */,
 				37903A3028B2365D00EFF886 /* SearchView.swift */,
+				372E847028B2827300C7A7EF /* SearchViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -198,10 +215,13 @@
 			files = (
 				37903A2D28B2364700EFF886 /* SearchViewController.swift in Sources */,
 				37903A1628B2359400EFF886 /* ViewController.swift in Sources */,
+				372E847628B288DE00C7A7EF /* ReusableProtocol.swift in Sources */,
 				37903A1228B2359400EFF886 /* AppDelegate.swift in Sources */,
 				37903A3128B2365D00EFF886 /* SearchView.swift in Sources */,
+				372E847328B2834400C7A7EF /* BaseViewCell.swift in Sources */,
 				37903A1428B2359400EFF886 /* SceneDelegate.swift in Sources */,
 				37903A3428B2368A00EFF886 /* BaseViewController.swift in Sources */,
+				372E847128B2827300C7A7EF /* SearchViewCell.swift in Sources */,
 				37903A3628B2369600EFF886 /* BaseView.swift in Sources */,
 				37903A2B28B2363C00EFF886 /* MainView.swift in Sources */,
 				37903A2928B2363300EFF886 /* MainViewController.swift in Sources */,
