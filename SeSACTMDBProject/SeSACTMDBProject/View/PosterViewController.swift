@@ -37,6 +37,10 @@ class PosterViewController: UIViewController {
             TMDBAPIManager.shared.requestImage(list: self.recommendTMDBList) { poster in
                 self.recommendMovieList = poster
                 self.posterTableView.reloadData()
+
+//                DispatchQueue.main.async {
+//                    self.posterTableView.reloadData()
+//                }
                 print("서버통신 완료 - 2번째")
             }
         }
