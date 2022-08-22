@@ -70,7 +70,6 @@ class ShoppingTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListTableViewCell", for: indexPath) as! ShoppingListTableViewCell
         
-        
         // cell의 design + data
         cell.backgroundColor = .systemGray5
         
@@ -79,33 +78,23 @@ class ShoppingTableViewController: UITableViewController {
         
         cell.bookmarkButton.tag = indexPath.row
         cell.checkboxButton.tag = indexPath.row
-
-        print(indexPath.row)
         
         // cell안에있는 button 활성화
         cell.bookmarkButton.tintColor = .black
         cell.checkboxButton.tintColor = .black
         
-        cell.checkboxButton.addTarget(self, action: #selector(checkboxButtonClicked(_:)), for: .touchUpInside)
-
         if task?.shopCheck == true {
-            cell.checkboxButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .selected)
+            cell.checkboxButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
         } else {
             cell.checkboxButton.setImage(UIImage(systemName: "square"), for: .normal)
         }
         
         if task?.shopLike == true {
-            cell.bookmarkButton.setImage(UIImage(systemName: "star.fill"), for: .selected)
+            cell.bookmarkButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
         } else {
             cell.bookmarkButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
-        
         return cell
-    }
-    
-    @objc func checkboxButtonClicked(_ sender: UIButton){
-        print(task?.shopCheck)
-        
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

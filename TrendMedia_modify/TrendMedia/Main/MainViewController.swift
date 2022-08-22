@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     }()
     
     var tasks: Results<UserShopList>!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
