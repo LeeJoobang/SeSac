@@ -19,6 +19,11 @@
 		37C2F83E28B4AACD007A6A9E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 37C2F83D28B4AACD007A6A9E /* Realm */; };
 		37C2F84028B4AACD007A6A9E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37C2F83F28B4AACD007A6A9E /* RealmSwift */; };
 		37C2F84228B4AB8A007A6A9E /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84128B4AB8A007A6A9E /* RealmList.swift */; };
+		37C2F84628B4ADC3007A6A9E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */; };
+		37C2F84828B4ADCC007A6A9E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84728B4ADCC007A6A9E /* BaseView.swift */; };
+		37C2F84B28B4ADE0007A6A9E /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */; };
+		37C2F84D28B4AEC1007A6A9E /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */; };
+		37C2F85028B4BAFE007A6A9E /* ResuableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84F28B4BAFE007A6A9E /* ResuableProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		37C2F83528B4A8DB007A6A9E /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		37C2F83728B4A8E6007A6A9E /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		37C2F84128B4AB8A007A6A9E /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
+		37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		37C2F84728B4ADCC007A6A9E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		37C2F84F28B4BAFE007A6A9E /* ResuableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,8 @@
 		37C2F81E28B4A862007A6A9E /* ShoppingListApp */ = {
 			isa = PBXGroup;
 			children = (
+				37C2F84E28B4BAEF007A6A9E /* Protocol */,
+				37C2F84428B4ADB9007A6A9E /* Base */,
 				37C2F83428B4A88F007A6A9E /* Realm */,
 				37C2F83328B4A87A007A6A9E /* Shpping */,
 				37C2F81F28B4A862007A6A9E /* AppDelegate.swift */,
@@ -86,6 +98,7 @@
 			children = (
 				37C2F83528B4A8DB007A6A9E /* ShoppingViewController.swift */,
 				37C2F83728B4A8E6007A6A9E /* ShoppingTableViewCell.swift */,
+				37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */,
 			);
 			path = Shpping;
 			sourceTree = "<group>";
@@ -96,6 +109,24 @@
 				37C2F84128B4AB8A007A6A9E /* RealmList.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		37C2F84428B4ADB9007A6A9E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */,
+				37C2F84728B4ADCC007A6A9E /* BaseView.swift */,
+				37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		37C2F84E28B4BAEF007A6A9E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				37C2F84F28B4BAFE007A6A9E /* ResuableProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +209,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C2F84D28B4AEC1007A6A9E /* ShoppingView.swift in Sources */,
 				37C2F82428B4A862007A6A9E /* ViewController.swift in Sources */,
 				37C2F82028B4A862007A6A9E /* AppDelegate.swift in Sources */,
 				37C2F83628B4A8DB007A6A9E /* ShoppingViewController.swift in Sources */,
 				37C2F82228B4A862007A6A9E /* SceneDelegate.swift in Sources */,
 				37C2F83828B4A8E6007A6A9E /* ShoppingTableViewCell.swift in Sources */,
+				37C2F84628B4ADC3007A6A9E /* BaseViewController.swift in Sources */,
 				37C2F84228B4AB8A007A6A9E /* RealmList.swift in Sources */,
+				37C2F84B28B4ADE0007A6A9E /* BaseViewCell.swift in Sources */,
+				37C2F84828B4ADCC007A6A9E /* BaseView.swift in Sources */,
+				37C2F85028B4BAFE007A6A9E /* ResuableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
