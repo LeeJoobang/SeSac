@@ -10,7 +10,8 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet weak var mainUIView: UIView!
     
     var shoppingList:[String] = []
-    var task: UserShopList?
+    
+    var tasks: UserShopList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class ShoppingTableViewController: UITableViewController {
         restoreButton.layer.cornerRadius = 4
         
         designTextField(item: shoppingTextField)
-        
+
     }
 
     // textField action
@@ -43,10 +44,9 @@ class ShoppingTableViewController: UITableViewController {
         shoppingTextField.text = ""
         view.endEditing(true)
         
-        task = UserShopList(shopCheck: false, shopList: shopping, shopLike: false)
-
+        
         try! localRealm.write {
-            localRealm.add(task!) // 35번째 줄에서 실제로 생성(Create)이 된다. 경로에 레코드를 추가해주라
+            localRealm.add(tasks!) // 35번째 줄에서 실제로 생성(Create)이 된다. 경로에 레코드를 추가해주라
             // 왜 try? 안전하게 데이터를 가져오기 위해서. 8/22 여기까지만 배우자!
             print("Realm Succeed")
             dismiss(animated: true)
@@ -83,17 +83,19 @@ class ShoppingTableViewController: UITableViewController {
         cell.bookmarkButton.tintColor = .black
         cell.checkboxButton.tintColor = .black
         
-        if task?.shopCheck == true {
-            cell.checkboxButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-        } else {
-            cell.checkboxButton.setImage(UIImage(systemName: "square"), for: .normal)
-        }
+//        if task?.shopCheck == true {
+//            cell.checkboxButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+//        } else {
+//            cell.checkboxButton.setImage(UIImage(systemName: "square"), for: .normal)
+//        }
+//
+//        if task?.shopLike == true {
+//            cell.bookmarkButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+//        } else {
+//            cell.bookmarkButton.setImage(UIImage(systemName: "star"), for: .normal)
+//        }
+
         
-        if task?.shopLike == true {
-            cell.bookmarkButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        } else {
-            cell.bookmarkButton.setImage(UIImage(systemName: "star"), for: .normal)
-        }
         return cell
     }
     

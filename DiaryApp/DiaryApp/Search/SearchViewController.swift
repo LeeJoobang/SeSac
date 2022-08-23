@@ -11,9 +11,6 @@ class SearchViewController: BaseViewController{
         searchView.collectionView.delegate = self
         searchView.collectionView.dataSource = self
         self.searchView.collectionView.register(SearchViewCell.self, forCellWithReuseIdentifier: SearchViewCell.reusableIdentifier)
-
-        
-        
     }
             
     override func configureUI() {

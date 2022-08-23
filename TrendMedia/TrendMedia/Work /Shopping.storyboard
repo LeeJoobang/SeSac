@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWP-be-cVN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,51 +37,52 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppinglistTableViewCell" rowHeight="118" id="x12-tr-qhy" customClass="ShoppinglistTableViewCell" customModule="TrendMedia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="141.5" width="414" height="118"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppinglistTableViewCell" rowHeight="145" id="x12-tr-qhy" customClass="ShoppinglistTableViewCell" customModule="TrendMedia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="141.5" width="414" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x12-tr-qhy" id="iEh-bQ-xvU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oLm-QL-u4F">
-                                            <rect key="frame" x="30" y="22" width="70" height="73.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="7gr-U6-3wv"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쇼핑 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-wt-5ws">
-                                            <rect key="frame" x="116" y="16" width="78" height="86"/>
+                                            <rect key="frame" x="100" y="16" width="94" height="113"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltt-MH-Jcl">
-                                            <rect key="frame" x="376" y="31" width="22" height="56"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="star.fill" catalog="system"/>
-                                            <connections>
-                                                <action selector="likeStarButtonReturn:" destination="x12-tr-qhy" eventType="touchUpInside" id="Wnu-Ce-giq"/>
-                                            </connections>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-O4-blk">
+                                            <rect key="frame" x="20" y="35" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Tsq-OA-9gl"/>
+                                                <constraint firstAttribute="width" constant="50" id="Xv8-U2-kui"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M1-ei-yjX">
+                                            <rect key="frame" x="344" y="35" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="K8m-y7-jOX"/>
+                                                <constraint firstAttribute="width" constant="50" id="k3I-rZ-63S"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="AYm-wt-5ws" secondAttribute="bottom" constant="16" id="20g-Gs-9n7"/>
-                                        <constraint firstItem="AYm-wt-5ws" firstAttribute="leading" secondItem="oLm-QL-u4F" secondAttribute="trailing" constant="16" id="3kk-dw-NtV"/>
-                                        <constraint firstItem="AYm-wt-5ws" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="top" constant="16" id="Huo-iJ-r2k"/>
-                                        <constraint firstItem="oLm-QL-u4F" firstAttribute="leading" secondItem="iEh-bQ-xvU" secondAttribute="leadingMargin" constant="10" id="KRV-vb-ktB"/>
-                                        <constraint firstItem="oLm-QL-u4F" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="topMargin" constant="10" id="RfH-TR-VHJ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="oLm-QL-u4F" secondAttribute="bottom" constant="10" id="RyK-VZ-hrs"/>
-                                        <constraint firstAttribute="trailing" secondItem="ltt-MH-Jcl" secondAttribute="trailing" constant="16" id="fKH-m3-z7I"/>
-                                        <constraint firstItem="oLm-QL-u4F" firstAttribute="centerY" secondItem="iEh-bQ-xvU" secondAttribute="centerY" id="fVV-eR-rE6"/>
-                                        <constraint firstAttribute="bottom" secondItem="ltt-MH-Jcl" secondAttribute="bottom" constant="31" id="h9y-bA-YvN"/>
-                                        <constraint firstItem="ltt-MH-Jcl" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="top" constant="31" id="ihz-J1-RpX"/>
-                                        <constraint firstItem="AYm-wt-5ws" firstAttribute="centerY" secondItem="iEh-bQ-xvU" secondAttribute="centerY" id="z6l-Ng-dpw"/>
+                                        <constraint firstAttribute="bottom" secondItem="AYm-wt-5ws" secondAttribute="bottom" constant="16" id="8u8-pC-Dkq"/>
+                                        <constraint firstAttribute="trailing" secondItem="7M1-ei-yjX" secondAttribute="trailing" constant="20" id="ChY-9k-jwf"/>
+                                        <constraint firstItem="AYm-wt-5ws" firstAttribute="leading" secondItem="TTk-O4-blk" secondAttribute="trailing" constant="30" id="Dcq-Ab-501"/>
+                                        <constraint firstItem="7M1-ei-yjX" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="top" constant="35" id="LoN-vh-EIe"/>
+                                        <constraint firstItem="TTk-O4-blk" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="top" constant="35" id="MYF-Vn-HxB"/>
+                                        <constraint firstItem="TTk-O4-blk" firstAttribute="leading" secondItem="iEh-bQ-xvU" secondAttribute="leading" constant="20" id="gL8-zC-n34"/>
+                                        <constraint firstItem="7M1-ei-yjX" firstAttribute="leading" secondItem="AYm-wt-5ws" secondAttribute="trailing" constant="150" id="jFp-4H-FoL"/>
+                                        <constraint firstItem="AYm-wt-5ws" firstAttribute="top" secondItem="iEh-bQ-xvU" secondAttribute="top" constant="16" id="zaA-rh-DIN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="checkboxImageView" destination="oLm-QL-u4F" id="9Nj-oT-d6a"/>
-                                    <outlet property="likeStarButton" destination="ltt-MH-Jcl" id="Hg3-w4-3aW"/>
+                                    <outlet property="checkboxButton" destination="TTk-O4-blk" id="t3O-SB-bOs"/>
+                                    <outlet property="likeButton" destination="7M1-ei-yjX" id="oy9-hL-fqT"/>
                                     <outlet property="shoppinglistLabel" destination="AYm-wt-5ws" id="r8g-lC-B1i"/>
                                 </connections>
                             </tableViewCell>
