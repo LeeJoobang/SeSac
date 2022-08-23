@@ -6,19 +6,25 @@ class ShoppingTableViewCell: BaseViewCell {
     
     let checkBoxButton: UIButton = {
         let check = UIButton()
-        check.backgroundColor = .brown
+        check.backgroundColor = .systemGray3
+        check.layer.borderWidth = 1
+        check.layer.borderColor = UIColor.black.cgColor
         return check
     }()
     
     let shoppingName: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .red
+        label.backgroundColor = .systemGray
+        label.layer.borderWidth = 1
+        label.layer.borderColor = UIColor.black.cgColor
         return label
     }()
     
     let likeButton: UIButton = {
         let like = UIButton()
-        like.backgroundColor = .blue
+        like.layer.borderWidth = 1
+        like.layer.borderColor = UIColor.black.cgColor
+        like.backgroundColor = .systemGray3
         return like
     }()
     
@@ -40,23 +46,21 @@ class ShoppingTableViewCell: BaseViewCell {
         checkBoxButton.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(10)
-            make.height.equalTo(50)
+            make.height.equalTo(contentView.snp.height).multipliedBy(1)
             make.width.equalTo(contentView.snp.width).multipliedBy(0.15)
         }
         
         shoppingName.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(self.checkBoxButton.snp.trailing).offset(10)
-            make.height.equalTo(50)
+            make.height.equalTo(contentView.snp.height).multipliedBy(1)
             make.width.equalTo(contentView.snp.width).multipliedBy(0.6)
-
-
         }
 
         likeButton.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(self.shoppingName.snp.trailing).offset(10)
-            make.height.equalTo(50)
+            make.height.equalTo(contentView.snp.height).multipliedBy(1)
             make.width.equalTo(contentView.snp.width).multipliedBy(0.15)
         }
 
