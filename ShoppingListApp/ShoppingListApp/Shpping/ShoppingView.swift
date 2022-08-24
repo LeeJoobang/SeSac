@@ -67,8 +67,6 @@ class ShoppingView: BaseView{
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
-//            make.height.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.1)
-
         }
         
     }
