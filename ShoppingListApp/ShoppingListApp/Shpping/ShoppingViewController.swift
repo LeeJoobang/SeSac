@@ -18,7 +18,8 @@ class ShoppingViewController: BaseViewController {
         
         self.shoppingView.tableView.register(ShoppingTableViewCell.self, forCellReuseIdentifier: ShoppingTableViewCell.reusableIdentifier)
 
-        
+        print("Realm is located at:", localRealm.configuration.fileURL!) //스니펫에 저장해서 써도 무방
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,5 +95,23 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         shoppingView.tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            try! localRealm.write{
+                localRealm.delete(tasks[indexPath.row])
+            }
+            tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }

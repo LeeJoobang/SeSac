@@ -6,24 +6,27 @@ class ShoppingTableViewCell: BaseViewCell {
     let checkBoxButton: UIButton = {
         let check = UIButton()
         check.backgroundColor = .systemGray3
-        check.layer.borderWidth = 1
-        check.layer.borderColor = UIColor.black.cgColor
+        check.tintColor = .black
+//        check.layer.borderWidth = 1
+//        check.layer.borderColor = UIColor.black.cgColor
         return check
     }()
     
     let shoppingName: UILabel = {
         let label = UILabel()
         label.backgroundColor = .systemGray
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.black.cgColor
+        label.textAlignment = .center
+//        label.layer.borderWidth = 1
+//        label.layer.borderColor = UIColor.black.cgColor
         return label
     }()
     
     let likeButton: UIButton = {
         let like = UIButton()
-        like.layer.borderWidth = 1
-        like.layer.borderColor = UIColor.black.cgColor
         like.backgroundColor = .systemGray3
+        like.tintColor = .black
+//        like.layer.borderWidth = 1
+//        like.layer.borderColor = UIColor.black.cgColor
         return like
     }()
     
@@ -41,7 +44,7 @@ class ShoppingTableViewCell: BaseViewCell {
     
     override func configureUI() {
         [checkBoxButton, shoppingName, likeButton].forEach {
-            self.contentView.addSubview($0)
+            self.contentView.addSubview($0) // contentview에 올리지 않고, cell 에 곧바로 올렸을 때, 해당 버튼에 대한 클릭이 해결되지 않음을 확인할 수 있었음.
         }
     }
     

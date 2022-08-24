@@ -22,9 +22,7 @@ class ShoppingView: BaseView{
     
     let tableView: UITableView = {
         let view = UITableView()
-        view.backgroundColor = UIColor.green
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 1
+        view.backgroundColor = UIColor.clear
         return view
     }()
     
