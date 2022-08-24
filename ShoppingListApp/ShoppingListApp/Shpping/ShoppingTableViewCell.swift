@@ -7,8 +7,6 @@ class ShoppingTableViewCell: BaseViewCell {
         let check = UIButton()
         check.backgroundColor = .systemGray3
         check.tintColor = .black
-//        check.layer.borderWidth = 1
-//        check.layer.borderColor = UIColor.black.cgColor
         return check
     }()
     
@@ -16,8 +14,6 @@ class ShoppingTableViewCell: BaseViewCell {
         let label = UILabel()
         label.backgroundColor = .systemGray
         label.textAlignment = .center
-//        label.layer.borderWidth = 1
-//        label.layer.borderColor = UIColor.black.cgColor
         return label
     }()
     
@@ -25,8 +21,6 @@ class ShoppingTableViewCell: BaseViewCell {
         let like = UIButton()
         like.backgroundColor = .systemGray3
         like.tintColor = .black
-//        like.layer.borderWidth = 1
-//        like.layer.borderColor = UIColor.black.cgColor
         return like
     }()
     
@@ -35,8 +29,6 @@ class ShoppingTableViewCell: BaseViewCell {
         self.selectionStyle = .none
 
     }
-    
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -71,8 +63,4 @@ class ShoppingTableViewCell: BaseViewCell {
         }
 
     }
-    
-    
-    
-    
 }

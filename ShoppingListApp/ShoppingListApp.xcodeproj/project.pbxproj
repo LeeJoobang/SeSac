@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		376FCD2B28B648760026D17B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD2A28B648760026D17B /* DetailViewController.swift */; };
+		376FCD2F28B649550026D17B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD2E28B649550026D17B /* DetailView.swift */; };
+		376FCD3128B64A570026D17B /* ImageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD3028B64A570026D17B /* ImageDummy.swift */; };
+		376FCD3428B64AE30026D17B /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD3328B64AE30026D17B /* Transition.swift */; };
 		37C2F82028B4A862007A6A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F81F28B4A862007A6A9E /* AppDelegate.swift */; };
 		37C2F82228B4A862007A6A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F82128B4A862007A6A9E /* SceneDelegate.swift */; };
 		37C2F82428B4A862007A6A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F82328B4A862007A6A9E /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		376FCD2A28B648760026D17B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		376FCD2E28B649550026D17B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		376FCD3028B64A570026D17B /* ImageDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummy.swift; sourceTree = "<group>"; };
+		376FCD3328B64AE30026D17B /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		37C2F81C28B4A862007A6A9E /* ShoppingListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C2F81F28B4A862007A6A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C2F82128B4A862007A6A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376FCD2928B648660026D17B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				376FCD2A28B648760026D17B /* DetailViewController.swift */,
+				376FCD2E28B649550026D17B /* DetailView.swift */,
+				376FCD3028B64A570026D17B /* ImageDummy.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		376FCD3228B64ACE0026D17B /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				376FCD3328B64AE30026D17B /* Transition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		37C2F81328B4A862007A6A9E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +104,8 @@
 		37C2F81E28B4A862007A6A9E /* ShoppingListApp */ = {
 			isa = PBXGroup;
 			children = (
+				376FCD3228B64ACE0026D17B /* Transition */,
+				376FCD2928B648660026D17B /* Detail */,
 				37C2F84E28B4BAEF007A6A9E /* Protocol */,
 				37C2F84428B4ADB9007A6A9E /* Base */,
 				37C2F83428B4A88F007A6A9E /* Realm */,
@@ -209,13 +237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376FCD3428B64AE30026D17B /* Transition.swift in Sources */,
+				376FCD3128B64A570026D17B /* ImageDummy.swift in Sources */,
 				37C2F84D28B4AEC1007A6A9E /* ShoppingView.swift in Sources */,
 				37C2F82428B4A862007A6A9E /* ViewController.swift in Sources */,
 				37C2F82028B4A862007A6A9E /* AppDelegate.swift in Sources */,
+				376FCD2B28B648760026D17B /* DetailViewController.swift in Sources */,
 				37C2F83628B4A8DB007A6A9E /* ShoppingViewController.swift in Sources */,
 				37C2F82228B4A862007A6A9E /* SceneDelegate.swift in Sources */,
 				37C2F83828B4A8E6007A6A9E /* ShoppingTableViewCell.swift in Sources */,
 				37C2F84628B4ADC3007A6A9E /* BaseViewController.swift in Sources */,
+				376FCD2F28B649550026D17B /* DetailView.swift in Sources */,
 				37C2F84228B4AB8A007A6A9E /* RealmList.swift in Sources */,
 				37C2F84B28B4ADE0007A6A9E /* BaseViewCell.swift in Sources */,
 				37C2F84828B4ADCC007A6A9E /* BaseView.swift in Sources */,
