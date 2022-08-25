@@ -19,13 +19,39 @@ class ShoppingViewController: BaseViewController {
         self.shoppingView.tableView.register(ShoppingTableViewCell.self, forCellReuseIdentifier: ShoppingTableViewCell.reusableIdentifier)
 
         print("Realm is located at:", localRealm.configuration.fileURL!) //스니펫에 저장해서 써도 무방
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopList", ascending: true)
+        tasks = localRealm.objects(UserShopList.self)
         shoppingView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
+        
+        let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(showAlertAction))
+        navigationItem.rightBarButtonItem = sortButton
+    }
+    
+    @objc func showAlertAction(){
+        let alert = UIAlertController(title: "정렬", message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "할일 기준 정렬", style: .default, handler: { UIAlertAction in
+            self.tasks = self.localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopCheck", ascending: false)
+            self.shoppingView.tableView.reloadData()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "즐겨찾기 순 정렬", style: .default, handler: { UIAlertAction in
+            self.tasks = self.localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopLike", ascending: false)
+            self.shoppingView.tableView.reloadData()
+        }))
+
+        alert.addAction(UIAlertAction(title: "제목 순 정렬 기준", style: .default, handler: { UIAlertAction in
+            self.tasks = self.localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopList", ascending: true)
+            self.shoppingView.tableView.reloadData()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+        present(alert, animated: true)
+        
     }
    
     @objc func searchButtonClicked(){
@@ -117,7 +143,6 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        vc.
         transition(vc, transitionStyle: .push)
     }
 }
