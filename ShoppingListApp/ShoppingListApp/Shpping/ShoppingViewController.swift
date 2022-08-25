@@ -89,6 +89,7 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.checkBoxButton.addTarget(self, action: #selector(checkboxButtonClicked), for: .touchUpInside)
         cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
         
+        
         cell.checkBoxButton.tag = indexPath.row
         cell.likeButton.tag = indexPath.row
 
@@ -143,6 +144,17 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
+        vc.detailView.shoppingName.text = tasks[indexPath.row].shopList
+        //bool 값의 여부에 따라 setImage를 정할 수 있어야 한다.
+        print("좋아요: \(tasks[indexPath.row].shopLike)")
+        print("우선: \(tasks[indexPath.row].shopCheck)")
+
+        let check = tasks[indexPath.row].shopCheck ? "checkmark.square" : "square"
+        let like = tasks[indexPath.row].shopLike ? "star.fill" : "star"
+
+
+        vc.detailView.checkBoxButton.setImage(UIImage(systemName: check), for: .normal)
+        vc.detailView.likeButton.setImage(UIImage(systemName: like), for: .normal)
         transition(vc, transitionStyle: .push)
     }
 }

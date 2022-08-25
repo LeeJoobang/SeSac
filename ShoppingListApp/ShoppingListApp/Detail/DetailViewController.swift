@@ -16,4 +16,7 @@ class DetailViewController: BaseViewController {
     
     override func setConstraints() {
     }
+    
+    
+    
 }
