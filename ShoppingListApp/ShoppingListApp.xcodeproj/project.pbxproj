@@ -11,6 +11,11 @@
 		376FCD2F28B649550026D17B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD2E28B649550026D17B /* DetailView.swift */; };
 		376FCD3128B64A570026D17B /* ImageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD3028B64A570026D17B /* ImageDummy.swift */; };
 		376FCD3428B64AE30026D17B /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCD3328B64AE30026D17B /* Transition.swift */; };
+		37C2984828B75B7000C4EE22 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2984728B75B7000C4EE22 /* SearchViewController.swift */; };
+		37C2984A28B75B9D00C4EE22 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2984928B75B9D00C4EE22 /* SearchView.swift */; };
+		37C2984C28B75BC100C4EE22 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2984B28B75BC100C4EE22 /* SearchViewCell.swift */; };
+		37C2984E28B75C8900C4EE22 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2984D28B75C8900C4EE22 /* BaseCollectionViewCell.swift */; };
+		37C2985128B7603000C4EE22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 37C2985028B7603000C4EE22 /* Kingfisher */; };
 		37C2F82028B4A862007A6A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F81F28B4A862007A6A9E /* AppDelegate.swift */; };
 		37C2F82228B4A862007A6A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F82128B4A862007A6A9E /* SceneDelegate.swift */; };
 		37C2F82428B4A862007A6A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F82328B4A862007A6A9E /* ViewController.swift */; };
@@ -25,7 +30,7 @@
 		37C2F84228B4AB8A007A6A9E /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84128B4AB8A007A6A9E /* RealmList.swift */; };
 		37C2F84628B4ADC3007A6A9E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */; };
 		37C2F84828B4ADCC007A6A9E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84728B4ADCC007A6A9E /* BaseView.swift */; };
-		37C2F84B28B4ADE0007A6A9E /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */; };
+		37C2F84B28B4ADE0007A6A9E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84A28B4ADE0007A6A9E /* BaseTableViewCell.swift */; };
 		37C2F84D28B4AEC1007A6A9E /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */; };
 		37C2F85028B4BAFE007A6A9E /* ResuableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F84F28B4BAFE007A6A9E /* ResuableProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +40,10 @@
 		376FCD2E28B649550026D17B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		376FCD3028B64A570026D17B /* ImageDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummy.swift; sourceTree = "<group>"; };
 		376FCD3328B64AE30026D17B /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		37C2984728B75B7000C4EE22 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		37C2984928B75B9D00C4EE22 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		37C2984B28B75BC100C4EE22 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		37C2984D28B75C8900C4EE22 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C2F81C28B4A862007A6A9E /* ShoppingListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C2F81F28B4A862007A6A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C2F82128B4A862007A6A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +57,7 @@
 		37C2F84128B4AB8A007A6A9E /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
 		37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		37C2F84728B4ADCC007A6A9E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		37C2F84A28B4ADE0007A6A9E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
 		37C2F84F28B4BAFE007A6A9E /* ResuableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C2985128B7603000C4EE22 /* Kingfisher in Frameworks */,
 				37C2F84028B4AACD007A6A9E /* RealmSwift in Frameworks */,
 				37C2F83E28B4AACD007A6A9E /* Realm in Frameworks */,
 				37C2F83B28B4AA58007A6A9E /* SnapKit in Frameworks */,
@@ -72,7 +82,6 @@
 			children = (
 				376FCD2A28B648760026D17B /* DetailViewController.swift */,
 				376FCD2E28B649550026D17B /* DetailView.swift */,
-				376FCD3028B64A570026D17B /* ImageDummy.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -83,6 +92,17 @@
 				376FCD3328B64AE30026D17B /* Transition.swift */,
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		37C2984628B75B5D00C4EE22 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				376FCD3028B64A570026D17B /* ImageDummy.swift */,
+				37C2984728B75B7000C4EE22 /* SearchViewController.swift */,
+				37C2984928B75B9D00C4EE22 /* SearchView.swift */,
+				37C2984B28B75BC100C4EE22 /* SearchViewCell.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		37C2F81328B4A862007A6A9E = {
@@ -104,12 +124,13 @@
 		37C2F81E28B4A862007A6A9E /* ShoppingListApp */ = {
 			isa = PBXGroup;
 			children = (
+				37C2984628B75B5D00C4EE22 /* Search */,
 				376FCD3228B64ACE0026D17B /* Transition */,
 				376FCD2928B648660026D17B /* Detail */,
 				37C2F84E28B4BAEF007A6A9E /* Protocol */,
 				37C2F84428B4ADB9007A6A9E /* Base */,
 				37C2F83428B4A88F007A6A9E /* Realm */,
-				37C2F83328B4A87A007A6A9E /* Shpping */,
+				37C2F83328B4A87A007A6A9E /* Shopping */,
 				37C2F81F28B4A862007A6A9E /* AppDelegate.swift */,
 				37C2F82128B4A862007A6A9E /* SceneDelegate.swift */,
 				37C2F82328B4A862007A6A9E /* ViewController.swift */,
@@ -121,14 +142,14 @@
 			path = ShoppingListApp;
 			sourceTree = "<group>";
 		};
-		37C2F83328B4A87A007A6A9E /* Shpping */ = {
+		37C2F83328B4A87A007A6A9E /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
 				37C2F83528B4A8DB007A6A9E /* ShoppingViewController.swift */,
 				37C2F83728B4A8E6007A6A9E /* ShoppingTableViewCell.swift */,
 				37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */,
 			);
-			path = Shpping;
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 		37C2F83428B4A88F007A6A9E /* Realm */ = {
@@ -144,7 +165,8 @@
 			children = (
 				37C2F84528B4ADC3007A6A9E /* BaseViewController.swift */,
 				37C2F84728B4ADCC007A6A9E /* BaseView.swift */,
-				37C2F84A28B4ADE0007A6A9E /* BaseViewCell.swift */,
+				37C2F84A28B4ADE0007A6A9E /* BaseTableViewCell.swift */,
+				37C2984D28B75C8900C4EE22 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -177,6 +199,7 @@
 				37C2F83A28B4AA58007A6A9E /* SnapKit */,
 				37C2F83D28B4AACD007A6A9E /* Realm */,
 				37C2F83F28B4AACD007A6A9E /* RealmSwift */,
+				37C2985028B7603000C4EE22 /* Kingfisher */,
 			);
 			productName = ShoppingListApp;
 			productReference = 37C2F81C28B4A862007A6A9E /* ShoppingListApp.app */;
@@ -209,6 +232,7 @@
 			packageReferences = (
 				37C2F83928B4AA58007A6A9E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				37C2F83C28B4AACD007A6A9E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				37C2984F28B7602F00C4EE22 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 37C2F81D28B4A862007A6A9E /* Products */;
 			projectDirPath = "";
@@ -243,13 +267,17 @@
 				37C2F82428B4A862007A6A9E /* ViewController.swift in Sources */,
 				37C2F82028B4A862007A6A9E /* AppDelegate.swift in Sources */,
 				376FCD2B28B648760026D17B /* DetailViewController.swift in Sources */,
+				37C2984A28B75B9D00C4EE22 /* SearchView.swift in Sources */,
 				37C2F83628B4A8DB007A6A9E /* ShoppingViewController.swift in Sources */,
 				37C2F82228B4A862007A6A9E /* SceneDelegate.swift in Sources */,
 				37C2F83828B4A8E6007A6A9E /* ShoppingTableViewCell.swift in Sources */,
+				37C2984E28B75C8900C4EE22 /* BaseCollectionViewCell.swift in Sources */,
 				37C2F84628B4ADC3007A6A9E /* BaseViewController.swift in Sources */,
+				37C2984828B75B7000C4EE22 /* SearchViewController.swift in Sources */,
+				37C2984C28B75BC100C4EE22 /* SearchViewCell.swift in Sources */,
 				376FCD2F28B649550026D17B /* DetailView.swift in Sources */,
 				37C2F84228B4AB8A007A6A9E /* RealmList.swift in Sources */,
-				37C2F84B28B4ADE0007A6A9E /* BaseViewCell.swift in Sources */,
+				37C2F84B28B4ADE0007A6A9E /* BaseTableViewCell.swift in Sources */,
 				37C2F84828B4ADCC007A6A9E /* BaseView.swift in Sources */,
 				37C2F85028B4BAFE007A6A9E /* ResuableProtocol.swift in Sources */,
 			);
@@ -471,6 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		37C2984F28B7602F00C4EE22 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		37C2F83928B4AA58007A6A9E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -490,6 +526,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		37C2985028B7603000C4EE22 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37C2984F28B7602F00C4EE22 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		37C2F83A28B4AA58007A6A9E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 37C2F83928B4AA58007A6A9E /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class ShoppingTableViewCell: BaseViewCell {
+class ShoppingTableViewCell: BaseTableViewCell {
     
     let checkBoxButton: UIButton = {
         let check = UIButton()

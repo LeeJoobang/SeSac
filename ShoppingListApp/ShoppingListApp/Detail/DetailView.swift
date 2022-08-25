@@ -29,8 +29,17 @@ class DetailView: BaseView {
         return like
     }()
     
+    let searchImageButton: UIButton = {
+        let view = UIButton()
+        view.setImage(UIImage(systemName: "photo"), for: .normal)
+        view.tintColor = .red
+        view.backgroundColor = .yellow
+        view.layer.cornerRadius = 25
+        return view
+    }()
+    
     override func configureUI(){
-        [shoppingImage, shoppingName, checkBoxButton, likeButton].forEach { self.addSubview($0)
+        [shoppingImage, shoppingName, checkBoxButton, likeButton, searchImageButton].forEach { self.addSubview($0)
         }
     }
     
@@ -41,6 +50,12 @@ class DetailView: BaseView {
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
             make.height.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.4)
+        }
+        
+        searchImageButton.snp.makeConstraints { make in
+            make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
+            make.trailing.equalTo(-10)
+            make.height.width.equalTo(50)
         }
         
         checkBoxButton.snp.makeConstraints { make in

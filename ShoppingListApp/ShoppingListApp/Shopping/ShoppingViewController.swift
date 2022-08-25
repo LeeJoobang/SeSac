@@ -60,6 +60,7 @@ class ShoppingViewController: BaseViewController {
             localRealm.add(task)
             print("Realm Succeed")
         }
+        shoppingView.searchTextField.text = ""
         shoppingView.tableView.reloadData()
     }
     
