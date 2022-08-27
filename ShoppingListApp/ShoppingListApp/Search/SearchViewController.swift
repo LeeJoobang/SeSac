@@ -62,8 +62,5 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         selectImage = cell.searchImageView.image
         selectIndexPath = indexPath
         collectionView.reloadData()
-        
     }
-    
-    
 }

@@ -55,7 +55,7 @@ class ShoppingViewController: BaseViewController {
     }
    
     @objc func searchButtonClicked(){
-        let task = UserShopList(shopList: shoppingView.searchTextField.text ?? "")
+        let task = UserShopList(shopList: shoppingView.searchTextField.text ?? "", shopImage: "")
         try! localRealm.write {
             localRealm.add(task)
             print("Realm Succeed")
@@ -68,8 +68,18 @@ class ShoppingViewController: BaseViewController {
     }
     
     override func setConstraints() {
-        
     }
+    
+    func loadImageFromDocument(filename: String) -> UIImage? {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        let fileURL = documentDirectory.appendingPathComponent(filename)
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            return UIImage(contentsOfFile: fileURL.path)
+        } else {
+            return UIImage(systemName: "star.fill")
+        }
+    }
+
 }
 
 extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
@@ -89,7 +99,6 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.checkBoxButton.addTarget(self, action: #selector(checkboxButtonClicked), for: .touchUpInside)
         cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
-        
         
         cell.checkBoxButton.tag = indexPath.row
         cell.likeButton.tag = indexPath.row
@@ -150,12 +159,20 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
         print("좋아요: \(tasks[indexPath.row].shopLike)")
         print("우선: \(tasks[indexPath.row].shopCheck)")
 
+//       print("이미지:\(tasks[indexPath.row].)")
+        //vc.detailView.shoppingImage =
+        
+        
         let check = tasks[indexPath.row].shopCheck ? "checkmark.square" : "square"
         let like = tasks[indexPath.row].shopLike ? "star.fill" : "star"
 
-
+        vc.detailView.shoppingImage.image = loadImageFromDocument(filename: "\(tasks[indexPath.row].objectID).jpg")
+        
         vc.detailView.checkBoxButton.setImage(UIImage(systemName: check), for: .normal)
         vc.detailView.likeButton.setImage(UIImage(systemName: like), for: .normal)
+        
+        
+        
         transition(vc, transitionStyle: .push)
     }
 }
