@@ -209,9 +209,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 // 렘저장(이미지 x), 이미지저장(도큐먼트 추가), 이미지 가지고 올 때 경로(확장자)
 
 extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource {
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return repository.fetchDate(date: date).count
-    }
+//    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+//        return repository.fetchDate(date: date).count
+//    }
+    
 //    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
 //         return "새싹"
 //    }
@@ -224,8 +225,8 @@ extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource {
     }
     
     // 데이터가 100개가 있다. 렘에 저장된 25일에 저장된
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        tasks = repository.fetchDate(date: date)
-    }
+//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//        tasks = repository.fetchDate(date: date)
+//    }
     
 }

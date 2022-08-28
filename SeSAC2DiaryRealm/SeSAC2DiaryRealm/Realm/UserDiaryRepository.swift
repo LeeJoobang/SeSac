@@ -9,16 +9,16 @@ protocol UserDiaryRepositoryType { // 이렇게 채택을 후행에 하니까 �
     func updateFavorite(item: UserDiary)
     func deleteItem(item: UserDiary)
     func addItem(item: UserDiary)
-    func fetchDate(date: Date) -> Results<UserDiary>
+//    func fetchDate(date: Date) -> Results<UserDiary>
     
 }
 
 class UserDiaryRepository: UserDiaryRepositoryType {
-    func fetchDate(date: Date) -> Results<UserDiary> {
-        
-        return localRealm.objects(UserDiary.self).filter("diary >= %@ AND diaryDate <= %@", date, Date(timeInterval: 86400, since: date)) //NSPredicate
-    }
-    
+//    func fetchDate(date: Date) -> Results<UserDiary> {
+//        
+//        return localRealm.objects(UserDiary.self).filter("diary >= %@ AND diaryDate <= %@", date, Date(timeInterval: 86400, since: date)) //NSPredicate
+//    }
+//    
     
     func addItem(item: UserDiary) {
         
