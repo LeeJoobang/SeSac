@@ -40,6 +40,7 @@ class SearchViewController: BaseViewController {
             return
         }
         delegate?.sendImageData(image: selectImage)
+
         dismiss(animated: true)
     }
 }

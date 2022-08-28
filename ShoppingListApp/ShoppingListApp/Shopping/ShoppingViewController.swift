@@ -73,12 +73,14 @@ class ShoppingViewController: BaseViewController {
     func loadImageFromDocument(filename: String) -> UIImage? {
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         let fileURL = documentDirectory.appendingPathComponent(filename)
-        if FileManager.default.fileExists(atPath: fileURL.path) {
+        if FileManager.default.fileExists(atPath: fileURL.path) { // 왜 false가 나올까?
             return UIImage(contentsOfFile: fileURL.path)
         } else {
             return UIImage(systemName: "star.fill")
         }
     }
+    
+    
 
 }
 
@@ -158,16 +160,12 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
         //bool 값의 여부에 따라 setImage를 정할 수 있어야 한다.
         print("좋아요: \(tasks[indexPath.row].shopLike)")
         print("우선: \(tasks[indexPath.row].shopCheck)")
-
-//       print("이미지:\(tasks[indexPath.row].)")
-        //vc.detailView.shoppingImage =
-        
-        
+   
         let check = tasks[indexPath.row].shopCheck ? "checkmark.square" : "square"
         let like = tasks[indexPath.row].shopLike ? "star.fill" : "star"
 
         vc.detailView.shoppingImage.image = loadImageFromDocument(filename: "\(tasks[indexPath.row].objectID).jpg")
-        
+
         vc.detailView.checkBoxButton.setImage(UIImage(systemName: check), for: .normal)
         vc.detailView.likeButton.setImage(UIImage(systemName: like), for: .normal)
         
