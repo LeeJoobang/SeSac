@@ -29,6 +29,14 @@ class ShoppingViewController: BaseViewController {
         
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(showAlertAction))
         navigationItem.rightBarButtonItem = sortButton
+        let backupButton = UIBarButtonItem(title: "백업복구설정", style: .plain, target: self, action: #selector(backupButtonClicked))
+        navigationItem.leftBarButtonItems = [backupButton]
+
+    }
+    
+    @objc func backupButtonClicked() {
+        let vc = BackupViewContoller()
+        transition(vc, transitionStyle: .push)
     }
     
     @objc func showAlertAction(){
