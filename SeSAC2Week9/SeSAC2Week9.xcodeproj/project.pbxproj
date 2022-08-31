@@ -18,6 +18,8 @@
 		37352C8C28BDA73600F8DA01 /* PersonAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C8B28BDA73600F8DA01 /* PersonAPIManager.swift */; };
 		37352C8E28BDA88300F8DA01 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C8D28BDA88300F8DA01 /* Person.swift */; };
 		37352C9128BDB75800F8DA01 /* URLSeeion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9028BDB75800F8DA01 /* URLSeeion+Extension.swift */; };
+		37352C9328BEF8CC00F8DA01 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9228BEF8CC00F8DA01 /* Observable.swift */; };
+		37352C9528BEFC0D00F8DA01 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9428BEFC0D00F8DA01 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		37352C8B28BDA73600F8DA01 /* PersonAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPIManager.swift; sourceTree = "<group>"; };
 		37352C8D28BDA88300F8DA01 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		37352C9028BDB75800F8DA01 /* URLSeeion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSeeion+Extension.swift"; sourceTree = "<group>"; };
+		37352C9228BEF8CC00F8DA01 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		37352C9428BEFC0D00F8DA01 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				37352C7C28BD94E500F8DA01 /* LaunchScreen.storyboard */,
 				37352C7F28BD94E500F8DA01 /* Info.plist */,
 				37352C9028BDB75800F8DA01 /* URLSeeion+Extension.swift */,
+				37352C9228BEF8CC00F8DA01 /* Observable.swift */,
 			);
 			path = SeSAC2Week9;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			children = (
 				37352C8B28BDA73600F8DA01 /* PersonAPIManager.swift */,
 				37352C8D28BDA88300F8DA01 /* Person.swift */,
+				37352C9428BEFC0D00F8DA01 /* PersonViewModel.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -170,9 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37352C7628BD94E300F8DA01 /* ViewController.swift in Sources */,
+				37352C9528BEFC0D00F8DA01 /* PersonViewModel.swift in Sources */,
 				37352C8728BD94F500F8DA01 /* LottoAPIManager.swift in Sources */,
 				37352C9128BDB75800F8DA01 /* URLSeeion+Extension.swift in Sources */,
 				37352C7228BD94E300F8DA01 /* AppDelegate.swift in Sources */,
+				37352C9328BEF8CC00F8DA01 /* Observable.swift in Sources */,
 				37352C8C28BDA73600F8DA01 /* PersonAPIManager.swift in Sources */,
 				37352C8E28BDA88300F8DA01 /* Person.swift in Sources */,
 				37352C8928BD9BB500F8DA01 /* Lotto.swift in Sources */,
