@@ -68,7 +68,6 @@ class HomeViewController: BaseViewController{
         
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonClicked))
         let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonClicked))
-        
         let backupButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButtonClicked))
         
         let jackbackupbutton = UIBarButtonItem(title: "잭님백업", style: .plain, target: self, action: #selector(jackbackupButtonClicked))

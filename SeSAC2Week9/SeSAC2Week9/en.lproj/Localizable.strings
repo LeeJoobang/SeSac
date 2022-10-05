@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  SeSAC2Week9
+
+  Created by Jooyoung Lee on 2022/09/06.
+  
+*/
+
+"navigation_title" = "나의 다이어리";
+"search_placeholder" = "영화를 검색해보세요.";
+"main_age_textfield_placeholder" = "나이를 입력해보세요";
+"common_cancel" = "취소";
+
+//매개변수로 다국어 대응
+"introduce" = "my nickname is %@"; // string
+"number_test" = "i'm %lld yesrs old."; // int

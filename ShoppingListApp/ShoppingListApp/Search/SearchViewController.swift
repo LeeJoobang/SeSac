@@ -55,7 +55,6 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchViewCell.reusableIdentifier, for: indexPath) as? SearchViewCell else { return UICollectionViewCell() }
         cell.setImage(data: ImageDummy.data[indexPath.item].url)
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

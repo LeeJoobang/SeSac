@@ -20,11 +20,15 @@
 		37352C9128BDB75800F8DA01 /* URLSeeion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9028BDB75800F8DA01 /* URLSeeion+Extension.swift */; };
 		37352C9328BEF8CC00F8DA01 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9228BEF8CC00F8DA01 /* Observable.swift */; };
 		37352C9528BEFC0D00F8DA01 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37352C9428BEFC0D00F8DA01 /* PersonViewModel.swift */; };
+		37D4231928C6D5A400CBBE52 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D4231B28C6D5A400CBBE52 /* Localizable.strings */; };
+		37D4231F28C6D97C00CBBE52 /* LocalizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4231E28C6D97C00CBBE52 /* LocalizableViewController.swift */; };
+		37D4232228C6E0CF00CBBE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D4232428C6E0CF00CBBE52 /* InfoPlist.strings */; };
 		37F861B028C037F300DC362F /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861AF28C037F300DC362F /* Sample.swift */; };
 		37F861B428C0487600DC362F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861B328C0487600DC362F /* LoginViewController.swift */; };
 		37F861B628C04A0A00DC362F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861B528C04A0A00DC362F /* LoginViewModel.swift */; };
 		37F861B828C05AF200DC362F /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861B728C05AF200DC362F /* LottoViewController.swift */; };
 		37F861BA28C05C1B00DC362F /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861B928C05C1B00DC362F /* LottoViewModel.swift */; };
+		37F861D428C1867800DC362F /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F861D328C1867800DC362F /* GCDViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +47,24 @@
 		37352C9028BDB75800F8DA01 /* URLSeeion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSeeion+Extension.swift"; sourceTree = "<group>"; };
 		37352C9228BEF8CC00F8DA01 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		37352C9428BEFC0D00F8DA01 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		37D4231128C6D03200CBBE52 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		37D4231228C6D03300CBBE52 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		37D4231328C6D07800CBBE52 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		37D4231428C6D07800CBBE52 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		37D4231628C6D1A000CBBE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		37D4231A28C6D5A400CBBE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37D4231C28C6D5AA00CBBE52 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37D4231D28C6D5AC00CBBE52 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37D4231E28C6D97C00CBBE52 /* LocalizableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableViewController.swift; sourceTree = "<group>"; };
+		37D4232328C6E0CF00CBBE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D4232528C6E0D100CBBE52 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D4232628C6E0D200CBBE52 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37F861AF28C037F300DC362F /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		37F861B328C0487600DC362F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		37F861B528C04A0A00DC362F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		37F861B728C05AF200DC362F /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		37F861B928C05C1B00DC362F /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		37F861D328C1867800DC362F /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +102,9 @@
 				37352C7128BD94E300F8DA01 /* AppDelegate.swift */,
 				37352C7328BD94E300F8DA01 /* SceneDelegate.swift */,
 				37352C7528BD94E300F8DA01 /* ViewController.swift */,
+				37D4231E28C6D97C00CBBE52 /* LocalizableViewController.swift */,
 				37352C7728BD94E300F8DA01 /* Main.storyboard */,
+				37F861D328C1867800DC362F /* GCDViewController.swift */,
 				37352C7A28BD94E500F8DA01 /* Assets.xcassets */,
 				37352C7C28BD94E500F8DA01 /* LaunchScreen.storyboard */,
 				37352C7F28BD94E500F8DA01 /* Info.plist */,
@@ -94,6 +113,8 @@
 				37F861AF28C037F300DC362F /* Sample.swift */,
 				37F861B328C0487600DC362F /* LoginViewController.swift */,
 				37F861B528C04A0A00DC362F /* LoginViewModel.swift */,
+				37D4231B28C6D5A400CBBE52 /* Localizable.strings */,
+				37D4232428C6E0CF00CBBE52 /* InfoPlist.strings */,
 			);
 			path = SeSAC2Week9;
 			sourceTree = "<group>";
@@ -161,6 +182,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ja,
 			);
 			mainGroup = 37352C6528BD94E300F8DA01;
 			productRefGroup = 37352C6F28BD94E300F8DA01 /* Products */;
@@ -178,8 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37352C7E28BD94E500F8DA01 /* LaunchScreen.storyboard in Resources */,
+				37D4231928C6D5A400CBBE52 /* Localizable.strings in Resources */,
 				37352C7B28BD94E500F8DA01 /* Assets.xcassets in Resources */,
 				37352C7928BD94E300F8DA01 /* Main.storyboard in Resources */,
+				37D4232228C6E0CF00CBBE52 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +221,7 @@
 				37F861B828C05AF200DC362F /* LottoViewController.swift in Sources */,
 				37352C8728BD94F500F8DA01 /* LottoAPIManager.swift in Sources */,
 				37F861BA28C05C1B00DC362F /* LottoViewModel.swift in Sources */,
+				37D4231F28C6D97C00CBBE52 /* LocalizableViewController.swift in Sources */,
 				37352C9128BDB75800F8DA01 /* URLSeeion+Extension.swift in Sources */,
 				37352C7228BD94E300F8DA01 /* AppDelegate.swift in Sources */,
 				37352C9328BEF8CC00F8DA01 /* Observable.swift in Sources */,
@@ -205,6 +231,7 @@
 				37352C8928BD9BB500F8DA01 /* Lotto.swift in Sources */,
 				37F861B028C037F300DC362F /* Sample.swift in Sources */,
 				37352C7428BD94E300F8DA01 /* SceneDelegate.swift in Sources */,
+				37F861D428C1867800DC362F /* GCDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +242,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				37352C7828BD94E300F8DA01 /* Base */,
+				37D4231128C6D03200CBBE52 /* ko */,
+				37D4231328C6D07800CBBE52 /* ja */,
+				37D4231628C6D1A000CBBE52 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -223,8 +253,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				37352C7D28BD94E500F8DA01 /* Base */,
+				37D4231228C6D03300CBBE52 /* ko */,
+				37D4231428C6D07800CBBE52 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		37D4231B28C6D5A400CBBE52 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D4231A28C6D5A400CBBE52 /* en */,
+				37D4231C28C6D5AA00CBBE52 /* ko */,
+				37D4231D28C6D5AC00CBBE52 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		37D4232428C6E0CF00CBBE52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D4232328C6E0CF00CBBE52 /* en */,
+				37D4232528C6E0D100CBBE52 /* ja */,
+				37D4232628C6E0D200CBBE52 /* ko */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -234,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -294,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

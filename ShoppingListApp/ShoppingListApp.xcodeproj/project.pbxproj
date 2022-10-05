@@ -132,14 +132,14 @@
 		37C2F81E28B4A862007A6A9E /* ShoppingListApp */ = {
 			isa = PBXGroup;
 			children = (
-				37E4A67428BB670400722709 /* Backup */,
 				37C2984628B75B5D00C4EE22 /* Search */,
-				376FCD3228B64ACE0026D17B /* Transition */,
+				37C2F83328B4A87A007A6A9E /* Shopping */,
 				376FCD2928B648660026D17B /* Detail */,
+				37E4A67428BB670400722709 /* Backup */,
+				376FCD3228B64ACE0026D17B /* Transition */,
 				37C2F84E28B4BAEF007A6A9E /* Protocol */,
 				37C2F84428B4ADB9007A6A9E /* Base */,
 				37C2F83428B4A88F007A6A9E /* Realm */,
-				37C2F83328B4A87A007A6A9E /* Shopping */,
 				37C2F81F28B4A862007A6A9E /* AppDelegate.swift */,
 				37C2F82128B4A862007A6A9E /* SceneDelegate.swift */,
 				37C2F82328B4A862007A6A9E /* ViewController.swift */,
@@ -155,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				37C2F83528B4A8DB007A6A9E /* ShoppingViewController.swift */,
-				37C2F83728B4A8E6007A6A9E /* ShoppingTableViewCell.swift */,
 				37C2F84C28B4AEC1007A6A9E /* ShoppingView.swift */,
+				37C2F83728B4A8E6007A6A9E /* ShoppingTableViewCell.swift */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";

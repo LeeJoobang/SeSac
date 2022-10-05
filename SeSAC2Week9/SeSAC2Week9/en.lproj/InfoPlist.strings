@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SeSAC2Week9
+
+  Created by Jooyoung Lee on 2022/09/06.
+  plist에 들어가는 내용도 다국어 대응을 하겠다.
+*/
+
+"CFBundleDisplayName" = "Jack Diary";
+"NSLocationWhenInUseUsageDescription" = "help me!";
