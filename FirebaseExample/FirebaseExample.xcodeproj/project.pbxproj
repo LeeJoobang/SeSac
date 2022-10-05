@@ -13,6 +13,7 @@
 		3756E3A728ED15A100730427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3756E3A528ED15A100730427 /* Main.storyboard */; };
 		3756E3A928ED15A500730427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3756E3A828ED15A500730427 /* Assets.xcassets */; };
 		3756E3AC28ED15A500730427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3756E3AA28ED15A500730427 /* LaunchScreen.storyboard */; };
+		3756E3B428ED1D4E00730427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3756E3B328ED1D4E00730427 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3756E3A828ED15A500730427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3756E3AB28ED15A500730427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3756E3AD28ED15A500730427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3756E3B328ED1D4E00730427 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3756E3A528ED15A100730427 /* Main.storyboard */,
 				3756E3A828ED15A500730427 /* Assets.xcassets */,
 				3756E3AA28ED15A500730427 /* LaunchScreen.storyboard */,
+				3756E3B328ED1D4E00730427 /* GoogleService-Info.plist */,
 				3756E3AD28ED15A500730427 /* Info.plist */,
 			);
 			path = FirebaseExample;
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3756E3AC28ED15A500730427 /* LaunchScreen.storyboard in Resources */,
+				3756E3B428ED1D4E00730427 /* GoogleService-Info.plist in Resources */,
 				3756E3A928ED15A500730427 /* Assets.xcassets in Resources */,
 				3756E3A728ED15A100730427 /* Main.storyboard in Resources */,
 			);
