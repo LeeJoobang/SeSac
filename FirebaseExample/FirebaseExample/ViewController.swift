@@ -25,5 +25,7 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func crashClicked(_ sender: UIButton) {
+    }
 }
 
