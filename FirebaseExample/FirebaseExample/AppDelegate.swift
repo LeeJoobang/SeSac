@@ -72,6 +72,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: UNUserNotificationCenterDelegate - delegate extension으로 표현
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
+    // MARK: 재구성 사용 중지됨: APNs 토큰과 등록 토큰 매핑
+    func application(application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      Messaging.messaging().apnsToken = deviceToken
+    }
+    
 }
 
 // MARK: MessagingDelegate - delegate extension으로 표현
