@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         application.registerForRemoteNotifications()
         
+        // MARK: 메시지 대리자 설정
+        Messaging.messaging().delegate = self
+
+        
         return true
     }
 
@@ -61,3 +66,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
 }
 
+// MARK: MessagingDelegate - delegate extension으로 표현
+extension AppDelegate: MessagingDelegate {
+    
+}
