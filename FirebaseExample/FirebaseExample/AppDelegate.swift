@@ -79,12 +79,20 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     // MARK: 포그라운드 알림 수신: 로컬 / 푸시 동일
+    // 카카오톡: 도이님과 채팅방, 푸시마다, 화면마다 설정 할 수 있다.
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         // MARK: .banner, .list: iOS 14+
         completionHandler([.badge, .sound, .banner, .list])
     }
     
+    //푸시 클릭: 쿠팡 - 호두과자 클릭 바로 열리는 것이 아니라, 호두과자 장바구니 담는 화면까지
+    //사용자가 푸시를 클릭했을 때만 수신 확인 가능
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print("사용자가 푸시를 클릭했습니다.")
+        
+    }
 }
 
 // MARK: MessagingDelegate - delegate extension으로 표현
