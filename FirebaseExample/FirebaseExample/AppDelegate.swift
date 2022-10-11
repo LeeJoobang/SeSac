@@ -78,6 +78,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
       Messaging.messaging().apnsToken = deviceToken
     }
     
+    // MARK: 포그라운드 알림 수신: 로컬 / 푸시 동일
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        // MARK: .banner, .list: iOS 14+
+        completionHandler([.badge, .sound, .banner, .list])
+    }
+    
 }
 
 // MARK: MessagingDelegate - delegate extension으로 표현
