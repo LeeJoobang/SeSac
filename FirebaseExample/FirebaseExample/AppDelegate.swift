@@ -18,6 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: firebase 초기화 코드 추가
         FirebaseApp.configure()
+        
+        // MARK: 알림 시스템에 앱을 등록하는 과정
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+          UNUserNotificationCenter.current().delegate = self
+
+          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: { _, _ in }
+          )
+        } else {
+          let settings: UIUserNotificationSettings =
+            UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+          application.registerUserNotificationSettings(settings)
+        }
+
+        application.registerForRemoteNotifications()
+        
         return true
     }
 
@@ -35,5 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+// MARK: UNUserNotificationCenterDelegate - delegate extension으로 표현
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
 }
 
