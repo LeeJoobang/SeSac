@@ -87,10 +87,20 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     //푸시 클릭: 쿠팡 - 호두과자 클릭 바로 열리는 것이 아니라, 호두과자 장바구니 담는 화면까지
-    //사용자가 푸시를 클릭했을 때만 수신 확인 가능
+    // MARK: 사용자가 푸시를 클릭했을 때만 수신 확인 가능
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
         print("사용자가 푸시를 클릭했습니다.")
+        print(response.notification.request.content.body) // 알림 메세지의 내용을 출력할 수 있음.
+        print(response.notification.request.content.userInfo) // 알림 메세지의 내용을 출력할 수 있음.
+        
+        let userInfo = response.notification.request.content.userInfo
+        
+        if userInfo[AnyHashable("sesac")] as? String == "project" {
+            print("SESAC PROJECT")
+        } else {
+            print("NOTHING")
+        }
+        
         
     }
 }
