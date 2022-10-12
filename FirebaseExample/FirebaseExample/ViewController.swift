@@ -23,6 +23,12 @@ class ViewController: UIViewController {
 //          "level_difficulty": 4
 //        ])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewController ViewWillAppear")
+    }
 
 
     @IBAction func crashClicked(_ sender: UIButton) {
@@ -43,12 +49,25 @@ class ProfileViewController: UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .lightGray
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewController ViewWillAppear")
+    }
+    
 }
 
 class SettingViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewController ViewWillAppear")
     }
 }
 
@@ -72,5 +91,25 @@ extension UIViewController {
         }
     }
     
+}
+
+
+extension UIViewController{
+    // MARK: class or static 사용 가능 - overriding 진행
+    // MARK: log찍을 때도 유용
+    class func swizzleMethod(){
+        let origin = #selector(viewWillAppear)
+        let change = #selector(changeViewWillAppear)
+        
+        guard let originMethod = class_getInstanceMethod(UIViewController.self, origin), let changeMethod = class_getInstanceMethod(UIViewController.self, change) else {
+            print("함수를 찾을 수 없거나 오류 발생")
+            return
+        }
+        method_exchangeImplementations(originMethod, changeMethod)
+                
+    }
     
+    @objc func changeViewWillAppear(){
+        print("Change ViewWillAppear SUCCEED")
+    }
 }

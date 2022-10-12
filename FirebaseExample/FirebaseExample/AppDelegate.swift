@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // MARK: swizzleMethod 호출
+        UIViewController.swizzleMethod()
+        
         // MARK: firebase 초기화 코드 추가
         FirebaseApp.configure()
         
@@ -84,13 +87,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // MARK: Setting화면에 있다면 포그라운드 푸시 띄우지 마라
         guard let viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
         if viewController is SettingViewController{
-            
+            completionHandler([])
         } else {
             // MARK: .banner, .list: iOS 14+
             completionHandler([.badge, .sound, .banner, .list])
         }
-        
-        
     }
     
     //푸시 클릭: 쿠팡 - 호두과자 클릭 바로 열리는 것이 아니라, 호두과자 장바구니 담는 화면까지
