@@ -41,14 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: 메시지 대리자 설정
         Messaging.messaging().delegate = self
         
-        // MARK: 현재 등록 토큰 가져오기
-        Messaging.messaging().token { token, error in
-            if let error = error {
-                print("Error fetching FCM registration token: \(error)")
-            } else if let token = token {
-                print("FCM registration token: \(token)")
-            }
-        }
+        // MARK: 현재 등록 토큰 가져오기 - 주석처리 가능
+//        Messaging.messaging().token { token, error in
+//            if let error = error {
+//                print("Error fetching FCM registration token: \(error)")
+//            } else if let token = token {
+//                print("FCM registration token: \(token)")
+//            }
+//        }
         
         return true
     }
@@ -102,6 +102,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             print("NOTHING")
         }
         
+
+        guard let viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
+        print(viewController)
         
     }
 }
