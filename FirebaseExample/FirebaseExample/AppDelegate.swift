@@ -81,9 +81,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // MARK: 포그라운드 알림 수신: 로컬 / 푸시 동일
     // 카카오톡: 도이님과 채팅방, 푸시마다, 화면마다 설정 할 수 있다.
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // MARK: Setting화면에 있다면 포그라운드 푸시 띄우지 마라
+        guard let viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
+        if viewController is SettingViewController{
+            
+        } else {
+            // MARK: .banner, .list: iOS 14+
+            completionHandler([.badge, .sound, .banner, .list])
+        }
         
-        // MARK: .banner, .list: iOS 14+
-        completionHandler([.badge, .sound, .banner, .list])
+        
     }
     
     //푸시 클릭: 쿠팡 - 호두과자 클릭 바로 열리는 것이 아니라, 호두과자 장바구니 담는 화면까지
@@ -103,6 +110,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
 
+        // MARK: push 버튼 누르면 setting 화면으로 전환
         guard let viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
         print(viewController)
         
