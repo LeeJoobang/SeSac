@@ -106,6 +106,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         guard let viewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
         print(viewController)
         
+        //is - class의 instance를 비교할 때 사용
+        if viewController is ViewController {
+            viewController.navigationController?.pushViewController(SettingViewController(), animated: true)
+        }
+        
+        if viewController is ProfileViewController {
+            viewController.dismiss(animated: true)
+        }
+        
     }
 }
 
