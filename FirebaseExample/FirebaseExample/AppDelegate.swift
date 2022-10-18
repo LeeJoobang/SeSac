@@ -11,8 +11,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let config = Realm.Configuration(schemaVersion: 3) { migration, oldSchemaVersion in
+            if oldSchemaVersion < 1{ // detaiolTodo, list 추가
+                
+            }
+            
+            if oldSchemaVersion < 2{ //embededObject 추가
+                
+            }
+            
+            if oldSchemaVersion < 3{ //detailTodo에 deadline 추가
+            }
+
+        }
+        
+        Realm.Configuration.defaultConfiguration = config
+        
+        
         // MARK: realm의 메소드 호출
-        aboutRealmMigration()
+        // aboutRealmMigration()
         
         // MARK: swizzleMethod 호출
         UIViewController.swizzleMethod()
@@ -20,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: firebase 초기화 코드 추가
         FirebaseApp.configure()
         
-        // MARK: 알림 시스템에 앱을 등록하는 과정
+        // MARK: 원격 알림 시스템에 앱을 등록하는 과정
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
             UNUserNotificationCenter.current().delegate = self
@@ -152,13 +169,9 @@ extension AppDelegate {
             
             // MARK: 각 버전을 다 타야하기 때문에 각 버전별 if구문을 넣은 것이다.
             // 컬럼, 테이블 단순 추가 삭제의 경우 별도 코드 필요 없음
-            if oldSchemaVersion < 1 {
-                
-            }
+            if oldSchemaVersion < 1 {}
             
-            if oldSchemaVersion < 2 {
-                
-            }
+            if oldSchemaVersion < 2 {}
             
             if oldSchemaVersion < 3 { // 이름 변경할 수 있음.
                 migration.renameProperty(onType: Todo.className(), from: "favorite", to: "importance")
@@ -168,7 +181,6 @@ extension AppDelegate {
                 migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
                     guard let new = newObject else { return }
                     guard let old = oldObject else { return }
-                    
                     new["userDescription"] = "안녕하세요 \(old["title"]!) 의 중요도는 \(old["importance"]!)입니다."
                 }
             }
@@ -176,7 +188,6 @@ extension AppDelegate {
             if oldSchemaVersion < 5 { // 컬럼 생성 후 데이터 넣기
                 migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
                     guard let new = newObject else { return }
-                    
                     new["count"] = 100
                 }
             }
@@ -185,16 +196,10 @@ extension AppDelegate {
                 migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
                     guard let new = newObject else { return }
                     guard let old = oldObject else { return }
-                    
                     // new optional, old optional
                     new["importance"] = old["importance"]
                 }
             }
-
-            
-
-            
-            
         }
         
         Realm.Configuration.defaultConfiguration = config

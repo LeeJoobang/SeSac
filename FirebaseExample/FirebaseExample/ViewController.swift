@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        Analytics.logEvent("rejack", parameters: [
 //          "name": "고래밥", // userdefault, realm
 //          "full_text": "안녕하세요",
@@ -52,7 +51,6 @@ class ProfileViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         print("viewController ViewWillAppear")
     }
     
@@ -66,7 +64,6 @@ class SettingViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         print("viewController ViewWillAppear")
     }
 }
