@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3799B73728FE39D2001371C5 /* SimpleCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799B73628FE39D2001371C5 /* SimpleCollectionCollectionViewController.swift */; };
+		3799B73728FE39D2001371C5 /* SimplCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799B73628FE39D2001371C5 /* SimplCollectionViewController.swift */; };
 		37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A953B528FE2E6700341A19 /* AppDelegate.swift */; };
 		37A953B828FE2E6700341A19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A953B728FE2E6700341A19 /* SceneDelegate.swift */; };
 		37A953BA28FE2E6700341A19 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A953B928FE2E6700341A19 /* SimpleTableViewController.swift */; };
 		37A953BD28FE2E6700341A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A953BB28FE2E6700341A19 /* Main.storyboard */; };
 		37A953BF28FE2E6900341A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A953BE28FE2E6900341A19 /* Assets.xcassets */; };
 		37A953C228FE2E6900341A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A953C028FE2E6900341A19 /* LaunchScreen.storyboard */; };
+		37B3DC8428FF906F008515CC /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3799B73628FE39D2001371C5 /* SimpleCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		3799B73628FE39D2001371C5 /* SimplCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplCollectionViewController.swift; sourceTree = "<group>"; };
 		37A953B228FE2E6700341A19 /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A953B528FE2E6700341A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A953B728FE2E6700341A19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		37A953BE28FE2E6900341A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A953C128FE2E6900341A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A953C328FE2E6900341A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 				37A953B528FE2E6700341A19 /* AppDelegate.swift */,
 				37A953B728FE2E6700341A19 /* SceneDelegate.swift */,
 				37A953B928FE2E6700341A19 /* SimpleTableViewController.swift */,
-				3799B73628FE39D2001371C5 /* SimpleCollectionCollectionViewController.swift */,
+				3799B73628FE39D2001371C5 /* SimplCollectionViewController.swift */,
 				37A953BB28FE2E6700341A19 /* Main.storyboard */,
+				37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */,
 				37A953BE28FE2E6900341A19 /* Assets.xcassets */,
 				37A953C028FE2E6900341A19 /* LaunchScreen.storyboard */,
 				37A953C328FE2E6900341A19 /* Info.plist */,
@@ -143,7 +146,8 @@
 			files = (
 				37A953BA28FE2E6700341A19 /* SimpleTableViewController.swift in Sources */,
 				37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */,
-				3799B73728FE39D2001371C5 /* SimpleCollectionCollectionViewController.swift in Sources */,
+				3799B73728FE39D2001371C5 /* SimplCollectionViewController.swift in Sources */,
+				37B3DC8428FF906F008515CC /* DiffableCollectionViewController.swift in Sources */,
 				37A953B828FE2E6700341A19 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
