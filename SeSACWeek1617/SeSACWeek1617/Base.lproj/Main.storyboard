@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UyR-nd-iqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fbR-ow-j4L">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -181,6 +181,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvv-hJ-cUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3736.8000000000002" y="25.862068965517242"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="Cyd-sk-wKV">
+            <objects>
+                <viewController id="fbR-ow-j4L" customClass="NewsViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OVJ-6b-HK0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qx6-Vz-boL">
+                                <rect key="frame" x="8" y="67" width="359" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kxi-Gy-m9m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="testchanged:" destination="fbR-ow-j4L" eventType="editingDidEnd" id="ngn-L3-f71"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Opo-0c-GH8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Opo-0c-GH8" firstAttribute="trailing" secondItem="Qx6-Vz-boL" secondAttribute="trailing" constant="8" id="0D9-nw-ga8"/>
+                            <constraint firstItem="Qx6-Vz-boL" firstAttribute="top" secondItem="Opo-0c-GH8" secondAttribute="top" constant="20" id="c6C-SV-UZh"/>
+                            <constraint firstItem="Qx6-Vz-boL" firstAttribute="leading" secondItem="Opo-0c-GH8" secondAttribute="leading" constant="8" id="n2H-fN-LQA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="Qx6-Vz-boL" id="r87-la-D0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgn-cA-Lye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4766" y="44"/>
         </scene>
     </scenes>
     <resources>

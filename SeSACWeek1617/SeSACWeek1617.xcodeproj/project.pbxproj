@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373604392900D28800930528 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373604382900D28800930528 /* NewsViewModel.swift */; };
 		3799B73728FE39D2001371C5 /* SimplCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799B73628FE39D2001371C5 /* SimplCollectionViewController.swift */; };
 		37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A953B528FE2E6700341A19 /* AppDelegate.swift */; };
 		37A953B828FE2E6700341A19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A953B728FE2E6700341A19 /* SceneDelegate.swift */; };
@@ -16,9 +17,11 @@
 		37A953C228FE2E6900341A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A953C028FE2E6900341A19 /* LaunchScreen.storyboard */; };
 		37B3DC8428FF906F008515CC /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */; };
 		37ED99372900CF8A00743AFE /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED99362900CF8A00743AFE /* CObservable.swift */; };
+		37ED99392900D13B00743AFE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED99382900D13B00743AFE /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373604382900D28800930528 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		3799B73628FE39D2001371C5 /* SimplCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplCollectionViewController.swift; sourceTree = "<group>"; };
 		37A953B228FE2E6700341A19 /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A953B528FE2E6700341A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		37A953C328FE2E6900341A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 		37ED99362900CF8A00743AFE /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
+		37ED99382900D13B00743AFE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,9 @@
 		37ED99352900CD8D00743AFE /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				37ED99382900D13B00743AFE /* NewsViewController.swift */,
 				37ED99362900CF8A00743AFE /* CObservable.swift */,
+				373604382900D28800930528 /* NewsViewModel.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -159,8 +165,10 @@
 				37A953BA28FE2E6700341A19 /* SimpleTableViewController.swift in Sources */,
 				37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */,
 				3799B73728FE39D2001371C5 /* SimplCollectionViewController.swift in Sources */,
+				37ED99392900D13B00743AFE /* NewsViewController.swift in Sources */,
 				37B3DC8428FF906F008515CC /* DiffableCollectionViewController.swift in Sources */,
 				37A953B828FE2E6700341A19 /* SceneDelegate.swift in Sources */,
+				373604392900D28800930528 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
