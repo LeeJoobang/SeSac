@@ -14,10 +14,23 @@ class RxCocoaExampleViewController: UIViewController {
     @IBOutlet weak var signEmail: UITextField!
     @IBOutlet weak var signButton: UIButton!
     
-    let disposeBag = DisposeBag()
+    @IBOutlet weak var nicknameLabel: UILabel!
+    
+    var disposeBag = DisposeBag()
+    
+    var nickname = Observable.just("Jack")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nickname
+            .bind(to: nicknameLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+//            self.nickname = "Hello"
+        }
+        
+        
         
         setTableView()
         setPickerView()
@@ -25,22 +38,27 @@ class RxCocoaExampleViewController: UIViewController {
         setSign()
         setOperator()
     }
+    // MARK: viewcontroller deinit이 되면, 알아서 disposed도 동작된다.
+    // MARK: or DisposeBag() 객체를 새롭게 넣어주거나, nil 할당 => 예외 케이스!(rootvc에 interval이 있다명?)
+    deinit{
+        print("RxCocoaExampleViewController")
+    }
     
     func setOperator(){
+        Observable.repeatElement("jack") // 네트워크 실패시 몇번 제약을 줄 것인지 세부 제안을 할 수 있음.
+            .take(5) // finite observable sequence
+            .subscribe { value in
+                print("repeat - \(value)")
+            } onError: { error in
+                print("repeat - \(error)")
+            } onCompleted: {
+                print("repeat completed")
+            } onDisposed: {
+                print("repeat disposed")
+            }
+            .disposed(by: disposeBag)
         
-//        Observable.repeatElement("jack") // 네트워크 실패시 몇번 제약을 줄 것인지 세부 제안을 할 수 있음.
-//            .subscribe { value in
-//                print("repeat - \(value)")
-//            } onError: { error in
-//                print("repeat - \(error)")
-//            } onCompleted: {
-//                print("repeat completed")
-//            } onDisposed: {
-//                print("repeat disposed")
-//            }
-//            .disposed(by: disposeBag)
-        
-        let intervalObsevable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe { value in
                 print("interval - \(value)")
             } onError: { error in
@@ -51,12 +69,14 @@ class RxCocoaExampleViewController: UIViewController {
             } onDisposed: {
                 print("interval disposed")
             }
-//            .disposed(by: disposeBag)
+            .disposed(by: disposeBag)// - 메모리 누수가 발생할 수 있는 요소
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+5){
-            intervalObsevable.dispose()
-            
-        }
+        // DisposeBag: 리소스 해제 관리
+        // - 1. 시퀀스 끝날때 but bind 2. class deinit 자동해제(bind) 3. dispose 직접 호출 -> dispose 구독하는 것마다 별도 관리 4.disposebag새로 할당함
+//        DispatchQueue.main.asyncAfter(deadline: .now()+5){
+//            self.disposeBag = DisposeBag()
+//        }
+        
         let itemsA = [3.3, 4.0, 5.0, 2.0, 3.6, 4.8]
         let itemsB = [2.3, 2.0, 1.3]
         
@@ -122,9 +142,14 @@ class RxCocoaExampleViewController: UIViewController {
             .disposed(by: disposeBag)
         
         signButton.rx.tap
-            .subscribe { _ in
-                self.showAlert()
-            }
+            .withUnretained(self) //= [weak self]를 대신할 수 있게 된다. 순환참조 해결이 가능하게 된다.
+            .subscribe(onNext: { vc, _ in
+                vc.showAlert()
+            })
+        
+//            .subscribe { [weak self] _ in
+//                self?.showAlert()
+//            }
             .disposed(by: disposeBag)
         
     }
