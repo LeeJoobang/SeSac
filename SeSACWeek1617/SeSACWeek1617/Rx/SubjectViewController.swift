@@ -8,7 +8,6 @@ class SubjectViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar! // barvutton으로 변경
     @IBOutlet weak var resetButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
-    
     @IBOutlet weak var newButton: UIBarButtonItem!
     
     let publish = PublishSubject<Int>() // 초기값이 없는 빈 상태

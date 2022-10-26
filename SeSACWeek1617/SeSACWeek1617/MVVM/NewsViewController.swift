@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class NewsViewController: UIViewController {
-
+    
     
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var loadButton: UIButton!
     
     
     var viewModel = NewsViewModel()
+    let disposeBag = DisposeBag()
+    
     var dataSource: UICollectionViewDiffableDataSource<Int, News.NewsItem>!
     
     override func viewDidLoad() {
@@ -26,28 +30,43 @@ class NewsViewController: UIViewController {
         configureHierachy()
         configureDataSource()
         bindData()
-        configureViews()
+//        configureViews()
     }
     
     func bindData(){
-        viewModel.pageNumber.bind { value in
-            print("bind == \(value)")
-            self.numberTextField.text = value
-        }
+        //        viewModel.pageNumber.bind { value in
+        //            print("bind == \(value)")
+        //            self.numberTextField.text = value
+        //        }
+        viewModel.sample
+            .withUnretained(self)
+            .bind { (vc, item) in
+                var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
+                snapshot.appendSections([0])
+                snapshot.appendItems(item)
+                vc.dataSource.apply(snapshot, animatingDifferences: false)
+            }
+            .disposed(by: disposeBag)
         
-        viewModel.sample.bind { item in
-            var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(item)
-            self.dataSource.apply(snapshot, animatingDifferences: false)
-        }
+        loadButton
+            .rx
+            .tap
+            .withUnretained(self)
+            .bind { (vc, item) in
+                vc.viewModel.loadSample()
+            }
+        
+        resetButton
+            .rx
+            .tap
+            .withUnretained(self)
+            .bind { (vc, item) in
+                vc.viewModel.resetSample()
+            }
+        
     }
     
-    func configureViews(){
-        numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
-        resetButton.addTarget(self, action: #selector(resetButtonClicked), for: .touchUpInside)
-        loadButton.addTarget(self, action: #selector(loadButtonClicked), for: .touchUpInside)
-    }
+    
     
     @objc func numberTextFieldChanged(){
         print(#function)
@@ -55,13 +74,19 @@ class NewsViewController: UIViewController {
         viewModel.changePageNumberFormat(text: text)
     }
     
-    @objc func resetButtonClicked(){
-        viewModel.resetSample()
-    }
+    //    func configureViews(){
+    //        numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
+    //        resetButton.addTarget(self, action: #selector(resetButtonClicked), for: .touchUpInside)
+    //        loadButton.addTarget(self, action: #selector(loadButtonClicked), for: .touchUpInside)
+    //    }
     
-    @objc func loadButtonClicked(){
-        viewModel.loadSample()
-    }
+    //    @objc func resetButtonClicked(){
+    //        viewModel.resetSample()
+    //    }
+    //
+    //    @objc func loadButtonClicked(){
+    //        viewModel.loadSample()
+    //    }
 }
 
 // MARK: collectionView 역할
@@ -84,7 +109,7 @@ extension NewsViewController{
             return cell
         })
         
-
+        
     }
     
     func createLayout() -> UICollectionViewLayout{

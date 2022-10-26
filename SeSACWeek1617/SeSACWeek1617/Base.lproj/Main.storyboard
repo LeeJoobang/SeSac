@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lRU-0R-64p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -9,20 +9,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Subscribe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SubscribeViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f63-C0-cxf">
+                                <rect key="frame" x="30" y="77" width="315" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HOw-Yd-2Gm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-HV-ORG">
+                                <rect key="frame" x="50" y="197" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LON-tc-dex"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f63-C0-cxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1WZ-4u-aL8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f63-C0-cxf" secondAttribute="trailing" constant="30" id="Lge-Ha-QRB"/>
+                            <constraint firstItem="3JW-HV-ORG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bnb-2W-8cV"/>
+                            <constraint firstItem="f63-C0-cxf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="glr-Gp-XCm"/>
+                            <constraint firstItem="3JW-HV-ORG" firstAttribute="top" secondItem="f63-C0-cxf" secondAttribute="bottom" constant="20" id="lzD-ph-2Qr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3JW-HV-ORG" secondAttribute="trailing" constant="50" id="yJc-f7-qSk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="f63-C0-cxf" id="P5D-qb-cWe"/>
+                        <outlet property="label" destination="3JW-HV-ORG" id="vN7-gy-Div"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125" y="-2"/>
+            <point key="canvasLocation" x="124" y="-2.2167487684729066"/>
         </scene>
         <!--Simple Table View Controller-->
         <scene sceneID="j4D-0e-06A">
@@ -156,9 +187,6 @@
                                     <constraint firstAttribute="height" constant="44" id="kDu-05-DQn"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="qLl-DD-i3y" id="MXW-gq-Oyh"/>
-                                </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mh4-k2-lwX"/>

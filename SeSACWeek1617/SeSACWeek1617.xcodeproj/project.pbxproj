@@ -10,6 +10,7 @@
 		3701D2A52906237300727DF2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3701D2A42906237300727DF2 /* RxCocoa */; };
 		3701D2A72906237300727DF2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3701D2A62906237300727DF2 /* RxSwift */; };
 		3701D2AA290625C700727DF2 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701D2A9290625C700727DF2 /* RxCocoaExampleViewController.swift */; };
+		370D99532908CBE500377E56 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D99522908CBE500377E56 /* SubscribeViewController.swift */; };
 		373604392900D28800930528 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373604382900D28800930528 /* NewsViewModel.swift */; };
 		3736043B2900D78000930528 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736043A2900D78000930528 /* News.swift */; };
 		3736043D2900ED6F00930528 /* DiffableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736043C2900ED6F00930528 /* DiffableViewModel.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		3701D2A9290625C700727DF2 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
+		370D99522908CBE500377E56 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		373604382900D28800930528 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		3736043A2900D78000930528 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		3736043C2900ED6F00930528 /* DiffableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				3701D2A9290625C700727DF2 /* RxCocoaExampleViewController.swift */,
 				37ED4DEC29077A5200858988 /* SubjectViewController.swift */,
 				37ED4DEE2907889F00858988 /* SubjectViewModel.swift */,
+				370D99522908CBE500377E56 /* SubscribeViewController.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370D99532908CBE500377E56 /* SubscribeViewController.swift in Sources */,
 				37ED99372900CF8A00743AFE /* CObservable.swift in Sources */,
 				37A953BA28FE2E6700341A19 /* SimpleTableViewController.swift in Sources */,
 				37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */,

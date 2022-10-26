@@ -1,13 +1,18 @@
 import UIKit
 import Kingfisher
 
-class DiffableCollectionViewController: UIViewController {
+import RxSwift
+import RxCocoa
 
+class DiffableCollectionViewController: UIViewController {
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     var viewModel = DiffableViewModel()
-//    var list = ["아이폰", "아이패드", "에어팟", "이어팟", "맥북"]
-//    private var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, String>!
+    //    var list = ["아이폰", "아이패드", "에어팟", "이어팟", "맥북"]
+    //    private var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, String>!
+    
+    let disposeBag = DisposeBag()
     
     // MARK: Int, String - row에 들어가는 데이터가 String으로 들어감. indexpath기준이 아닌 모델 기반으로 들어감
     private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
@@ -17,36 +22,63 @@ class DiffableCollectionViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         configureDatasource()
         collectionView.delegate = self
+//        searchBar.delegate = self
+        bindData()
         
-        searchBar.delegate = self
+    }
+    
+    func bindData(){
+        viewModel.photoList
+            .withUnretained(self)
+            .subscribe (onNext: { (vc, photo) in
+                var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+                snapshot.appendSections([0])
+                snapshot.appendItems(photo.results)
+                vc.dataSource.apply(snapshot)
+            }, onError: { error in
+                print("error=====:\(error)")
+            }, onCompleted: {
+                print("completed")
+            }, onDisposed: {
+                print("DISPOSED")
+            })
+            .disposed(by: disposeBag)
         
-        viewModel.photoList.bind { photo in
-            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(photo.results)
-            self.dataSource.apply(snapshot)
-        }
+        searchBar
+            .rx
+            .text
+            .orEmpty
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .withUnretained(self)
+            .subscribe { (vc, value) in
+                vc.viewModel.requestSearchPhoto(query: value)
+            }
+            .disposed(by: disposeBag)
+        //       .bind { photo in
+        //            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+        //            snapshot.appendSections([0])
+        //            snapshot.appendItems(photo.results)
+        //            self.dataSource.apply(snapshot)
+        //        }
     }
 }
 
 extension DiffableCollectionViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
-//        let alert = UIAlertController(title: item, message: "클릭", preferredStyle: .alert)
-//        let ok = UIAlertAction(title: "확인", style: .cancel)
-//        alert.addAction(ok)
-//        present(alert, animated: true)
+        //        let alert = UIAlertController(title: item, message: "클릭", preferredStyle: .alert)
+        //        let ok = UIAlertAction(title: "확인", style: .cancel)
+        //        alert.addAction(ok)
+        //        present(alert, animated: true)
     }
 }
 
-extension DiffableCollectionViewController: UISearchBarDelegate{
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        viewModel.requestSearchPhoto(query: searchBar.text!)
-        
-    }
-}
+//extension DiffableCollectionViewController: UISearchBarDelegate{
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        viewModel.requestSearchPhoto(query: searchBar.text!)
+//    }
+//}
 
 extension DiffableCollectionViewController{
     private func createLayout()-> UICollectionViewLayout{
@@ -68,7 +100,7 @@ extension DiffableCollectionViewController{
                 DispatchQueue.main.async {
                     content.image = UIImage(data: data!)
                     cell.contentConfiguration = content
-
+                    
                 }
             }
             cell.contentConfiguration = content
