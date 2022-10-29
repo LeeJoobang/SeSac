@@ -1,9 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
+class UnsplashCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-
