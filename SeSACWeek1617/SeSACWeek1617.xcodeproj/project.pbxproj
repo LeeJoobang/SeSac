@@ -17,7 +17,6 @@
 		373604402900EDEE00930528 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736043F2900EDEE00930528 /* APIService.swift */; };
 		373604422900EE3F00930528 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373604412900EE3F00930528 /* APIKey.swift */; };
 		373604442900EF7C00930528 /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373604432900EF7C00930528 /* SearchPhoto.swift */; };
-		373604472900F10200930528 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 373604462900F10200930528 /* Alamofire */; };
 		3736044A2900F11100930528 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 373604492900F11100930528 /* Kingfisher */; };
 		375C117C290A07B40065BD18 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C117B290A07B40065BD18 /* ValidationViewController.swift */; };
 		375C117E290A22CC0065BD18 /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C117D290A22CC0065BD18 /* ValidationViewModel.swift */; };
@@ -29,6 +28,12 @@
 		37A953BF28FE2E6900341A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A953BE28FE2E6900341A19 /* Assets.xcassets */; };
 		37A953C228FE2E6900341A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A953C028FE2E6900341A19 /* LaunchScreen.storyboard */; };
 		37B3DC8428FF906F008515CC /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */; };
+		37C967FC290E9442003CF5BB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C967FB290E9442003CF5BB /* Observable.swift */; };
+		37C967FF290E9591003CF5BB /* ObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C967FE290E9591003CF5BB /* ObservableViewModel.swift */; };
+		37C96803290E9744003CF5BB /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C96802290E9744003CF5BB /* ObservableViewController.swift */; };
+		37C96807290F769C003CF5BB /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37C96806290F769C003CF5BB /* RxAlamofire */; };
+		37C9680A290F7791003CF5BB /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 37C96809290F7791003CF5BB /* Differentiator */; };
+		37C9680C290F7791003CF5BB /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 37C9680B290F7791003CF5BB /* RxDataSources */; };
 		37ED4DED29077A5200858988 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED4DEC29077A5200858988 /* SubjectViewController.swift */; };
 		37ED4DEF2907889F00858988 /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED4DEE2907889F00858988 /* SubjectViewModel.swift */; };
 		37ED99372900CF8A00743AFE /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED99362900CF8A00743AFE /* CObservable.swift */; };
@@ -56,6 +61,9 @@
 		37A953C128FE2E6900341A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A953C328FE2E6900341A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
+		37C967FB290E9442003CF5BB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		37C967FE290E9591003CF5BB /* ObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModel.swift; sourceTree = "<group>"; };
+		37C96802290E9744003CF5BB /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 		37ED4DEC29077A5200858988 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		37ED4DEE2907889F00858988 /* SubjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewModel.swift; sourceTree = "<group>"; };
 		37ED99362900CF8A00743AFE /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
@@ -68,9 +76,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3701D2A52906237300727DF2 /* RxCocoa in Frameworks */,
+				37C9680A290F7791003CF5BB /* Differentiator in Frameworks */,
+				37C96807290F769C003CF5BB /* RxAlamofire in Frameworks */,
+				37C9680C290F7791003CF5BB /* RxDataSources in Frameworks */,
 				3736044A2900F11100930528 /* Kingfisher in Frameworks */,
 				3701D2A72906237300727DF2 /* RxSwift in Frameworks */,
-				373604472900F10200930528 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +131,7 @@
 		37A953B428FE2E6700341A19 /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
+				37C967FD290E9560003CF5BB /* MVVM_Test */,
 				3701D2A82906259800727DF2 /* Rx */,
 				3736043E2900ED7900930528 /* Diffable */,
 				37ED99352900CD8D00743AFE /* MVVM */,
@@ -134,6 +145,16 @@
 				37A953C328FE2E6900341A19 /* Info.plist */,
 			);
 			path = SeSACWeek1617;
+			sourceTree = "<group>";
+		};
+		37C967FD290E9560003CF5BB /* MVVM_Test */ = {
+			isa = PBXGroup;
+			children = (
+				37C967FB290E9442003CF5BB /* Observable.swift */,
+				37C967FE290E9591003CF5BB /* ObservableViewModel.swift */,
+				37C96802290E9744003CF5BB /* ObservableViewController.swift */,
+			);
+			path = MVVM_Test;
 			sourceTree = "<group>";
 		};
 		37ED99352900CD8D00743AFE /* MVVM */ = {
@@ -164,10 +185,12 @@
 			);
 			name = SeSACWeek1617;
 			packageProductDependencies = (
-				373604462900F10200930528 /* Alamofire */,
 				373604492900F11100930528 /* Kingfisher */,
 				3701D2A42906237300727DF2 /* RxCocoa */,
 				3701D2A62906237300727DF2 /* RxSwift */,
+				37C96806290F769C003CF5BB /* RxAlamofire */,
+				37C96809290F7791003CF5BB /* Differentiator */,
+				37C9680B290F7791003CF5BB /* RxDataSources */,
 			);
 			productName = SeSACWeek1617;
 			productReference = 37A953B228FE2E6700341A19 /* SeSACWeek1617.app */;
@@ -198,9 +221,10 @@
 			);
 			mainGroup = 37A953A928FE2E6700341A19;
 			packageReferences = (
-				373604452900F10200930528 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				373604482900F11100930528 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				3701D2A32906237300727DF2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				37C96805290F769C003CF5BB /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				37C96808290F7791003CF5BB /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = 37A953B328FE2E6700341A19 /* Products */;
 			projectDirPath = "";
@@ -230,12 +254,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				370D99532908CBE500377E56 /* SubscribeViewController.swift in Sources */,
+				37C96803290E9744003CF5BB /* ObservableViewController.swift in Sources */,
 				375C117C290A07B40065BD18 /* ValidationViewController.swift in Sources */,
 				37ED99372900CF8A00743AFE /* CObservable.swift in Sources */,
 				375C117E290A22CC0065BD18 /* ValidationViewModel.swift in Sources */,
 				37A953BA28FE2E6700341A19 /* SimpleTableViewController.swift in Sources */,
+				37C967FC290E9442003CF5BB /* Observable.swift in Sources */,
 				37A953B628FE2E6700341A19 /* AppDelegate.swift in Sources */,
 				3736043B2900D78000930528 /* News.swift in Sources */,
+				37C967FF290E9591003CF5BB /* ObservableViewModel.swift in Sources */,
 				373604402900EDEE00930528 /* APIService.swift in Sources */,
 				3799B73728FE39D2001371C5 /* SimplCollectionViewController.swift in Sources */,
 				37ED99392900D13B00743AFE /* NewsViewController.swift in Sources */,
@@ -473,20 +500,28 @@
 				minimumVersion = 6.0.0;
 			};
 		};
-		373604452900F10200930528 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		373604482900F11100930528 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.0.0;
+			};
+		};
+		37C96805290F769C003CF5BB /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.1.2;
+			};
+		};
+		37C96808290F7791003CF5BB /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -502,15 +537,25 @@
 			package = 3701D2A32906237300727DF2 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		373604462900F10200930528 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 373604452900F10200930528 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		373604492900F11100930528 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 373604482900F11100930528 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		37C96806290F769C003CF5BB /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37C96805290F769C003CF5BB /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+		37C96809290F7791003CF5BB /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37C96808290F7791003CF5BB /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		37C9680B290F7791003CF5BB /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37C96808290F7791003CF5BB /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

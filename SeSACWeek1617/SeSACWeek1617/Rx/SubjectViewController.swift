@@ -13,6 +13,7 @@ class SubjectViewController: UIViewController {
     let publish = PublishSubject<Int>() // 초기값이 없는 빈 상태
     let behavior = BehaviorSubject(value: 100) // 초기값 필수
     let replay = ReplaySubject<Int>.create(bufferSize: 3) // 초기값이 아니라, 미리 갖고 싶은 값의 범위를 정하는 것이다. buffersize 작성된 이벤트 갯수만큼 메모리에서 이벤트를 갖고 있다, subscribe 직후 한번에 이벤트 전달
+//    let replay = ReplaySubject<Int>.create(bufferSize: 3) // 초기값이 아니라, 미리 갖고 싶은 값의 범위를 정하는 것이다. buffersize 작성된 이벤트 갯수만큼 메모리에서 이벤트를 갖고 있다, subscribe 직후 한번에 이벤트 전달
     let async = AsyncSubject<Int>()
     let disposeBag = DisposeBag()
     let viewModel = SubjectViewModel()
