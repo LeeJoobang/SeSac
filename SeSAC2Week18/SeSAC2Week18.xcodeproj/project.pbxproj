@@ -16,6 +16,11 @@
 		37D580C129120A3400F8EC0D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37D580C029120A3400F8EC0D /* Alamofire */; };
 		37D580C429120F0200F8EC0D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D580C329120F0200F8EC0D /* APIService.swift */; };
 		37D580C629121BE000F8EC0D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D580C529121BE000F8EC0D /* EndPoint.swift */; };
+		37D580CA291351D600F8EC0D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D580C9291351D600F8EC0D /* Network.swift */; };
+		37D580CC291352FE00F8EC0D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D580CB291352FE00F8EC0D /* ProfileViewModel.swift */; };
+		37D580CF291353E700F8EC0D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 37D580CE291353E700F8EC0D /* RxCocoa */; };
+		37D580D1291353E700F8EC0D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37D580D0291353E700F8EC0D /* RxSwift */; };
+		37D580D32913628D00F8EC0D /* SubscriptExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D580D22913628D00F8EC0D /* SubscriptExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,9 @@
 		37D580B929120A1A00F8EC0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D580C329120F0200F8EC0D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		37D580C529121BE000F8EC0D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		37D580C9291351D600F8EC0D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		37D580CB291352FE00F8EC0D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		37D580D22913628D00F8EC0D /* SubscriptExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D580D1291353E700F8EC0D /* RxSwift in Frameworks */,
+				37D580CF291353E700F8EC0D /* RxCocoa in Frameworks */,
 				37D580C129120A3400F8EC0D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +80,8 @@
 				37D580B429120A1A00F8EC0D /* Assets.xcassets */,
 				37D580B629120A1A00F8EC0D /* LaunchScreen.storyboard */,
 				37D580B929120A1A00F8EC0D /* Info.plist */,
+				37D580CB291352FE00F8EC0D /* ProfileViewModel.swift */,
+				37D580D22913628D00F8EC0D /* SubscriptExample.swift */,
 			);
 			path = SeSAC2Week18;
 			sourceTree = "<group>";
@@ -79,6 +91,7 @@
 			children = (
 				37D580C329120F0200F8EC0D /* APIService.swift */,
 				37D580C529121BE000F8EC0D /* EndPoint.swift */,
+				37D580C9291351D600F8EC0D /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -101,6 +114,8 @@
 			name = SeSAC2Week18;
 			packageProductDependencies = (
 				37D580C029120A3400F8EC0D /* Alamofire */,
+				37D580CE291353E700F8EC0D /* RxCocoa */,
+				37D580D0291353E700F8EC0D /* RxSwift */,
 			);
 			productName = SeSAC2Week18;
 			productReference = 37D580A829120A1800F8EC0D /* SeSAC2Week18.app */;
@@ -132,6 +147,7 @@
 			mainGroup = 37D5809F29120A1700F8EC0D;
 			packageReferences = (
 				37D580BF29120A3400F8EC0D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				37D580CD291353E700F8EC0D /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 37D580A929120A1800F8EC0D /* Products */;
 			projectDirPath = "";
@@ -162,9 +178,12 @@
 			files = (
 				37D580B029120A1800F8EC0D /* ViewController.swift in Sources */,
 				37D580AC29120A1800F8EC0D /* AppDelegate.swift in Sources */,
+				37D580CA291351D600F8EC0D /* Network.swift in Sources */,
 				37D580C629121BE000F8EC0D /* EndPoint.swift in Sources */,
+				37D580D32913628D00F8EC0D /* SubscriptExample.swift in Sources */,
 				37D580C429120F0200F8EC0D /* APIService.swift in Sources */,
 				37D580AE29120A1800F8EC0D /* SceneDelegate.swift in Sources */,
+				37D580CC291352FE00F8EC0D /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +411,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		37D580CD291353E700F8EC0D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -399,6 +426,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 37D580BF29120A3400F8EC0D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		37D580CE291353E700F8EC0D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37D580CD291353E700F8EC0D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		37D580D0291353E700F8EC0D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37D580CD291353E700F8EC0D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
