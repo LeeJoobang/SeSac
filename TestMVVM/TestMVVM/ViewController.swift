@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    private var personViewModel = ViewModel()
+
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var profileButton: UIButton!
     
@@ -21,25 +22,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var ageButton: UIButton!
     
-    private var personViewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bind()
+    }
+    
+    func bind(){
         personViewModel.image.bind { image in
+            print(image)
             self.profileImg.image = image
+
         }
         personViewModel.name.bind { name in
+            print("change name text")
             self.nameLabel.text = name
         }
         personViewModel.age.bind { age in
+            print("change age text")
             self.ageLabel.text = age
         }
-
     }
 
     @IBAction func profileButtonClicked(_ sender: UIButton) {
-        personViewModel.setImage("Person.fill")
+        personViewModel.setImage("person.fill")
     }
     
     @IBAction func nameButtonClicked(_ sender: UIButton) {

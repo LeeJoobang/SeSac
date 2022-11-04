@@ -11,7 +11,7 @@ import UIKit
 class ViewModel{
     let defaultName = "이주방"
     let defaultAge = "34"
-    let defaultImage = "Person.fill"
+    let defaultImage = "person"
     
     let name = Observable("")
     let age = Observable("")
