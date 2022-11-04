@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378131D129152B5300BA70A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378131D029152B5300BA70A7 /* Person.swift */; };
+		378131D329152BCC00BA70A7 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378131D229152BCC00BA70A7 /* PersonViewController.swift */; };
+		378131D529152CC900BA70A7 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378131D429152CC900BA70A7 /* PersonViewModel.swift */; };
 		37A06056290D3FAD002E9DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A06055290D3FAD002E9DD7 /* AppDelegate.swift */; };
 		37A06058290D3FAD002E9DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A06057290D3FAD002E9DD7 /* SceneDelegate.swift */; };
 		37A0605A290D3FAD002E9DD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A06059290D3FAD002E9DD7 /* ViewController.swift */; };
@@ -15,14 +18,14 @@
 		37A06062290D3FAE002E9DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A06060290D3FAE002E9DD7 /* LaunchScreen.storyboard */; };
 		37A0606C290D4041002E9DD7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 37A0606B290D4041002E9DD7 /* .gitignore */; };
 		37A0606F290D40E6002E9DD7 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0606E290D40E6002E9DD7 /* APIKey.swift */; };
-		37A06071290D4160002E9DD7 /* UnsplashCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A06070290D4160002E9DD7 /* UnsplashCollectionViewController.swift */; };
 		37A06076290D451B002E9DD7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 37A06075290D451B002E9DD7 /* Alamofire */; };
-		37A0607C290D49E5002E9DD7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0607B290D49E5002E9DD7 /* APIService.swift */; };
-		37A0607E290D5386002E9DD7 /* UnsplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0607D290D5386002E9DD7 /* UnsplashViewModel.swift */; };
 		37A06080290D55CD002E9DD7 /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0607F290D55CD002E9DD7 /* CObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		378131D029152B5300BA70A7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		378131D229152BCC00BA70A7 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		378131D429152CC900BA70A7 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		37A06052290D3FAD002E9DD7 /* UnsplashMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A06055290D3FAD002E9DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A06057290D3FAD002E9DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +36,6 @@
 		37A06063290D3FAE002E9DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A0606B290D4041002E9DD7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		37A0606E290D40E6002E9DD7 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		37A06070290D4160002E9DD7 /* UnsplashCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashCollectionViewController.swift; sourceTree = "<group>"; };
-		37A0607B290D49E5002E9DD7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		37A0607D290D5386002E9DD7 /* UnsplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashViewModel.swift; sourceTree = "<group>"; };
 		37A0607F290D55CD002E9DD7 /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,11 +86,11 @@
 		37A0606D290D40B0002E9DD7 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				37A0606E290D40E6002E9DD7 /* APIKey.swift */,
-				37A06070290D4160002E9DD7 /* UnsplashCollectionViewController.swift */,
-				37A0607B290D49E5002E9DD7 /* APIService.swift */,
-				37A0607D290D5386002E9DD7 /* UnsplashViewModel.swift */,
+				378131D429152CC900BA70A7 /* PersonViewModel.swift */,
+				378131D029152B5300BA70A7 /* Person.swift */,
 				37A0607F290D55CD002E9DD7 /* CObservable.swift */,
+				378131D229152BCC00BA70A7 /* PersonViewController.swift */,
+				37A0606E290D40E6002E9DD7 /* APIKey.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -173,14 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A06071290D4160002E9DD7 /* UnsplashCollectionViewController.swift in Sources */,
-				37A0607E290D5386002E9DD7 /* UnsplashViewModel.swift in Sources */,
 				37A0605A290D3FAD002E9DD7 /* ViewController.swift in Sources */,
 				37A06056290D3FAD002E9DD7 /* AppDelegate.swift in Sources */,
 				37A06080290D55CD002E9DD7 /* CObservable.swift in Sources */,
+				378131D529152CC900BA70A7 /* PersonViewModel.swift in Sources */,
+				378131D129152B5300BA70A7 /* Person.swift in Sources */,
 				37A0606F290D40E6002E9DD7 /* APIKey.swift in Sources */,
 				37A06058290D3FAD002E9DD7 /* SceneDelegate.swift in Sources */,
-				37A0607C290D49E5002E9DD7 /* APIService.swift in Sources */,
+				378131D329152BCC00BA70A7 /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
