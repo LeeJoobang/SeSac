@@ -9,11 +9,9 @@ class BaseViewController: UIViewController {
     }
     
     func configure(){
-        
     }
     
     func setConstraints(){
-        
     }
     
     func showAlertMessage(title: String, button: String){ // 거의 모든 view에서 alert을 한다고 가정한다.
