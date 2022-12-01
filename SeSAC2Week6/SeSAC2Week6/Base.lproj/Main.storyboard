@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ybU-89-q8w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lkh-Yr-Yud">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fSd-Kw-qSR">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="KakaoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KakaoCell" rowHeight="221" id="hrW-H1-Db3" customClass="KakaoCell" customModule="SeSAC2Week6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="221"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hrW-H1-Db3" id="oTo-Ti-jJt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
@@ -94,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-1c-wDF" customClass="SeSacButton" customModule="SeSAC2Week6" customModuleProvider="target">
-                                <rect key="frame" x="20" y="64" width="335" height="60"/>
+                                <rect key="frame" x="20" y="67" width="335" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="kOl-Fn-KcW"/>
                                 </constraints>
@@ -116,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-OX-Dlm" customClass="SeSacButton" customModule="SeSAC2Week6" customModuleProvider="target">
-                                <rect key="frame" x="20" y="144" width="335" height="60"/>
+                                <rect key="frame" x="20" y="147" width="335" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FFk-TS-Gfu"/>
                                 </constraints>
@@ -138,7 +139,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS3-Hc-tCV" customClass="SeSacButton" customModule="SeSAC2Week6" customModuleProvider="target">
-                                <rect key="frame" x="20" y="224" width="335" height="60"/>
+                                <rect key="frame" x="20" y="227" width="335" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zOH-Rl-1Hj"/>
                                 </constraints>
@@ -204,7 +205,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-M2-omA">
-                                <rect key="frame" x="0.0" y="44" width="375" height="162.33333333333334"/>
+                                <rect key="frame" x="0.0" y="47.000000000000014" width="375" height="162.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mdn-4r-LTQ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -224,11 +225,11 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K2J-3L-gRa">
-                                <rect key="frame" x="0.0" y="206.33333333333331" width="375" height="571.66666666666674"/>
+                                <rect key="frame" x="0.0" y="209.33333333333331" width="375" height="568.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MainTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="290" id="dnG-Vh-HZD" customClass="MainTableViewCell" customModule="SeSAC2Week6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="290"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="290"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dnG-Vh-HZD" id="Lj7-Sk-Gw4">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
@@ -343,7 +344,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-Km-cM3">
-                                <rect key="frame" x="20" y="64" width="335" height="50"/>
+                                <rect key="frame" x="20" y="67" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ln3-Hj-uTf"/>
                                 </constraints>
@@ -354,7 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3n-s4-foV">
-                                <rect key="frame" x="20" y="134" width="335" height="50"/>
+                                <rect key="frame" x="20" y="137" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kQa-RA-6lz"/>
                                 </constraints>
@@ -365,7 +366,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfT-mX-IE0">
-                                <rect key="frame" x="20" y="204" width="335" height="50"/>
+                                <rect key="frame" x="20" y="207" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dDn-Ec-ze0"/>
                                 </constraints>
@@ -376,13 +377,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-un-77E">
-                                <rect key="frame" x="20" y="274" width="335" height="150"/>
+                                <rect key="frame" x="20" y="277" width="335" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1XY-fy-ngz"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7x-hm-7s0">
-                                <rect key="frame" x="20" y="444" width="335" height="50"/>
+                                <rect key="frame" x="20" y="447" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IH1-oO-S4X"/>
                                 </constraints>
@@ -393,7 +394,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZk-Zn-spP">
-                                <rect key="frame" x="20" y="514" width="335" height="50"/>
+                                <rect key="frame" x="20" y="517" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Mc9-Y7-fLy"/>
                                 </constraints>
@@ -441,7 +442,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nMD-Xc-mgO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FLI-yE-0gW">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -456,13 +457,13 @@
     </scenes>
     <designables>
         <designable name="hXj-1c-wDF">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
         <designable name="tS3-Hc-tCV">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
         <designable name="v6o-OX-Dlm">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

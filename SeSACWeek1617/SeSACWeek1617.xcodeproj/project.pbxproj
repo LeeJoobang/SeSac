@@ -105,9 +105,9 @@
 			children = (
 				37B3DC8328FF906F008515CC /* DiffableCollectionViewController.swift */,
 				3736043C2900ED6F00930528 /* DiffableViewModel.swift */,
+				373604432900EF7C00930528 /* SearchPhoto.swift */,
 				3736043F2900EDEE00930528 /* APIService.swift */,
 				373604412900EE3F00930528 /* APIKey.swift */,
-				373604432900EF7C00930528 /* SearchPhoto.swift */,
 			);
 			path = Diffable;
 			sourceTree = "<group>";

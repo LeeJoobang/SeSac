@@ -24,7 +24,6 @@ final class Network {
             case .success(let data):
                 completion(.success(data))//탈출클로져, Result, enum, 연관값...
             case .failure(_):
-                
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let error = SeSACError(rawValue: statusCode) else { return }
                 

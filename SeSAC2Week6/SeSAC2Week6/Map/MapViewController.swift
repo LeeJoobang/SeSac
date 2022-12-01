@@ -38,7 +38,7 @@ class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showRequestLocationServiceAlert()
+//        showRequestLocationServiceAlert()
     }
     
     func setRegionAndAnnotation(center: CLLocationCoordinate2D){

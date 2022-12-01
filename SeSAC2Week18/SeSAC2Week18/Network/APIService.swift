@@ -36,8 +36,6 @@ extension SeSACError: LocalizedError{
 }
 
 class APIService {
-    
-    
     func signup(){
         let api = SeSACAPI.signUP(username: "testjoo1", email: "testjoo1@testjoo1.com", password: "12345678")
         AF.request(api.url, method: .post, parameters: api.parameters, headers: api.headers).responseString {
