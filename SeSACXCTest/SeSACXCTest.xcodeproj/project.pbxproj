@@ -20,6 +20,8 @@
 		37D1F5DF29359F9000235C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F5B129359C0600235C4C /* ViewController.swift */; };
 		37D1F5E12935AB6600235C4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F5E02935AB6600235C4C /* LoginViewController.swift */; };
 		37D1F6032936FAFC00235C4C /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F6022936FAFC00235C4C /* ValidatorTests.swift */; };
+		37D2BC0729383969002127C9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2BC0629383969002127C9 /* APIService.swift */; };
+		37D2BC0929383BDA002127C9 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2BC0829383BDA002127C9 /* APIServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		37D1F5D829359F4100235C4C /* SeSACXCTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACXCTestTests.swift; sourceTree = "<group>"; };
 		37D1F5E02935AB6600235C4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		37D1F6022936FAFC00235C4C /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		37D2BC0629383969002127C9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		37D2BC0829383BDA002127C9 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				37D1F5B829359C0800235C4C /* LaunchScreen.storyboard */,
 				37D1F5BB29359C0800235C4C /* Info.plist */,
 				37D1F5E02935AB6600235C4C /* LoginViewController.swift */,
+				37D2BC0629383969002127C9 /* APIService.swift */,
 			);
 			path = SeSACXCTest;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				37D1F5D829359F4100235C4C /* SeSACXCTestTests.swift */,
 				37D1F6022936FAFC00235C4C /* ValidatorTests.swift */,
+				37D2BC0829383BDA002127C9 /* APIServiceTests.swift */,
 			);
 			path = SeSACXCTestTests;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D1F5E12935AB6600235C4C /* LoginViewController.swift in Sources */,
+				37D2BC0729383969002127C9 /* APIService.swift in Sources */,
 				37D1F5B229359C0600235C4C /* ViewController.swift in Sources */,
 				37D1F5AE29359C0600235C4C /* AppDelegate.swift in Sources */,
 				37D1F5B029359C0600235C4C /* SceneDelegate.swift in Sources */,
@@ -291,6 +298,7 @@
 			files = (
 				37D1F6032936FAFC00235C4C /* ValidatorTests.swift in Sources */,
 				37D1F5DF29359F9000235C4C /* ViewController.swift in Sources */,
+				37D2BC0929383BDA002127C9 /* APIServiceTests.swift in Sources */,
 				37D1F5D929359F4100235C4C /* SeSACXCTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
